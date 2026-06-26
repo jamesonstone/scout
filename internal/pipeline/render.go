@@ -61,7 +61,7 @@ func RenderMonthly(month time.Time, papers []PaperRecord) string {
 	}
 	b.WriteString("\n## Complete Monthly Index\n\n")
 	for i, paper := range sorted {
-		fmt.Fprintf(&b, "%d. [%s](%s) — %s\n", i+1, paper.Title, firstNonEmpty(paper.Links.HuggingFace, paper.Links.Arxiv, paper.Links.Paper), strings.Join(paper.Categories, ", "))
+		fmt.Fprintf(&b, "%d. [%s](%s) — %s\n", i+1, paper.Title, firstNonEmpty(paper.Links.HuggingFace, paper.Links.Arxiv, paper.Links.Paper), categoriesLabel(paper.Categories))
 	}
 	return b.String()
 }
@@ -81,7 +81,7 @@ func writePaper(b *strings.Builder, rank int, paper PaperRecord) {
 	fmt.Fprintf(b, "### %d. %s\n\n", rank, paper.Title)
 	fmt.Fprintf(b, "- **Overall score:** %d/100\n", paper.Score.Overall)
 	fmt.Fprintf(b, "- **Recommendation:** %s\n", paper.Recommendation)
-	fmt.Fprintf(b, "- **Categories:** %s\n", strings.Join(paper.Categories, ", "))
+	fmt.Fprintf(b, "- **Categories:** %s\n", categoriesLabel(paper.Categories))
 	fmt.Fprintf(b, "- **Innovation Summary:** %s\n", paper.InnovationSummary)
 	b.WriteString("- **Why It Matters:**\n")
 	for _, bullet := range paper.WhyItMatters {
@@ -176,4 +176,11 @@ func orNA(values []string) []string {
 		return []string{"N/A"}
 	}
 	return values
+}
+
+func categoriesLabel(categories []string) string {
+	if len(categories) == 0 {
+		return "N/A"
+	}
+	return strings.Join(categories, ", ")
 }

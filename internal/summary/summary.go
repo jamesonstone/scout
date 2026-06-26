@@ -16,12 +16,11 @@ type Builder struct{}
 func New() Builder { return Builder{} }
 
 func (Builder) InnovationSummary(paper model.Paper) string {
-	detail := truncateWords(firstSentence(firstNonEmpty(paper.Markdown, paper.Abstract)), 20)
+	detail := truncateWords(innovationSentence(paperSignalText(paper)), 26)
 	if detail == "" {
-		detail = "a targeted research contribution for modern AI systems"
+		detail = "A targeted research contribution for modern AI systems"
 	}
-	detail = normalizeInnovationDetail(detail)
-	return ensureSingleSentence(fmt.Sprintf("%s introduces %s.", cleanTitle(paper.Title), lowerFirst(detail)))
+	return ensureSingleSentence(fmt.Sprintf("%s: %s.", cleanTitle(paper.Title), upperFirst(detail)))
 }
 
 func (Builder) WhyItMatters(paper model.Paper, score model.ScoreBreakdown) []string {
@@ -43,7 +42,7 @@ func (Builder) ImplementationAngle(paper model.Paper, score model.ScoreBreakdown
 }
 
 func (Builder) Caveat(paper model.Paper) string {
-	text := strings.ToLower(firstNonEmpty(paper.Markdown, paper.Abstract))
+	text := strings.ToLower(paperSignalText(paper))
 	switch {
 	case strings.Contains(text, "benchmark"):
 		return "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims."
@@ -59,10 +58,7 @@ func (Builder) Caveat(paper model.Paper) string {
 func (Builder) ExecutiveSummary(paper model.Paper, score model.ScoreBreakdown) string {
 	parts := []string{
 		fmt.Sprintf("%s scores %d/100 for a mix of novelty, practical impact, and relevance to AI-agent and software-engineering workflows.", cleanTitle(paper.Title), score.Overall),
-		truncateWords(strings.TrimSpace(firstNonEmpty(paper.Abstract, paper.Markdown)), 90),
-	}
-	if paper.Markdown != "" {
-		parts = append(parts, truncateWords(firstSentence(paper.Markdown), 45))
+		truncateWords(paperSignalText(paper), 90),
 	}
 	summary := strings.Join(compact(parts), " ")
 	return truncateWords(summary, 300)
@@ -115,6 +111,98 @@ func firstNonEmpty(values ...string) string {
 	return ""
 }
 
+func paperSignalText(paper model.Paper) string {
+	return firstNonEmpty(paper.Abstract, cleanMarkdownText(paper.Markdown))
+}
+
+func cleanMarkdownText(text string) string {
+	text = strings.ReplaceAll(text, "\r\n", "\n")
+	text = strings.TrimSpace(text)
+	if text == "" {
+		return ""
+	}
+
+	lines := strings.Split(text, "\n")
+	for i, line := range lines {
+		heading := strings.Trim(strings.TrimSpace(line), "#* ")
+		if strings.EqualFold(heading, "Abstract") && i+1 < len(lines) {
+			return strings.TrimSpace(strings.Join(lines[i+1:], "\n"))
+		}
+	}
+
+	filtered := make([]string, 0, len(lines))
+	for _, line := range lines {
+		trimmed := strings.TrimSpace(line)
+		lower := strings.ToLower(trimmed)
+		if trimmed == "" {
+			continue
+		}
+		if strings.HasPrefix(lower, "title:") ||
+			strings.HasPrefix(lower, "url source:") ||
+			strings.HasPrefix(lower, "markdown content:") ||
+			lower == "back to arxiv" ||
+			lower == "why html?" ||
+			lower == "report issue" ||
+			lower == "back to abstract" {
+			continue
+		}
+		filtered = append(filtered, trimmed)
+	}
+	return strings.Join(filtered, " ")
+}
+
+func innovationSentence(text string) string {
+	sentences := sentenceBoundary.Split(strings.TrimSpace(text), -1)
+	best := ""
+	bestScore := 0
+	for _, sentence := range sentences {
+		sentence = strings.TrimSpace(sentence)
+		if sentence == "" {
+			continue
+		}
+		score := innovationCueScore(strings.ToLower(sentence))
+		if score > bestScore {
+			best = sentence
+			bestScore = score
+		}
+	}
+	if best != "" {
+		return best
+	}
+	return firstSentence(text)
+}
+
+func innovationCueScore(sentence string) int {
+	score := 0
+	for _, cue := range []string{
+		"we introduce",
+		"we propose",
+		"we present",
+		"we develop",
+		"we show",
+		"we demonstrate",
+		"we identify",
+		"we characterize",
+		"we study",
+		"this paper introduces",
+		"this paper proposes",
+		"this paper presents",
+		"to address this",
+		"to tackle this",
+		"our contributions",
+	} {
+		if strings.Contains(sentence, cue) {
+			score += 10
+		}
+	}
+	for _, cue := range []string{"framework", "benchmark", "method", "model", "algorithm", "pipeline", "system"} {
+		if strings.Contains(sentence, cue) {
+			score++
+		}
+	}
+	return score
+}
+
 func firstSentence(text string) string {
 	text = strings.TrimSpace(text)
 	if text == "" {
@@ -164,40 +252,13 @@ func githubBullet(paper model.Paper) string {
 	return fmt.Sprintf("Linked implementation resources are available via %s, which lowers the cost of benchmarking or prototyping the paper's ideas.", strings.Join(paper.Links.GitHub, ", "))
 }
 
-func lowerFirst(text string) string {
+func upperFirst(text string) string {
 	if text == "" {
 		return text
 	}
 	runes := []rune(text)
-	runes[0] = []rune(strings.ToLower(string(runes[0])))[0]
+	runes[0] = []rune(strings.ToUpper(string(runes[0])))[0]
 	return string(runes)
-}
-
-func normalizeInnovationDetail(text string) string {
-	text = strings.TrimSpace(strings.TrimRight(text, ".!? "))
-	for _, prefix := range []string{
-		"this paper introduces ",
-		"this paper proposes ",
-		"this paper presents ",
-		"this paper studies ",
-		"this paper covers ",
-		"this paper describes ",
-		"this paper develops ",
-		"we introduce ",
-		"we propose ",
-		"we present ",
-		"we study ",
-		"we describe ",
-	} {
-		if strings.HasPrefix(strings.ToLower(text), prefix) {
-			text = strings.TrimSpace(text[len(prefix):])
-			break
-		}
-	}
-	if text == "" {
-		return "a targeted research contribution for modern AI systems"
-	}
-	return text
 }
 
 func joinThemes(themes []string) string {

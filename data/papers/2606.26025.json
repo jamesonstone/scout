@@ -1,0 +1,99 @@
+{
+  "id": "2606.26025",
+  "title": "In-Context World Modeling for Robotic Control",
+  "authors": [
+    "Siyin Wang",
+    "Junhao Shi",
+    "Senyu Fei",
+    "Zhaoyang Fu",
+    "Li Ji",
+    "Jingjing Gong",
+    "Xipeng Qiu"
+  ],
+  "categories": [
+    "Vision-Language-Action models",
+    "in-context adaptation",
+    "novel configurations",
+    "parameter updates",
+    "real-world robot platforms",
+    "robot policies",
+    "simulation",
+    "system identification",
+    "task-agnostic interactions",
+    "world modeling"
+  ],
+  "published_at": "2026-06-25T00:00:00Z",
+  "first_seen": "2026-06-26",
+  "observed_dates": [
+    "2026-06-26"
+  ],
+  "abstract": "Modern Vision-Language-Action (VLA) models often fail to generalize to novel setups, such as altered camera viewpoints or robot morphologies, because they are typically conditioned only on current observations and language instructions. By ignoring the underlying system configuration as a variable, these models implicitly assume a fixed execution context encountered during training, necessitating data-intensive fine-tuning for any new environment. In this work, we introduce In-Context World Modeling (ICWM), a framework that treats system identification as an in-context adaptation problem. ICWM enables robot policies to autonomously infer essential system variables from a short history of self-generated, task-agnostic interactions. Unlike traditional In-Context Learning that uses demonstrations to specify what task to perform, ICWM leverages the context window to understand how the system operates. By processing these interactions before task execution, the model implicitly captures the world dynamics of the current system, enabling adaptation to novel configurations without parameter updates. Extensive experiments in simulation and on real-world robot platforms demonstrate that ICWM significantly outperforms standard VLA baselines on novel camera viewpoints.",
+  "innovation_summary": "In-Context World Modeling for Robotic Control: In this work, we introduce In-Context World Modeling (ICWM), a framework that treats system identification as an in-context adaptation problem.",
+  "why_it_matters": [
+    "Overall signal 52/100 driven by novelty 65 and practical impact 58.",
+    "Primary categories: Vision-Language-Action models, in-context adaptation, system identification, robot policies, task-agnostic interactions, world modeling, novel configurations, parameter updates, simulation, real-world robot platforms.",
+    "Community signal includes 5 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 35/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 63/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "The strongest evidence comes from simulated settings, so operational impact may be less certain in live systems.",
+  "executive_summary": "In-Context World Modeling for Robotic Control scores 52/100 for a mix of novelty, practical impact, and relevance to AI-agent and software-engineering workflows. Modern Vision-Language-Action (VLA) models often fail to generalize to novel setups, such as altered camera viewpoints or robot morphologies, because they are typically conditioned only on current observations and language instructions. By ignoring the underlying system configuration as a variable, these models implicitly assume a fixed execution context encountered during training, necessitating data-intensive fine-tuning for any new environment. In this work, we introduce In-Context World Modeling (ICWM), a framework that treats system identification as an in-context adaptation problem. ICWM enables robot policies to autonomously infer essential system variables from a",
+  "estimated_reading_priority": "Low — archive unless the topic is directly relevant",
+  "recommendation": "Skip",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.26025",
+    "arxiv": "https://arxiv.org/abs/2606.26025"
+  },
+  "score": {
+    "novelty": 65,
+    "practical_impact": 58,
+    "technical_depth": 63,
+    "implementation_potential": 35,
+    "relevance": 30,
+    "community_signal": 48,
+    "summary_confidence": 70,
+    "overall": 52,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "score_history": [
+    {
+      "observed_at": "2026-06-26",
+      "score": {
+        "novelty": 65,
+        "practical_impact": 58,
+        "technical_depth": 63,
+        "implementation_potential": 35,
+        "relevance": 30,
+        "community_signal": 48,
+        "summary_confidence": 70,
+        "overall": 52,
+        "weights": {
+          "novelty": 0.2,
+          "practical_impact": 0.2,
+          "technical_depth": 0.15,
+          "implementation_potential": 0.15,
+          "relevance": 0.15,
+          "community_signal": 0.1,
+          "summary_confidence": 0.05
+        }
+      }
+    }
+  ],
+  "community": {
+    "comments": 1,
+    "discussion": 0,
+    "upvotes": 5
+  },
+  "metadata_completeness": 6
+}
