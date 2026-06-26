@@ -1,0 +1,24 @@
+name: scout-daily
+
+on:
+  schedule:
+    - cron: '15 13 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-scout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: Run Scout pipeline
+        env:
+          SCOUT_DATA_DIR: .scout
+        run: |
+          go run ./cmd/scout run
