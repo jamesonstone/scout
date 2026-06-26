@@ -15,9 +15,7 @@ func TestRenderDailyIncludesRequiredSections(t *testing.T) {
 		WhyItMatters:        []string{"High signal."},
 		ImplementationAngle: []string{"Easy to integrate."},
 		Caveat:              "Needs real-world validation.",
-		ExecutiveSummary:    "A short executive summary.",
 		Recommendation:      RecommendationRead,
-		EstimatedPriority:   "Immediate",
 		Score:               ScoreBreakdown{Overall: 88},
 		Links:               Links{HuggingFace: "hf", Arxiv: "arxiv", GitHub: []string{"gh"}, Paper: "paper"},
 	}
@@ -37,9 +35,7 @@ func TestRenderDailyUsesNALabelForEmptyCategories(t *testing.T) {
 		WhyItMatters:        []string{"High signal."},
 		ImplementationAngle: []string{"Easy to integrate."},
 		Caveat:              "Needs validation.",
-		ExecutiveSummary:    "A short executive summary.",
 		Recommendation:      RecommendationRead,
-		EstimatedPriority:   "Immediate",
 		Score:               ScoreBreakdown{Overall: 88},
 	}
 	body := RenderDaily(day, []PaperRecord{paper}, "Themes are sparse.", "/tmp/monthly.md")

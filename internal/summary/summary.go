@@ -55,28 +55,6 @@ func (Builder) Caveat(paper model.Paper) string {
 	}
 }
 
-func (Builder) ExecutiveSummary(paper model.Paper, score model.ScoreBreakdown) string {
-	parts := []string{
-		fmt.Sprintf("%s scores %d/100 for a mix of novelty, practical impact, and relevance to AI-agent and software-engineering workflows.", cleanTitle(paper.Title), score.Overall),
-		truncateWords(paperSignalText(paper), 90),
-	}
-	summary := strings.Join(compact(parts), " ")
-	return truncateWords(summary, 300)
-}
-
-func (Builder) ReadingPriority(score int) string {
-	switch {
-	case score >= 85:
-		return "Immediate — skim today and queue a deeper read this week"
-	case score >= 70:
-		return "High — skim this week if you work on agents, evaluation, or infrastructure"
-	case score >= 55:
-		return "Medium — revisit when adjacent roadmap work appears"
-	default:
-		return "Low — archive unless the topic is directly relevant"
-	}
-}
-
 func (Builder) ExecutiveSignal(papers []model.PaperRecord, day string) string {
 	if len(papers) == 0 {
 		return fmt.Sprintf("No papers were available for %s.", day)

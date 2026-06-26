@@ -7,6 +7,8 @@ import (
 	"path/filepath"
 	"regexp"
 	"strings"
+
+	"github.com/jamesonstone/scout/internal/artifact"
 )
 
 type ValidationResult struct {
@@ -134,7 +136,7 @@ func validateRequiredContent(outDir string) error {
 	if err != nil {
 		return err
 	}
-	for _, token := range []string{"Executive Signal", "Top Papers", "Additional Papers", "Watchlist", "Archive", "Innovation Summary", "Why It Matters", "Implementation Angle", "Caveat", "Executive Summary", "Reading Priority"} {
+	for _, token := range []string{"Executive Signal", "Top Papers", "Additional Papers", "Watchlist", "Archive", "Innovation Summary", "Why It Matters", "Implementation Angle", "Caveat"} {
 		if !strings.Contains(string(dailyBody), token) {
 			return fmt.Errorf("daily page missing %q", token)
 		}
@@ -174,6 +176,9 @@ func validateScoreJSON(root string) error {
 		}
 		data, err := os.ReadFile(file)
 		if err != nil {
+			return err
+		}
+		if err := artifact.ValidatePaperRecordJSON(file, data); err != nil {
 			return err
 		}
 		if err := json.Unmarshal(data, &payload); err != nil {

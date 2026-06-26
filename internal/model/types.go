@@ -57,33 +57,19 @@ type Weights struct {
 	SummaryConfidence       float64 `json:"summary_confidence"`
 }
 
-type ScoreSnapshot struct {
-	ObservedAt string         `json:"observed_at"`
-	Score      ScoreBreakdown `json:"score"`
-}
-
 type PaperRecord struct {
-	ID                   string          `json:"id"`
-	Title                string          `json:"title"`
-	Authors              []string        `json:"authors,omitempty"`
-	Categories           []string        `json:"categories,omitempty"`
-	PublishedAt          string          `json:"published_at,omitempty"`
-	FirstSeen            string          `json:"first_seen"`
-	ObservedDates        []string        `json:"observed_dates"`
-	Abstract             string          `json:"abstract,omitempty"`
-	Markdown             string          `json:"markdown,omitempty"`
-	InnovationSummary    string          `json:"innovation_summary"`
-	WhyItMatters         []string        `json:"why_it_matters"`
-	ImplementationAngle  []string        `json:"implementation_angle"`
-	Caveat               string          `json:"caveat"`
-	ExecutiveSummary     string          `json:"executive_summary"`
-	EstimatedPriority    string          `json:"estimated_reading_priority"`
-	Recommendation       Recommendation  `json:"recommendation"`
-	Links                Links           `json:"links"`
-	Score                ScoreBreakdown  `json:"score"`
-	ScoreHistory         []ScoreSnapshot `json:"score_history"`
-	Community            map[string]int  `json:"community,omitempty"`
-	MetadataCompleteness int             `json:"metadata_completeness"`
+	ID                  string         `json:"id"`
+	Title               string         `json:"title"`
+	FirstSeen           string         `json:"first_seen"`
+	ObservedDates       []string       `json:"observed_dates"`
+	Score               ScoreBreakdown `json:"score"`
+	Recommendation      Recommendation `json:"recommendation"`
+	Categories          []string       `json:"categories,omitempty"`
+	InnovationSummary   string         `json:"innovation_summary"`
+	WhyItMatters        []string       `json:"why_it_matters"`
+	ImplementationAngle []string       `json:"implementation_angle"`
+	Caveat              string         `json:"caveat"`
+	Links               Links          `json:"links"`
 }
 
 type DailyObservation struct {

@@ -84,6 +84,7 @@ const pageTemplates = `
 <section class="panel archive-note">
   <h2>Archive</h2>
   <p>Daily record count: {{.Day.ArchiveCount}}. Persistent paper JSON lives under <a href="{{asset .Site.BasePath "data/index.json"}}">public data</a>.</p>
+  <ol class="index-list compact">{{range .Day.Archive}}<li><a href="{{.URL}}">{{.Record.Title}}</a><span>{{.Score}}/100 · {{.Record.Recommendation}}</span></li>{{end}}</ol>
 </section>
 {{template "pageEnd" .}}{{end}}
 
@@ -129,13 +130,10 @@ const pageTemplates = `
     <ul>{{range .Paper.Record.ImplementationAngle}}<li>{{.}}</li>{{end}}</ul>
     <h2>Caveat</h2>
     <p>{{.Paper.Record.Caveat}}</p>
-    <h2>Executive Summary</h2>
-    <p>{{.Paper.Record.ExecutiveSummary}}</p>
   </section>
   <section class="section-grid">
     <div class="panel">
-      <h2>Reading Priority</h2>
-      <p>{{.Paper.Record.EstimatedPriority}}</p>
+      <h2>Observation History</h2>
       <p>First seen {{.Paper.FirstSeen}}. Observed {{.Paper.Observed}}.</p>
       <p><a href="{{.Paper.JSONURL}}">Paper JSON record</a></p>
     </div>
@@ -164,8 +162,18 @@ const pageTemplates = `
 {{define "paperSection"}}
 <section class="paper-section">
   <h2>{{.Title}}</h2>
-  {{if .Papers}}<div class="paper-grid">{{range .Papers}}{{template "paperCard" .}}{{end}}</div>{{else}}<p class="empty-state">No papers in this section.</p>{{end}}
+  {{if .Papers}}{{if .Compact}}<div class="list-surface compact-list">{{range .Papers}}{{template "paperRow" .}}{{end}}</div>{{else}}<div class="paper-grid">{{range .Papers}}{{template "paperCard" .}}{{end}}</div>{{end}}{{else}}<p class="empty-state">No papers in this section.</p>{{end}}
 </section>
+{{end}}
+
+{{define "paperRow"}}
+<article class="compact-row">
+  <div>
+    <h3><a href="{{.URL}}">{{.Record.Title}}</a></h3>
+    <p>{{.Record.InnovationSummary}}</p>
+  </div>
+  <div class="row-meta"><span>{{.Score}}/100</span><span>{{.Record.Recommendation}}</span></div>
+</article>
 {{end}}
 
 {{define "paperCard"}}
@@ -180,10 +188,6 @@ const pageTemplates = `
   <ul>{{range .Record.ImplementationAngle}}<li>{{.}}</li>{{end}}</ul>
   <h4>Caveat</h4>
   <p>{{.Record.Caveat}}</p>
-  <h4>Executive Summary</h4>
-  <p>{{.Record.ExecutiveSummary}}</p>
-  <h4>Reading Priority</h4>
-  <p>{{.Record.EstimatedPriority}}</p>
   <h4>Links</h4>
   <ul class="link-stack compact">
     {{range .Links}}<li><a href="{{.URL}}">{{.Label}}</a></li>{{end}}

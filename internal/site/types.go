@@ -31,6 +31,7 @@ type dailyPage struct {
 	Top             []paperPage
 	Additional      []paperPage
 	Watchlist       []paperPage
+	Archive         []paperPage
 	ArchiveCount    int
 }
 
@@ -75,8 +76,9 @@ type pageView struct {
 }
 
 type paperSection struct {
-	Title  string
-	Papers []paperPage
+	Title   string
+	Papers  []paperPage
+	Compact bool
 }
 
 type manifest struct {

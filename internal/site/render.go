@@ -32,8 +32,8 @@ func renderSite(outDir string, data siteData) error {
 			Day:       day,
 			Sections: []paperSection{
 				{Title: "Top Papers", Papers: day.Top},
-				{Title: "Additional Papers", Papers: day.Additional},
-				{Title: "Watchlist", Papers: day.Watchlist},
+				{Title: "Additional Papers", Papers: day.Additional, Compact: true},
+				{Title: "Watchlist", Papers: day.Watchlist, Compact: true},
 			},
 		}
 		if err := renderPage(filepath.Join(outDir, "daily", day.Date, "index.html"), "daily", view); err != nil {

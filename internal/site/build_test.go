@@ -21,9 +21,7 @@ func TestBuildAndValidateStaticSite(t *testing.T) {
 		WhyItMatters:        []string{"It improves production evaluation signal."},
 		ImplementationAngle: []string{"Use the benchmark as a regression suite."},
 		Caveat:              "Needs validation on internal workloads.",
-		ExecutiveSummary:    "A concise summary for engineering readers.",
 		Recommendation:      model.RecommendationRead,
-		EstimatedPriority:   "Immediate",
 		Links:               model.Links{HuggingFace: "https://huggingface.co/papers/2606.00001", Arxiv: "https://arxiv.org/abs/2606.00001"},
 		Score:               model.ScoreBreakdown{Overall: 88, Novelty: 90, PracticalImpact: 85, TechnicalDepth: 80, ImplementationPotential: 86, Relevance: 92, CommunitySignal: 70, SummaryConfidence: 95},
 	})

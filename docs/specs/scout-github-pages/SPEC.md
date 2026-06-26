@@ -10,7 +10,7 @@ skills: []
 
 ## Thesis
 
-Scout remains a standalone repository and publishes a read-only GitHub Pages project site at the project path, expected as `/scout/`. The site is generated from Scout's committed `data/` and `reports/` artifacts and does not fetch Hugging Face, run Go code, or write storage in the browser.
+Scout remains a standalone repository and publishes a read-only GitHub Pages project site at the project path, expected as `/scout/`. The site is generated from Scout's committed curated `data/` and `reports/` artifacts and does not fetch Hugging Face, run Go code, write storage in the browser, or serve full paper text.
 
 ## Current Code Map
 
@@ -28,6 +28,17 @@ Scout remains a standalone repository and publishes a read-only GitHub Pages pro
 - Existing committed artifact paths: `data/papers/*.json`, `data/daily/2026-06/2026-06-26.json`, `reports/daily/2026-06/2026-06-26.md`, `reports/monthly/2026-06.md`.
 - Existing workflow: `.github/workflows/daily-scout.yml` runs `go run ./cmd/scout run` with `SCOUT_DATA_DIR=.scout`; it does not publish Pages or commit artifacts.
 
+## Curated Storage Contract
+
+Scout is a curated intelligence artifact, not an archive of papers.
+
+- Product question: Scout answers "Should I care?" Official paper pages answer "What are all the details?"
+- Transient inputs: the run may fetch markdown, abstract, author metadata, and community signals for scoring and summarization.
+- Committed paper records: store only compact distilled output: title, first/observed dates, score, recommendation, capped categories, innovation summary, why it matters, implementation angle, caveat, and source links.
+- Forbidden committed fields: `markdown`, `abstract`, `authors`, `community`, `score_history`, `metadata_completeness`, rendered executive prose, and reading-priority prose.
+- Size limits: paper JSON must be 8KB or smaller; category lists are capped; daily reports cap full summaries to the highest-signal papers; archive/lower-signal rows stay one-line.
+- Retention stance: raw paper text belongs in ignored `.scout/cache/` or temp storage only. Month-close compaction should preserve this contract for old low-signal records.
+
 ## Reconciliation
 
 - Live behavior matches the desired durable artifact layout: `data/papers/<paper-id>.json`, `data/daily/YYYY-MM/YYYY-MM-DD.json`, `reports/daily/YYYY-MM/YYYY-MM-DD.md`, and `reports/monthly/YYYY-MM.md`.
@@ -41,7 +52,7 @@ Scout remains a standalone repository and publishes a read-only GitHub Pages pro
 - Validate command: `go run ./cmd/scout site validate --out-dir public --base-path /scout/`.
 - Publish directory: `public/`, generated deterministically and suitable for `actions/upload-pages-artifact`.
 - Base path: `/scout/`, configurable with `--base-path` for local previews or repository renames.
-- Data strategy: copy JSON artifacts from `data/` to `public/data/` and write `public/data/index.json` as a static manifest.
+- Data strategy: copy compact JSON artifacts from `data/` to `public/data/` and write `public/data/index.json` as a static manifest. `site build` fails if source paper records violate the curated storage contract.
 - Asset strategy: write `public/assets/styles.css` and `public/.nojekyll`; no JavaScript is required.
 - Routes:
   - `/scout/` -> homepage.
@@ -55,7 +66,9 @@ Scout remains a standalone repository and publishes a read-only GitHub Pages pro
 ## File Edits
 
 - Add `pkg/cli/site.go` for `scout site build` and `scout site validate`.
+- Add `internal/artifact/` for the curated committed-artifact contract, paper JSON size limit, forbidden raw fields, and compact-list limits.
 - Add `internal/site/` for static site loading, rendering, styles, validation, and tests.
+- Update `internal/storage/` and `internal/pipeline/` so committed paper records are compact curated summaries, while raw fetched text remains transient.
 - Update `Makefile` with `site-build` and `site-validate`.
 - Add `.github/workflows/pages.yml` for GitHub Actions Pages artifact deployment from `public/`.
 - Update `README.md` with site generation, Pages deployment, and Codex automation flow.
@@ -67,10 +80,11 @@ Scout remains a standalone repository and publishes a read-only GitHub Pages pro
 - Current file/symbol map is recorded in this spec.
 - Static site architecture, route structure, data strategy, base path, and publish directory are recorded in this spec.
 - `scout site build` consumes existing artifacts and writes a static output directory.
-- `scout site validate` checks required pages, required daily/monthly sections, internal base-path links, and JSON score objects.
-- Daily pages show Executive Signal, Top Papers, Additional Papers, Watchlist, Archive, score, recommendation, innovation summary, why it matters, implementation angle, caveat, executive summary, source links, and reading priority.
+- `scout site validate` checks required pages, required daily/monthly sections, internal base-path links, JSON score objects, paper JSON size, and forbidden raw fields.
+- Daily pages show Executive Signal, Top Papers, Additional Papers, Watchlist, Archive, score, recommendation, innovation summary, why it matters, implementation angle, caveat, and source links.
 - Monthly pages show Top 10 papers, Rising Papers, Themes, and Complete Monthly Index.
 - Paper pages show source links and score breakdowns.
+- Committed paper records and generated `public/data/papers/*.json` omit raw markdown, full abstracts, authors, raw community blobs, score history arrays, metadata completeness counters, and duplicated rendered prose.
 - The Pages workflow publishes static output only; it does not fetch Hugging Face at page view time.
 
 ## Validation Plan

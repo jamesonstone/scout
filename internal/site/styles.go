@@ -192,6 +192,33 @@ h4 {
   gap: 12px;
 }
 
+.compact-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.compact-row:last-child {
+  border-bottom: 0;
+}
+
+.compact-row h3,
+.compact-row p {
+  margin-bottom: 6px;
+}
+
+.row-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+  color: var(--muted);
+  font-weight: 750;
+  white-space: nowrap;
+}
+
 .paper-card p,
 .panel p,
 .paper-detail li {
@@ -366,9 +393,16 @@ h4 {
 
   .paper-rank li,
   .archive-row,
+  .compact-row,
   .theme-list li {
     align-items: flex-start;
+    display: flex;
     flex-direction: column;
+  }
+
+  .row-meta {
+    justify-content: flex-start;
+    white-space: normal;
   }
 }
 `

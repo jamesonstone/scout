@@ -9,6 +9,7 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/jamesonstone/scout/internal/artifact"
 	"github.com/jamesonstone/scout/internal/model"
 )
 
@@ -100,9 +101,16 @@ func loadPaperRecords(root string) (map[string]model.PaperRecord, error) {
 	}
 	records := make(map[string]model.PaperRecord, len(files))
 	for _, file := range files {
-		var record model.PaperRecord
-		if err := readJSON(file, &record); err != nil {
+		data, err := os.ReadFile(file)
+		if err != nil {
 			return nil, fmt.Errorf("read paper record %s: %w", file, err)
+		}
+		if err := artifact.ValidatePaperRecordJSON(file, data); err != nil {
+			return nil, err
+		}
+		var record model.PaperRecord
+		if err := json.Unmarshal(data, &record); err != nil {
+			return nil, fmt.Errorf("decode paper record %s: %w", file, err)
 		}
 		if record.ID == "" {
 			return nil, fmt.Errorf("paper record %s is missing id", file)
@@ -160,6 +168,7 @@ func dailyFromRecords(cfg Config, date string, records []model.PaperRecord) dail
 	}
 	for _, record := range records {
 		paper := paperPageFromRecord(cfg.BasePath, record)
+		page.Archive = append(page.Archive, paper)
 		switch record.Recommendation {
 		case model.RecommendationRead:
 			page.Top = append(page.Top, paper)
@@ -168,6 +177,10 @@ func dailyFromRecords(cfg Config, date string, records []model.PaperRecord) dail
 		default:
 			page.Watchlist = append(page.Watchlist, paper)
 		}
+	}
+	if len(page.Top) > artifact.MaxDailyFullSummaries {
+		page.Additional = append(page.Top[artifact.MaxDailyFullSummaries:], page.Additional...)
+		page.Top = page.Top[:artifact.MaxDailyFullSummaries]
 	}
 	return page
 }
@@ -180,7 +193,7 @@ func monthlyFromIDs(basePath, month string, ids []string, records map[string]mod
 		papers = append(papers, paperPageFromRecord(basePath, record))
 	}
 	page := monthlyPage{Month: month, URL: siteURL(basePath, "monthly/"+month+"/"), AllPapers: papers, Themes: themesForRecords(monthRecords)}
-	page.Top = limitPapers(papers, 10)
+	page.Top = limitPapers(papers, artifact.MaxMonthlyTopPapers)
 	for _, paper := range papers {
 		if paper.Score >= 70 {
 			page.Rising = append(page.Rising, paper)

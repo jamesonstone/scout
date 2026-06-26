@@ -9,13 +9,13 @@
 
 **`scout` is a research-intelligence pipeline for engineers who want the highest-value AI papers without reading dozens of titles every day.**
 
-Scout ingests the Hugging Face Daily Papers feed, enriches each paper with metadata and markdown, scores it across explicit weighted dimensions, persists durable paper records, and publishes executive-style daily and monthly intelligence briefings.
+Scout ingests the Hugging Face Daily Papers feed, enriches each paper with metadata and markdown during the run, scores it across explicit weighted dimensions, persists compact curated paper records, and publishes executive-style daily and monthly intelligence briefings.
 
 ## Why Scout Exists
 
 - 🧠 Replace title-only discovery with concise signal-dense paper intelligence.
 - 📈 Maintain a continuously reranked monthly leaderboard instead of static daily ordering.
-- 🗃️ Preserve historical paper records, score breakdowns, and observation history.
+- 🗃️ Preserve compact paper records, score breakdowns, and observation history without mirroring full papers.
 - 🔁 Keep execution deterministic, incremental, and easy to audit.
 - 🛠️ Bias summaries toward implementation implications for AI agents, LLM systems, evaluation, memory, and ML infrastructure work.
 
@@ -55,10 +55,22 @@ scout site validate --out-dir public --base-path /scout/
 
 Scout writes durable artifacts beneath the configured data directory:
 
-- `data/papers/<paper-id>.json` — persistent per-paper records, summaries, links, and score history.
+- `data/papers/<paper-id>.json` — compact curated per-paper records with score, recommendation, distilled summaries, links, and observation dates.
 - `data/daily/YYYY-MM/YYYY-MM-DD.json` — observed paper IDs for each daily run.
 - `reports/daily/YYYY-MM/YYYY-MM-DD.md` — daily executive briefing.
 - `reports/monthly/YYYY-MM.md` — continuously reranked monthly briefing.
+
+## Storage Contract
+
+Scout answers "Should I care?" The official paper answers "What are all the details?"
+
+Committed artifacts are curated summaries only:
+
+- raw `markdown`, full `abstract`, full `authors`, raw community blobs, score history arrays, and duplicated rendered prose are not committed in paper JSON;
+- raw paper text may be fetched during a run for scoring and summarization, but stays transient in memory or ignored `.scout/cache/` paths;
+- paper JSON records are capped at 8KB, with category and link lists capped before persistence;
+- daily reports give full treatment only to the highest-signal papers, while lower-signal and archive entries stay compact;
+- the static site optimizes for title, score, recommendation, concrete innovation, why it matters, implementation angle, caveat, and links out.
 
 ## Deterministic Scoring Model
 

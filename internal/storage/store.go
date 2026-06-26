@@ -10,6 +10,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/jamesonstone/scout/internal/artifact"
 	"github.com/jamesonstone/scout/internal/model"
 )
 
@@ -26,7 +27,11 @@ func (s Store) SavePaper(record model.PaperRecord) error {
 	if err := os.MkdirAll(filepath.Dir(path), 0o755); err != nil {
 		return err
 	}
-	return writeJSON(path, record)
+	data, err := artifact.MarshalPaperRecord(record)
+	if err != nil {
+		return fmt.Errorf("prepare paper record %s: %w", record.ID, err)
+	}
+	return writeFile(path, data)
 }
 
 func (s Store) LoadPaper(id string) (model.PaperRecord, bool, error) {
