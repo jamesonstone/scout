@@ -154,23 +154,34 @@ func parsePaper(value any) model.Paper {
 	if !ok {
 		return model.Paper{}
 	}
+	if nested, ok := mapped["paper"].(map[string]any); ok {
+		merged := cloneMap(nested)
+		for _, key := range []string{"title", "summary", "publishedAt", "mediaUrls", "numComments", "organization"} {
+			if _, exists := merged[key]; !exists {
+				if value, exists := mapped[key]; exists {
+					merged[key] = value
+				}
+			}
+		}
+		return parsePaper(merged)
+	}
 	paper := model.Paper{
 		ID:         firstString(mapped, "arxiv_id", "id", "slug"),
 		Title:      firstString(mapped, "title"),
-		Abstract:   firstString(mapped, "abstract", "summary", "description"),
+		Abstract:   firstString(mapped, "abstract", "summary", "description", "ai_summary"),
 		Authors:    stringSlice(mapped["authors"]),
-		Categories: stringSlice(firstValue(mapped, "categories", "tags")),
+		Categories: stringSlice(firstValue(mapped, "categories", "tags", "ai_keywords")),
 		Links: model.Links{
 			HuggingFace: firstString(mapped, "hf_paper_url", "url", "paper_url"),
 			Arxiv:       firstString(mapped, "arxiv_url"),
 			Paper:       firstString(mapped, "pdf_url", "paper_pdf_url", "paper_link"),
 			PDF:         firstString(mapped, "pdf_url"),
-			GitHub:      stringSlice(firstValue(mapped, "github_urls", "github", "code_urls")),
-			Project:     stringSlice(firstValue(mapped, "project_urls", "resources")),
+			GitHub:      stringSlice(firstValue(mapped, "github_urls", "github", "code_urls", "githubUrl")),
+			Project:     stringSlice(firstValue(mapped, "project_urls", "resources", "projectPage")),
 		},
 		Upvotes:    intValue(firstValue(mapped, "upvotes", "likes")),
-		Comments:   intValue(firstValue(mapped, "comments_count", "comments")),
-		Discussion: intValue(firstValue(mapped, "discussion_count", "discussions")),
+		Comments:   intValue(firstValue(mapped, "comments_count", "comments", "numComments")),
+		Discussion: intValue(firstValue(mapped, "discussion_count", "discussions", "discussionCount")),
 	}
 	if paper.ID == "" && paper.Links.Arxiv != "" {
 		paper.ID = trailingID(paper.Links.Arxiv)
@@ -178,7 +189,7 @@ func parsePaper(value any) model.Paper {
 	if paper.ID == "" && paper.Links.HuggingFace != "" {
 		paper.ID = trailingID(paper.Links.HuggingFace)
 	}
-	paper.PublishedAt = parseDate(firstString(mapped, "publication_date", "published_at", "created_at"))
+	paper.PublishedAt = parseDate(firstString(mapped, "publication_date", "published_at", "publishedAt", "created_at", "submittedOnDailyAt"))
 	if paper.Links.HuggingFace == "" && paper.ID != "" {
 		paper.Links.HuggingFace = strings.TrimRight("https://huggingface.co/papers/"+paper.ID, "/")
 	}
@@ -187,6 +198,14 @@ func parsePaper(value any) model.Paper {
 	}
 	paper.RawCommunity = map[string]int{"upvotes": paper.Upvotes, "comments": paper.Comments, "discussion": paper.Discussion}
 	return paper
+}
+
+func cloneMap(source map[string]any) map[string]any {
+	out := make(map[string]any, len(source))
+	for key, value := range source {
+		out[key] = value
+	}
+	return out
 }
 
 func firstValue(mapped map[string]any, keys ...string) any {

@@ -28,3 +28,22 @@ func TestRenderDailyIncludesRequiredSections(t *testing.T) {
 		}
 	}
 }
+
+func TestRenderDailyUsesNALabelForEmptyCategories(t *testing.T) {
+	day, _ := time.Parse("2006-01-02", "2026-01-02")
+	paper := PaperRecord{
+		Title:               "Uncategorized Paper",
+		InnovationSummary:   "Uncategorized Paper introduces a useful result.",
+		WhyItMatters:        []string{"High signal."},
+		ImplementationAngle: []string{"Easy to integrate."},
+		Caveat:              "Needs validation.",
+		ExecutiveSummary:    "A short executive summary.",
+		Recommendation:      RecommendationRead,
+		EstimatedPriority:   "Immediate",
+		Score:               ScoreBreakdown{Overall: 88},
+	}
+	body := RenderDaily(day, []PaperRecord{paper}, "Themes are sparse.", "/tmp/monthly.md")
+	if !strings.Contains(body, "- **Categories:** N/A") {
+		t.Fatalf("expected N/A category label in report")
+	}
+}
