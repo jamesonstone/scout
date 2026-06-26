@@ -4,10 +4,10 @@
 ███████╗██║     ██║   ██║██║   ██║   ██║
 ╚════██║██║     ██║   ██║██║   ██║   ██║
 ███████║╚██████╗╚██████╔╝╚██████╔╝   ██║
-╚══════╝ ╚═════╝ ╚═════╝  ╚═════╝    ╚═╝   deterministic daily papers intelligence
+╚══════╝ ╚═════╝ ╚═════╝  ╚═════╝    ╚═╝   daily papers intelligence distillation
 ```
 
-**`scout` is a deterministic research-intelligence pipeline for engineers who want the highest-value AI papers without reading dozens of titles every day.**
+**`scout` is a research-intelligence pipeline for engineers who want the highest-value AI papers without reading dozens of titles every day.**
 
 Scout ingests the Hugging Face Daily Papers feed, enriches each paper with metadata and markdown, scores it across explicit weighted dimensions, persists durable paper records, and publishes executive-style daily and monthly intelligence briefings.
 
@@ -117,3 +117,8 @@ Current repository inspection found no pre-existing implementation for schedulin
 ## License
 
 MIT.
+
+## Maintainer
+
+❤️ Lovingly overthought by [Jameson Stone](https://github.com/jamesonstone)
+🪖 Field notes at [jamesonstone.io](https://jamesonstone.io)
