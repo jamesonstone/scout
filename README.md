@@ -1,19 +1,10 @@
 ```text
-╭──────────────────────────────────────────────────────────────────────╮
-│                                                                      │
-│   S                                                                  │
-│      scan Hugging Face Daily Papers on a deterministic schedule      │
-│                                                                      │
-│   C                                                                  │
-│      convert each paper into a high-signal intelligence brief        │
-│                                                                      │
-│   O                                                                  │
-│      order the month by durable engineering value                    │
-│                                                                      │
-├──────────────────────────────────────────────────────────────────────┤
-│                Scout research intelligence pipeline                  │
-│            daily briefing → monthly rerank → durable archive         │
-╰──────────────────────────────────────────────────────────────────────╯
+███████╗ ██████╗ ██████╗ ██╗   ██╗████████╗
+██╔════╝██╔════╝██╔═══██╗██║   ██║╚══██╔══╝
+███████╗██║     ██║   ██║██║   ██║   ██║
+╚════██║██║     ██║   ██║██║   ██║   ██║
+███████║╚██████╗╚██████╔╝╚██████╔╝   ██║
+╚══════╝ ╚═════╝ ╚═════╝  ╚═════╝    ╚═╝   deterministic daily papers intelligence
 ```
 
 **`scout` is a deterministic research-intelligence pipeline for engineers who want the highest-value AI papers without reading dozens of titles every day.**
