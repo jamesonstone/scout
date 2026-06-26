@@ -43,6 +43,12 @@ scout run
 
 # run a specific day into a custom workspace
 scout run --date 2026-01-02 --data-dir /tmp/scout-output
+
+# build the static GitHub Pages site from committed artifacts
+scout site build --data-dir . --out-dir public --base-path /scout/
+
+# validate generated pages, links, sections, and JSON score records
+scout site validate --out-dir public --base-path /scout/
 ```
 
 ## Output Layout
@@ -97,6 +103,28 @@ Expected observable results:
 ## Scheduled Automation
 
 `.github/workflows/daily-scout.yml` runs the pipeline on a daily cron schedule and supports manual dispatch.
+
+Codex Scheduled Automation is the intended durable research-update path: run Scout for a date, commit the updated `data/` and `reports/` artifacts, build `public/`, validate it, and deliver the result through the Kit-managed issue/branch/PR workflow.
+
+## Static GitHub Pages Site
+
+Scout publishes as its own project site instead of being copied into `jamesonstone.github.io`. The personal site can link to the Scout project URL, but generated Scout artifacts stay in this repository.
+
+The static site build is deterministic and backend-free:
+
+- `go run ./cmd/scout site build --data-dir . --out-dir public --base-path /scout/`
+- `go run ./cmd/scout site validate --out-dir public --base-path /scout/`
+
+Generated output includes:
+
+- `public/index.html` — homepage.
+- `public/daily/index.html` and `public/daily/YYYY-MM-DD/index.html` — daily archive and briefings.
+- `public/monthly/index.html` and `public/monthly/YYYY-MM/index.html` — monthly rankings.
+- `public/papers/<paper-id>/index.html` — paper detail pages.
+- `public/data/**` — copied JSON records and a generated manifest.
+- `public/assets/styles.css` and `public/.nojekyll` — static assets for GitHub Pages.
+
+`.github/workflows/pages.yml` builds and validates `public/`, then deploys it with GitHub Actions Pages. Repository settings should use GitHub Actions as the Pages source. GitHub Pages only serves static files; it does not fetch Hugging Face, execute Go, or mutate Scout storage at page view time.
 
 ## Repository Notes
 
