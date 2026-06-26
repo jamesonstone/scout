@@ -6,6 +6,7 @@ import (
 	"sort"
 	"time"
 
+	"github.com/jamesonstone/scout/internal/artifact"
 	"github.com/jamesonstone/scout/internal/config"
 	"github.com/jamesonstone/scout/internal/scoring"
 	"github.com/jamesonstone/scout/internal/storage"
@@ -51,6 +52,7 @@ func (r Runner) Run(ctx context.Context) (RunResult, error) {
 		}
 		if existed {
 			record = mergeObservedDate(record, day)
+			record = artifact.CompactPaperRecord(record)
 			if err := r.store.SavePaper(record); err != nil {
 				return RunResult{}, err
 			}
@@ -70,28 +72,20 @@ func (r Runner) Run(ctx context.Context) (RunResult, error) {
 		score := r.scorer.Score(paper)
 		recommendation := scoring.Recommendation(score.Overall)
 		record = PaperRecord{
-			ID:                   paper.ID,
-			Title:                paper.Title,
-			Authors:              paper.Authors,
-			Categories:           stableCategories(paper.Categories),
-			PublishedAt:          formatDate(paper.PublishedAt),
-			FirstSeen:            day.Format("2006-01-02"),
-			ObservedDates:        []string{day.Format("2006-01-02")},
-			Abstract:             paper.Abstract,
-			Markdown:             paper.Markdown,
-			InnovationSummary:    r.summary.InnovationSummary(paper),
-			WhyItMatters:         r.summary.WhyItMatters(paper, score),
-			ImplementationAngle:  r.summary.ImplementationAngle(paper, score),
-			Caveat:               r.summary.Caveat(paper),
-			ExecutiveSummary:     r.summary.ExecutiveSummary(paper, score),
-			EstimatedPriority:    r.summary.ReadingPriority(score.Overall),
-			Recommendation:       recommendation,
-			Links:                paper.Links,
-			Score:                score,
-			ScoreHistory:         []ScoreSnapshot{{ObservedAt: day.Format("2006-01-02"), Score: score}},
-			Community:            paper.RawCommunity,
-			MetadataCompleteness: metadataCompleteness(paper),
+			ID:                  paper.ID,
+			Title:               paper.Title,
+			FirstSeen:           day.Format("2006-01-02"),
+			ObservedDates:       []string{day.Format("2006-01-02")},
+			Score:               score,
+			Recommendation:      recommendation,
+			Categories:          stableCategories(paper.Categories),
+			InnovationSummary:   r.summary.InnovationSummary(paper),
+			WhyItMatters:        r.summary.WhyItMatters(paper, score),
+			ImplementationAngle: r.summary.ImplementationAngle(paper, score),
+			Caveat:              r.summary.Caveat(paper),
+			Links:               paper.Links,
 		}
+		record = artifact.CompactPaperRecord(record)
 		if err := r.store.SavePaper(record); err != nil {
 			return RunResult{}, fmt.Errorf("save paper %s: %w", paper.ID, err)
 		}
@@ -219,7 +213,6 @@ func mergeObservedDate(record PaperRecord, day time.Time) PaperRecord {
 	}
 	record.ObservedDates = append(record.ObservedDates, date)
 	sort.Strings(record.ObservedDates)
-	record.ScoreHistory = append(record.ScoreHistory, ScoreSnapshot{ObservedAt: date, Score: record.Score})
 	return record
 }
 
@@ -237,38 +230,5 @@ func stableCategories(categories []string) []string {
 		out = append(out, category)
 	}
 	sort.Strings(out)
-	return out
-}
-
-func formatDate(value time.Time) string {
-	if value.IsZero() {
-		return ""
-	}
-	return value.Format(time.RFC3339)
-}
-
-func metadataCompleteness(paper Paper) int {
-	completeness := 0
-	if paper.Title != "" {
-		completeness += 1
-	}
-	if paper.Abstract != "" {
-		completeness += 1
-	}
-	if len(paper.Authors) > 0 {
-		completeness += 1
-	}
-	if len(paper.Categories) > 0 {
-		completeness += 1
-	}
-	if paper.Links.HuggingFace != "" {
-		completeness += 1
-	}
-	if paper.Links.Arxiv != "" {
-		completeness += 1
-	}
-	if paper.Markdown != "" {
-		completeness += 1
-	}
-	return completeness
+	return artifact.LimitStrings(out, artifact.MaxCategories)
 }

@@ -58,5 +58,5 @@ func (e *cliExitError) Error() string {
 func rootLong() string {
 	return `Scout runs a deterministic research-intelligence pipeline over Hugging Face Daily Papers.
 
-It ingests the daily feed, retrieves paper metadata and markdown, scores papers across explicit weighted dimensions, persists per-paper records, and renders daily and monthly executive briefings.`
+It ingests the daily feed, retrieves paper metadata and markdown for transient scoring and summarization, persists compact curated records, and renders daily and monthly executive briefings.`
 }

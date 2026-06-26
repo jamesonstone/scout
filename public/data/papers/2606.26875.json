@@ -1,0 +1,52 @@
+{
+  "id": "2606.26875",
+  "title": "Information-Aware KV Cache Compression for Long Reasoning",
+  "first_seen": "2026-06-26",
+  "observed_dates": [
+    "2026-06-26"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 98,
+    "technical_depth": 99,
+    "implementation_potential": 65,
+    "relevance": 98,
+    "community_signal": 33,
+    "summary_confidence": 95,
+    "overall": 87,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "Forward Influence",
+    "KV cache",
+    "KV cache compression",
+    "LLMs",
+    "attention weights",
+    "entropy-aware"
+  ],
+  "innovation_summary": "Information-Aware KV Cache Compression for Long Reasoning: Based on the observation, we propose InfoKV, an entropy-aware KV cache compression framework that incorporates information-theoretic signals.",
+  "why_it_matters": [
+    "Overall signal 87/100 driven by novelty 100 and practical impact 98.",
+    "Primary categories: Forward Influence, KV cache, KV cache compression, LLMs, attention weights, entropy-aware.",
+    "Community signal includes 2 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 65/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 99/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.26875",
+    "arxiv": "https://arxiv.org/abs/2606.26875"
+  }
+}

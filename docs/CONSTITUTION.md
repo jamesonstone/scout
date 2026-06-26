@@ -7,14 +7,14 @@ Scout is a deterministic research-intelligence pipeline that turns the Hugging F
 - Replace title-only paper discovery with concise, signal-dense intelligence for engineers.
 - Bias every summary and score toward implementation implications for AI agents, LLM systems, orchestration, evaluation, memory, ML infrastructure, and software engineering.
 - Maintain a continuously reranked monthly leaderboard instead of static daily ordering.
-- Preserve durable, inspectable paper records, score breakdowns, and observation history.
+- Preserve durable, inspectable curated paper records, score breakdowns, and observation history without mirroring full paper text.
 - Keep execution deterministic, incremental, and easy to audit.
 
 ## PRINCIPLES
 
 - **Determinism first.** Identical inputs must produce byte-identical outputs. No randomness, no unsorted map iteration in output, no wall-clock or locale dependence in scoring, summarization, or rendering. Sort before emitting and use UTC for all dates.
-- **Incremental and idempotent.** Re-running any day must be safe and convergent. Reuse existing per-paper records, append (never overwrite) score history, and merge observation dates without duplication.
-- **Auditable artifacts.** Every run writes durable, human-readable JSON and Markdown under the data directory. Scores expose their per-dimension breakdown and weights so any result can be explained.
+- **Incremental and idempotent.** Re-running any day must be safe and convergent. Reuse existing per-paper records and merge observation dates without duplication.
+- **Auditable artifacts.** Every run writes durable, human-readable JSON and Markdown under the data directory. Scores expose their per-dimension breakdown and weights so any result can be explained. Committed paper records are curated summaries only; raw markdown, abstracts, full author lists, and raw community blobs are transient ingestion inputs.
 - **Standard library first.** Reach for the Go stdlib before adding dependencies. New direct dependencies require a clear, documented justification.
 - **Tolerant ingestion, strict output.** Upstream feeds are messy: parse defensively with key fallbacks and graceful degradation. Internal records and reports are strict and well-typed.
 - **Layered separation of concerns.** Presentation (CLI) → orchestration (pipeline) → domain logic (scoring, summary) → I/O (hf client, storage). Business logic never leaks into the CLI or the storage layer.
@@ -32,10 +32,10 @@ Layer map:
 - `pkg/cli/` — Cobra command surface (`root.go`, `run.go`). Owns flag/env resolution, exit codes via `cliExitError`, and wiring of dependencies. The only intentionally public package.
 - `internal/config/` — configuration from `SCOUT_*` environment variables with sensible defaults, overridable by CLI flags; resolves and validates the run date and data directory.
 - `internal/hf/` — Hugging Face HTTP client: retry/backoff, configurable timeout and user agent, and defensive JSON/Markdown parsing.
-- `internal/model/` — domain types and JSON contracts (`Paper`, `PaperRecord`, `ScoreBreakdown`, `Weights`, `ScoreSnapshot`, `DailyObservation`, `RunResult`, `Recommendation`). Single source of truth for the persisted schema.
+- `internal/model/` — domain types and JSON contracts (`Paper`, `PaperRecord`, `ScoreBreakdown`, `Weights`, `DailyObservation`, `RunResult`, `Recommendation`). Single source of truth for the persisted schema.
 - `internal/pipeline/` — orchestration `Runner`, dedup/merge logic, and report rendering (`render.go`); re-exports `model` types via aliases.
 - `internal/scoring/` — deterministic weighted keyword scorer and recommendation thresholds.
-- `internal/summary/` — deterministic, template-free text builders for innovation summary, why-it-matters, implementation angle, caveat, executive summary, and signal.
+- `internal/summary/` — deterministic, template-free text builders for innovation summary, why-it-matters, implementation angle, caveat, and executive signal.
 - `internal/storage/` — filesystem persistence of per-paper JSON, daily observations, and Markdown reports.
 - `internal/prompt/` — embedded `*.tmpl` assets via `go:embed`.
 
@@ -45,18 +45,31 @@ Data flow: `cli.run` builds `config`, `hf.Client`, and `storage.Store`, construc
 
 Durable artifacts live beneath the configured data directory (default `.scout`):
 
-- `data/papers/<paper-id>.json` — per-paper record, summaries, links, score, and score history.
+- `data/papers/<paper-id>.json` — compact curated per-paper record with score, recommendation, categories, distilled summaries, observation dates, and links.
 - `data/daily/YYYY-MM/YYYY-MM-DD.json` — observed paper IDs for a daily run.
 - `reports/daily/YYYY-MM/YYYY-MM-DD.md` — daily executive briefing.
 - `reports/monthly/YYYY-MM.md` — continuously reranked monthly briefing.
 
 File paths are derived deterministically; paper IDs are sanitized for filesystem safety. JSON is written pretty-printed with a trailing newline; directories are created on demand.
 
+### Curated Storage Contract
+
+Scout answers "Should I care?" The official paper answers "What are all the details?"
+
+Committed artifacts must remain curated intelligence, not paper mirrors:
+
+- `PaperRecord` JSON must not include `markdown`, `abstract`, `authors`, `community`, `score_history`, `metadata_completeness`, rendered executive prose, or reading-priority prose.
+- Raw markdown and abstracts may be fetched during a run for scoring and summarization, but must stay transient, for example under ignored `.scout/cache/` or process memory.
+- Paper JSON records are capped at 8KB and category/link lists are capped before persistence.
+- Daily reports cap full paper summaries to the highest-signal papers; archive and lower-signal rows are one-line entries.
+- Monthly reports and pages keep full ranking emphasis to Top 10 and otherwise use compact indexes.
+- GitHub Pages publishes only static curated HTML and compact JSON. It must not fetch Hugging Face, run Go, mutate storage, or serve full paper text.
+
 ## DOMAIN MODEL AND SCORING
 
-- **Temporal provenance is mandatory on records.** Every `PaperRecord` carries `FirstSeen`, `ObservedDates`, and `ScoreHistory`. New data models must preserve equivalent creation/observation/update provenance; do not introduce records without durable temporal tracking.
+- **Temporal provenance is mandatory on records.** Every `PaperRecord` carries `FirstSeen` and `ObservedDates`. New data models must preserve equivalent creation/observation provenance; do not introduce records without durable temporal tracking.
 - **Scoring weights must sum to 1.0** and every component and overall score is clamped to `0–100`. Current weights: novelty `0.20`, practical impact `0.20`, technical depth `0.15`, implementation potential `0.15`, relevance `0.15`, community signal `0.10`, summary confidence `0.05`.
-- **Recommendation thresholds:** `>= 80` → Read, `>= 60` → Worth Watching, otherwise Skip. Reading-priority bands: `>= 85`, `>= 70`, `>= 55`, else low.
+- **Recommendation thresholds:** `>= 80` → Read, `>= 60` → Worth Watching, otherwise Skip.
 - Scoring is pure keyword/metadata heuristics over lowercased text. Changing weights, keywords, or thresholds is a behavioral change: update tests and any affected docs in the same change.
 - Summaries are deterministic string construction, not generated prose. No external model calls.
 

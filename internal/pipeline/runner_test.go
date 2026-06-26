@@ -66,7 +66,7 @@ func TestRunnerProducesDailyAndMonthlyReportsAndAvoidsReprocessing(t *testing.T)
 		t.Fatalf("read daily report: %v", err)
 	}
 	text := string(body)
-	for _, token := range []string{"## Executive Signal", "### 1.", "**Recommendation:**", "**Implementation Angle:**", "**Caveat:**", "**Estimated reading priority:**"} {
+	for _, token := range []string{"## Executive Signal", "## Top Papers", "## Additional Papers", "## Watchlist", "## Archive", "Agent System Paper"} {
 		if !strings.Contains(text, token) {
 			t.Fatalf("missing %q in daily report", token)
 		}
@@ -87,5 +87,10 @@ func TestRunnerProducesDailyAndMonthlyReportsAndAvoidsReprocessing(t *testing.T)
 	}
 	if !strings.Contains(string(data), "2026-01-03") {
 		t.Fatalf("expected observed date update in %s", paperPath)
+	}
+	for _, token := range []string{`"markdown"`, `"abstract"`, `"authors"`, `"community"`, `"score_history"`, `"metadata_completeness"`} {
+		if strings.Contains(string(data), token) {
+			t.Fatalf("stored paper record contains raw or bulky field %s", token)
+		}
 	}
 }

@@ -1,4 +1,4 @@
-.PHONY: build test lint fmt vet clean install install-git-hooks tidy
+.PHONY: build test lint fmt vet clean install install-git-hooks tidy site-build site-validate
 
 BINARY_NAME=scout
 VERSION?=$(shell git describe --tags --abbrev=0 --match 'v[0-9]*.[0-9]*.[0-9]*' 2>/dev/null || echo dev)
@@ -34,5 +34,11 @@ clean:
 
 tidy:
 	go mod tidy
+
+site-build:
+	go run ./cmd/scout site build --data-dir . --out-dir public --base-path /scout/
+
+site-validate:
+	go run ./cmd/scout site validate --out-dir public --base-path /scout/
 
 all: fmt vet test build
