@@ -95,7 +95,7 @@ func (Builder) ExecutiveSignal(papers []model.PaperRecord, day string) string {
 	if len(themes) == 0 {
 		themes = []string{"AI systems", "evaluation", "infrastructure"}
 	}
-	return fmt.Sprintf("%s is led by %s, with the strongest papers skewing toward production-minded advances that pair novelty with implementation value.", day, strings.Join(themes, ", "))
+	return fmt.Sprintf("%s is led by %s, with the strongest papers skewing toward production-minded advances that pair novelty with implementation value.", day, joinThemes(themes))
 }
 
 func cleanTitle(title string) string {
@@ -198,6 +198,19 @@ func normalizeInnovationDetail(text string) string {
 		return "a targeted research contribution for modern AI systems"
 	}
 	return text
+}
+
+func joinThemes(themes []string) string {
+	switch len(themes) {
+	case 0:
+		return "cross-cutting AI systems work"
+	case 1:
+		return themes[0]
+	case 2:
+		return themes[0] + " and " + themes[1]
+	default:
+		return strings.Join(themes[:len(themes)-1], ", ") + ", and " + themes[len(themes)-1]
+	}
 }
 
 func compactBullets(items []string, max int) []string {

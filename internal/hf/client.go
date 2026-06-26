@@ -100,10 +100,12 @@ func (c Client) getText(ctx context.Context, endpoint string) (string, error) {
 		if err != nil {
 			lastErr = err
 		} else {
-			defer resp.Body.Close()
 			data, readErr := io.ReadAll(resp.Body)
+			closeErr := resp.Body.Close()
 			if readErr != nil {
 				lastErr = readErr
+			} else if closeErr != nil {
+				lastErr = closeErr
 			} else if resp.StatusCode >= 200 && resp.StatusCode < 300 {
 				return string(data), nil
 			} else {

@@ -5,6 +5,9 @@ on:
     - cron: '15 13 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   run-scout:
     runs-on: ubuntu-latest

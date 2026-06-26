@@ -7,6 +7,12 @@ import (
 	"github.com/jamesonstone/scout/internal/model"
 )
 
+const (
+	technicalBaseScoreFloor   = 35
+	technicalAbstractWordStep = 6
+	technicalBaseScoreCap     = 55
+)
+
 var defaultWeights = model.Weights{
 	Novelty:                 0.20,
 	PracticalImpact:         0.20,
@@ -31,7 +37,7 @@ func (Scorer) Score(paper model.Paper) model.ScoreBreakdown {
 		"deploy": 12, "production": 12, "real-world": 10, "inference": 10, "latency": 10, "cost": 8, "efficiency": 10,
 		"evaluation": 8, "tool": 8, "framework": 8, "infrastructure": 12, "software": 10,
 	})
-	technical := keywordScore(text, min(35+len(strings.Fields(paper.Abstract))/6, 55), map[string]int{
+	technical := keywordScore(text, min(technicalBaseScoreFloor+len(strings.Fields(paper.Abstract))/technicalAbstractWordStep, technicalBaseScoreCap), map[string]int{
 		"algorithm": 10, "architecture": 10, "theorem": 12, "optimization": 8, "dataset": 6, "benchmark": 8,
 		"ablation": 10, "training": 8, "alignment": 10, "diffusion": 8, "transformer": 8,
 	})
