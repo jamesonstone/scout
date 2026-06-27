@@ -47,16 +47,18 @@ type monthlyPage struct {
 }
 
 type paperPage struct {
-	Record        model.PaperRecord
-	URL           string
-	JSONURL       string
-	Categories    string
-	FirstSeen     string
-	PublishedDate string
-	Observed      string
-	Score         int
-	ScoreClass    string
-	Links         []siteLink
+	Record                   model.PaperRecord
+	URL                      string
+	JSONURL                  string
+	Categories               string
+	FirstSeen                string
+	PublishedDate            string
+	Observed                 string
+	Score                    int
+	ScoreClass               string
+	Links                    []siteLink
+	ExecutiveSummary         string
+	EstimatedReadingPriority string
 }
 
 type siteLink struct {

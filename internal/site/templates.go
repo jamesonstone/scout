@@ -137,12 +137,16 @@ const pageTemplates = `
   <section class="panel">
     <h2>Innovation Summary</h2>
     <p>{{.Paper.Record.InnovationSummary}}</p>
+    <h2>Executive Summary</h2>
+    <p>{{.Paper.ExecutiveSummary}}</p>
     <h2>Why It Matters</h2>
     <ul>{{range .Paper.Record.WhyItMatters}}<li>{{.}}</li>{{end}}</ul>
     <h2>Implementation Angle</h2>
     <ul>{{range .Paper.Record.ImplementationAngle}}<li>{{.}}</li>{{end}}</ul>
     <h2>Caveat</h2>
     <p>{{.Paper.Record.Caveat}}</p>
+    <h2>Estimated Reading Priority</h2>
+    <p>{{.Paper.EstimatedReadingPriority}}</p>
   </section>
   <section class="section-grid">
     <div class="panel">
@@ -197,12 +201,16 @@ const pageTemplates = `
   <p class="paper-date">Published {{.PublishedDate}} · Fetched {{.FirstSeen}}</p>
   <h4>Innovation Summary</h4>
   <p class="innovation">{{.Record.InnovationSummary}}</p>
+  <h4>Executive Summary</h4>
+  <p>{{.ExecutiveSummary}}</p>
   <h4>Why It Matters</h4>
   <ul>{{range .Record.WhyItMatters}}<li>{{.}}</li>{{end}}</ul>
   <h4>Implementation Angle</h4>
   <ul>{{range .Record.ImplementationAngle}}<li>{{.}}</li>{{end}}</ul>
   <h4>Caveat</h4>
   <p>{{.Record.Caveat}}</p>
+  <h4>Estimated Reading Priority</h4>
+  <p>{{.EstimatedReadingPriority}}</p>
   <h4>Links</h4>
   <ul class="link-stack compact">
     {{range .Links}}<li><a href="{{.URL}}">{{.Label}}</a></li>{{end}}

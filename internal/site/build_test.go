@@ -50,7 +50,7 @@ func TestBuildAndValidateStaticSite(t *testing.T) {
 	if err != nil {
 		t.Fatalf("read daily page: %v", err)
 	}
-	for _, token := range []string{"Papers fetched on 2026-06-26", "Executive Signal", "Top Papers", "Innovation Summary", "Why It Matters", "Published 2026-06-25", "/scout/papers/2606.00001/"} {
+	for _, token := range []string{"Papers fetched on 2026-06-26", "Executive Signal", "Top Papers", "Innovation Summary", "Executive Summary", "Why It Matters", "Estimated Reading Priority", "Published 2026-06-25", "/scout/papers/2606.00001/"} {
 		if !strings.Contains(string(body), token) {
 			t.Fatalf("daily page missing %q", token)
 		}
