@@ -30,7 +30,7 @@ func TestBuildAndValidateStaticSite(t *testing.T) {
 	writeText(t, filepath.Join(root, "reports", "daily", "2026-06", "2026-06-26.md"), "# Scout Daily Intelligence Briefing\n\n## Executive Signal\n\nAgents are the dominant signal.\n\n## Top Papers\n")
 
 	outDir := filepath.Join(root, "public")
-	result, err := Build(Config{DataDir: root, OutDir: outDir, BasePath: "/scout/"})
+	result, err := Build(Config{DataDir: root, OutDir: outDir, BasePath: "/"})
 	if err != nil {
 		t.Fatalf("build site: %v", err)
 	}
@@ -50,12 +50,12 @@ func TestBuildAndValidateStaticSite(t *testing.T) {
 	if err != nil {
 		t.Fatalf("read daily page: %v", err)
 	}
-	for _, token := range []string{"Papers fetched on 2026-06-26", "Executive Signal", "Top Papers", "Innovation Summary", "Executive Summary", "Why It Matters", "Estimated Reading Priority", "Published 2026-06-25", "/scout/papers/2606.00001/"} {
+	for _, token := range []string{"Papers fetched on 2026-06-26", "Executive Signal", "Top Papers", "Innovation Summary", "Executive Summary", "Why It Matters", "Estimated Reading Priority", "Published 2026-06-25", "/papers/2606.00001/"} {
 		if !strings.Contains(string(body), token) {
 			t.Fatalf("daily page missing %q", token)
 		}
 	}
-	validation, err := Validate(Config{OutDir: outDir, BasePath: "/scout/"})
+	validation, err := Validate(Config{OutDir: outDir, BasePath: "/"})
 	if err != nil {
 		t.Fatalf("validate site: %v", err)
 	}

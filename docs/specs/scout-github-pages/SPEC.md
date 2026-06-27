@@ -10,7 +10,7 @@ skills: []
 
 ## Thesis
 
-Scout remains a standalone repository and publishes a read-only GitHub Pages project site at the project path, expected as `/scout/`. The site is generated from Scout's committed curated `data/` and `reports/` artifacts and does not fetch Hugging Face, run Go code, write storage in the browser, or serve full paper text.
+Scout remains a standalone repository and publishes a read-only GitHub Pages static site at the custom subdomain root, expected as `/`. The site is generated from Scout's committed curated `data/` and `reports/` artifacts and does not fetch Hugging Face, run Go code, write storage in the browser, or serve full paper text.
 
 ## Current Code Map
 
@@ -48,20 +48,20 @@ Scout is a curated intelligence artifact, not an archive of papers.
 
 ## Static Site Architecture
 
-- Build command: `go run ./cmd/scout site build --data-dir . --out-dir public --base-path /scout/`.
-- Validate command: `go run ./cmd/scout site validate --out-dir public --base-path /scout/`.
+- Build command: `go run ./cmd/scout site build --data-dir . --out-dir public --base-path /`.
+- Validate command: `go run ./cmd/scout site validate --out-dir public --base-path /`.
 - Publish directory: `public/`, generated deterministically and suitable for `actions/upload-pages-artifact`.
-- Base path: `/scout/`, configurable with `--base-path` for local previews or repository renames.
+- Base path: `/`, configurable with `--base-path` for local previews or alternate Pages hosting.
 - Data strategy: copy compact JSON artifacts from `data/` to `public/data/` and write `public/data/index.json` as a static manifest. `site build` fails if source paper records violate the curated storage contract.
 - Asset strategy: write `public/assets/styles.css` and `public/.nojekyll`; no JavaScript is required.
 - Routes:
-  - `/scout/` -> homepage focused on Scout-branded latest fetched papers, grouped by date.
-  - `/scout/daily/` -> daily archive organized by Scout fetch date.
-  - `/scout/daily/YYYY-MM-DD/` -> daily briefing page for papers fetched on that date.
-  - `/scout/monthly/` -> monthly archive.
-  - `/scout/monthly/YYYY-MM/` -> monthly ranking page.
-  - `/scout/papers/<paper-id>/` -> paper detail page.
-  - `/scout/data/index.json`, `/scout/data/papers/*.json`, `/scout/data/daily/YYYY-MM/*.json` -> durable JSON.
+  - `/` -> homepage focused on Scout-branded latest fetched papers, grouped by date.
+  - `/daily/` -> daily archive organized by Scout fetch date.
+  - `/daily/YYYY-MM-DD/` -> daily briefing page for papers fetched on that date.
+  - `/monthly/` -> monthly archive.
+  - `/monthly/YYYY-MM/` -> monthly ranking page.
+  - `/papers/<paper-id>/` -> paper detail page.
+  - `/data/index.json`, `/data/papers/*.json`, `/data/daily/YYYY-MM/*.json` -> durable JSON.
 
 ## File Edits
 
@@ -96,8 +96,8 @@ Scout is a curated intelligence artifact, not an archive of papers.
 - `make test`: covers CLI-adjacent package behavior, rendering, storage, scoring, summary, Hugging Face parsing, and site build/validation.
 - `make build`: ensures the Scout binary still builds.
 - `go run ./cmd/scout run --date 2026-06-26 --data-dir .`: validates the daily pipeline against the committed durable artifact directory.
-- `go run ./cmd/scout site build --data-dir . --out-dir public --base-path /scout/`: writes the Pages output.
-- `go run ./cmd/scout site validate --out-dir public --base-path /scout/`: validates generated pages, sections, links, and JSON score data.
+- `go run ./cmd/scout site build --data-dir . --out-dir public --base-path /`: writes the Pages output.
+- `go run ./cmd/scout site validate --out-dir public --base-path /`: validates generated pages, sections, links, and JSON score data.
 
 ## Codex Automation Flow
 
@@ -111,7 +111,7 @@ Scout is a curated intelligence artifact, not an archive of papers.
 ## Risks And Owners
 
 - GitHub Pages source setting: owner Jameson Stone; mitigation is `.github/workflows/pages.yml` and this spec documenting GitHub Actions Pages as the expected source.
-- Project-site base path drift: owner Codex for code; mitigation is configurable `--base-path` plus link validation.
+- Site base path drift: owner Codex for code; mitigation is configurable `--base-path` plus link validation.
 - Generated artifact growth: owner Codex for repo hygiene; mitigation is deterministic generated paths and future pruning policy if history grows too large.
 - Hugging Face API payload drift: owner external API plus Codex tests; mitigation is existing parser coverage and daily run validation.
 - Report quality regressions: owner Codex; mitigation is site validation plus existing summary/render tests.

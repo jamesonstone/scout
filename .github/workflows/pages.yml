@@ -28,10 +28,10 @@ jobs:
           go-version-file: go.mod
 
       - name: Build static Scout site
-        run: go run ./cmd/scout site build --data-dir . --out-dir public --base-path /scout/
+        run: go run ./cmd/scout site build --data-dir . --out-dir public --base-path /
 
       - name: Validate static Scout site
-        run: go run ./cmd/scout site validate --out-dir public --base-path /scout/
+        run: go run ./cmd/scout site validate --out-dir public --base-path /
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

@@ -2,195 +2,195 @@
   "daily": [
     {
       "date": "2026-06-27",
-      "url": "/scout/daily/2026-06-27/",
-      "json": "/scout/data/daily/2026-06/2026-06-27.json"
+      "url": "/daily/2026-06-27/",
+      "json": "/data/daily/2026-06/2026-06-27.json"
     },
     {
       "date": "2026-06-26",
-      "url": "/scout/daily/2026-06-26/",
-      "json": "/scout/data/daily/2026-06/2026-06-26.json"
+      "url": "/daily/2026-06-26/",
+      "json": "/data/daily/2026-06/2026-06-26.json"
     }
   ],
   "monthly": [
     {
       "month": "2026-06",
-      "url": "/scout/monthly/2026-06/"
+      "url": "/monthly/2026-06/"
     }
   ],
   "papers": [
     {
       "id": "2606.26300",
       "title": "The Verification Horizon: No Silver Bullet for Coding Agent Rewards",
-      "url": "/scout/papers/2606.26300/",
-      "json": "/scout/data/papers/2606.26300.json",
+      "url": "/papers/2606.26300/",
+      "json": "/data/papers/2606.26300.json",
       "score": 100
     },
     {
       "id": "2606.27377",
       "title": "DanceOPD: On-Policy Generative Field Distillation",
-      "url": "/scout/papers/2606.27377/",
-      "json": "/scout/data/papers/2606.27377.json",
+      "url": "/papers/2606.27377/",
+      "json": "/data/papers/2606.27377.json",
       "score": 98
     },
     {
       "id": "2606.26790",
       "title": "OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning",
-      "url": "/scout/papers/2606.26790/",
-      "json": "/scout/data/papers/2606.26790.json",
+      "url": "/papers/2606.26790/",
+      "json": "/data/papers/2606.26790.json",
       "score": 98
     },
     {
       "id": "2606.18394",
       "title": "JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting",
-      "url": "/scout/papers/2606.18394/",
-      "json": "/scout/data/papers/2606.18394.json",
+      "url": "/papers/2606.18394/",
+      "json": "/data/papers/2606.18394.json",
       "score": 97
     },
     {
       "id": "2606.26080",
       "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-      "url": "/scout/papers/2606.26080/",
-      "json": "/scout/data/papers/2606.26080.json",
+      "url": "/papers/2606.26080/",
+      "json": "/data/papers/2606.26080.json",
       "score": 95
     },
     {
       "id": "2606.26907",
       "title": "Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation",
-      "url": "/scout/papers/2606.26907/",
-      "json": "/scout/data/papers/2606.26907.json",
+      "url": "/papers/2606.26907/",
+      "json": "/data/papers/2606.26907.json",
       "score": 94
     },
     {
       "id": "2606.27313",
       "title": "ViQ: Text-Aligned Visual Quantized Representations at Any Resolution",
-      "url": "/scout/papers/2606.27313/",
-      "json": "/scout/data/papers/2606.27313.json",
+      "url": "/papers/2606.27313/",
+      "json": "/data/papers/2606.27313.json",
       "score": 94
     },
     {
       "id": "2606.23835",
       "title": "ABACUS: Adapting Unified Foundation Model for Bridging Image Count Understanding and Generation",
-      "url": "/scout/papers/2606.23835/",
-      "json": "/scout/data/papers/2606.23835.json",
+      "url": "/papers/2606.23835/",
+      "json": "/data/papers/2606.23835.json",
       "score": 91
     },
     {
       "id": "2606.26299",
       "title": "COrigami: An AI Pipeline for Co-Designing Flat-Foldable Visually Recognisable Origami",
-      "url": "/scout/papers/2606.26299/",
-      "json": "/scout/data/papers/2606.26299.json",
+      "url": "/papers/2606.26299/",
+      "json": "/data/papers/2606.26299.json",
       "score": 91
     },
     {
       "id": "2606.24551",
       "title": "GUI vs. CLI: Execution Bottlenecks in Screen-Only and Skill-Mediated Computer-Use Agents",
-      "url": "/scout/papers/2606.24551/",
-      "json": "/scout/data/papers/2606.24551.json",
+      "url": "/papers/2606.24551/",
+      "json": "/data/papers/2606.24551.json",
       "score": 90
     },
     {
       "id": "2606.26875",
       "title": "Information-Aware KV Cache Compression for Long Reasoning",
-      "url": "/scout/papers/2606.26875/",
-      "json": "/scout/data/papers/2606.26875.json",
+      "url": "/papers/2606.26875/",
+      "json": "/data/papers/2606.26875.json",
       "score": 87
     },
     {
       "id": "2606.27288",
       "title": "When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models",
-      "url": "/scout/papers/2606.27288/",
-      "json": "/scout/data/papers/2606.27288.json",
+      "url": "/papers/2606.27288/",
+      "json": "/data/papers/2606.27288.json",
       "score": 87
     },
     {
       "id": "2606.26027",
       "title": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It",
-      "url": "/scout/papers/2606.26027/",
-      "json": "/scout/data/papers/2606.26027.json",
+      "url": "/papers/2606.26027/",
+      "json": "/data/papers/2606.26027.json",
       "score": 87
     },
     {
       "id": "2606.16517",
       "title": "How Post-Training Shapes Biological Reasoning Models",
-      "url": "/scout/papers/2606.16517/",
-      "json": "/scout/data/papers/2606.16517.json",
+      "url": "/papers/2606.16517/",
+      "json": "/data/papers/2606.16517.json",
       "score": 85
     },
     {
       "id": "2606.27192",
       "title": "LISA: Likelihood Score Alignment for Visual-condition Controllable Generation",
-      "url": "/scout/papers/2606.27192/",
-      "json": "/scout/data/papers/2606.27192.json",
+      "url": "/papers/2606.27192/",
+      "json": "/data/papers/2606.27192.json",
       "score": 85
     },
     {
       "id": "2606.21795",
       "title": "Discretizing Reward Models",
-      "url": "/scout/papers/2606.21795/",
-      "json": "/scout/data/papers/2606.21795.json",
+      "url": "/papers/2606.21795/",
+      "json": "/data/papers/2606.21795.json",
       "score": 84
     },
     {
       "id": "2606.27277",
       "title": "EO-WM: A Physically Informed World Model for Probabilistic Earth Observation Forecasting",
-      "url": "/scout/papers/2606.27277/",
-      "json": "/scout/data/papers/2606.27277.json",
+      "url": "/papers/2606.27277/",
+      "json": "/data/papers/2606.27277.json",
       "score": 84
     },
     {
       "id": "2606.27326",
       "title": "Hallucination in World Models is Predictable and Preventable",
-      "url": "/scout/papers/2606.27326/",
-      "json": "/scout/data/papers/2606.27326.json",
+      "url": "/papers/2606.27326/",
+      "json": "/data/papers/2606.27326.json",
       "score": 84
     },
     {
       "id": "2606.16613",
       "title": "CoffeeBench: Benchmarking Long-Horizon LLM Agents in Heterogeneous Multi-Agent Economies",
-      "url": "/scout/papers/2606.16613/",
-      "json": "/scout/data/papers/2606.16613.json",
+      "url": "/papers/2606.16613/",
+      "json": "/data/papers/2606.16613.json",
       "score": 82
     },
     {
       "id": "2606.21959",
       "title": "OpenBioRQ: Unsolved Biomedical Research Questions for Agents",
-      "url": "/scout/papers/2606.21959/",
-      "json": "/scout/data/papers/2606.21959.json",
+      "url": "/papers/2606.21959/",
+      "json": "/data/papers/2606.21959.json",
       "score": 82
     },
     {
       "id": "2606.26217",
       "title": "Fast LeWorldModel",
-      "url": "/scout/papers/2606.26217/",
-      "json": "/scout/data/papers/2606.26217.json",
+      "url": "/papers/2606.26217/",
+      "json": "/data/papers/2606.26217.json",
       "score": 70
     },
     {
       "id": "2606.26904",
       "title": "Confidence-Aware Tool Orchestration for Robust Video Understanding",
-      "url": "/scout/papers/2606.26904/",
-      "json": "/scout/data/papers/2606.26904.json",
+      "url": "/papers/2606.26904/",
+      "json": "/data/papers/2606.26904.json",
       "score": 68
     },
     {
       "id": "2606.14397",
       "title": "Running the Gauntlet: Re-evaluating the Capabilities of Agents Beyond Familiar Environments",
-      "url": "/scout/papers/2606.14397/",
-      "json": "/scout/data/papers/2606.14397.json",
+      "url": "/papers/2606.14397/",
+      "json": "/data/papers/2606.14397.json",
       "score": 68
     },
     {
       "id": "2606.27364",
       "title": "PhysiFormer: Learning to Simulate Mechanics in World Space",
-      "url": "/scout/papers/2606.27364/",
-      "json": "/scout/data/papers/2606.27364.json",
+      "url": "/papers/2606.27364/",
+      "json": "/data/papers/2606.27364.json",
       "score": 55
     },
     {
       "id": "2606.26025",
       "title": "In-Context World Modeling for Robotic Control",
-      "url": "/scout/papers/2606.26025/",
-      "json": "/scout/data/papers/2606.26025.json",
+      "url": "/papers/2606.26025/",
+      "json": "/data/papers/2606.26025.json",
       "score": 52
     }
   ]

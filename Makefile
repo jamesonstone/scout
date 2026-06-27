@@ -36,9 +36,9 @@ tidy:
 	go mod tidy
 
 site-build:
-	go run ./cmd/scout site build --data-dir . --out-dir public --base-path /scout/
+	go run ./cmd/scout site build --data-dir . --out-dir public --base-path /
 
 site-validate:
-	go run ./cmd/scout site validate --out-dir public --base-path /scout/
+	go run ./cmd/scout site validate --out-dir public --base-path /
 
 all: fmt vet test build

@@ -45,10 +45,10 @@ scout run
 scout run --date 2026-01-02 --data-dir /tmp/scout-output
 
 # build the static GitHub Pages site from committed artifacts
-scout site build --data-dir . --out-dir public --base-path /scout/
+scout site build --data-dir . --out-dir public --base-path /
 
 # validate generated pages, links, sections, and JSON score records
-scout site validate --out-dir public --base-path /scout/
+scout site validate --out-dir public --base-path /
 ```
 
 ## Output Layout
@@ -122,8 +122,8 @@ Codex Scheduled Automation is the intended durable research-update path: run Sco
 Daily publishing contract:
 
 1. Run `go run ./cmd/scout run --date YYYY-MM-DD --data-dir .`.
-2. Run `go run ./cmd/scout site build --data-dir . --out-dir public --base-path /scout/`.
-3. Run `go run ./cmd/scout site validate --out-dir public --base-path /scout/`.
+2. Run `go run ./cmd/scout site build --data-dir . --out-dir public --base-path /`.
+3. Run `go run ./cmd/scout site validate --out-dir public --base-path /`.
 4. Deliver the changed `data/`, `reports/`, and `public/` artifacts through the Kit-managed GitHub issue, `GH-123` branch, commit, push, and ready PR workflow.
 5. After merge to `main`, `.github/workflows/pages.yml` deploys the committed static site artifact.
 
@@ -133,8 +133,8 @@ Scout publishes as its own project site instead of being copied into `jamesonsto
 
 The static site build is deterministic and backend-free:
 
-- `go run ./cmd/scout site build --data-dir . --out-dir public --base-path /scout/`
-- `go run ./cmd/scout site validate --out-dir public --base-path /scout/`
+- `go run ./cmd/scout site build --data-dir . --out-dir public --base-path /`
+- `go run ./cmd/scout site validate --out-dir public --base-path /`
 
 Generated output includes:
 
