@@ -41,7 +41,7 @@ func TestBuildAndValidateStaticSite(t *testing.T) {
 	if err != nil {
 		t.Fatalf("read home page: %v", err)
 	}
-	for _, token := range []string{"<h1>Scout</h1>", "Papers fetched by Scout", "Papers fetched on 2026-06-26", "Published 2026-06-25"} {
+	for _, token := range []string{"<h1>Scout</h1>", "Papers fetched by Scout", "Papers fetched on 2026-06-26", "Published 2026-06-25", `href="https://jamesonstone.io/"`, "Scout is part of"} {
 		if !strings.Contains(string(home), token) {
 			t.Fatalf("home page missing %q", token)
 		}

@@ -16,13 +16,14 @@ const layoutTemplate = `{{define "pageStart"}}<!doctype html>
       <a href="{{asset .Site.BasePath "daily/"}}">Daily</a>
       <a href="{{asset .Site.BasePath "monthly/"}}">Monthly</a>
       <a href="{{asset .Site.BasePath "data/index.json"}}">Data</a>
+      <a href="https://jamesonstone.io/">Jameson Stone</a>
     </nav>
   </header>
   <main>
 {{end}}
 {{define "pageEnd"}}  </main>
   <footer class="site-footer">
-    <p>Read-only intelligence briefings generated from Hugging Face Daily Papers. Source artifacts remain in Scout.</p>
+    <p>Read-only intelligence briefings generated from Hugging Face Daily Papers. Scout is part of <a href="https://jamesonstone.io/">jamesonstone.io</a>.</p>
   </footer>
 </body>
 </html>{{end}}
