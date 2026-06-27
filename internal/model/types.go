@@ -61,6 +61,7 @@ type PaperRecord struct {
 	ID                  string         `json:"id"`
 	Title               string         `json:"title"`
 	FirstSeen           string         `json:"first_seen"`
+	PublishedDate       string         `json:"published_date,omitempty"`
 	ObservedDates       []string       `json:"observed_dates"`
 	Score               ScoreBreakdown `json:"score"`
 	Recommendation      Recommendation `json:"recommendation"`

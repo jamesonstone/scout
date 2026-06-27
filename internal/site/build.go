@@ -91,7 +91,19 @@ func loadSiteData(cfg Config) (siteData, error) {
 		}
 		return papers[i].Score > papers[j].Score
 	})
-	return siteData{BasePath: cfg.BasePath, Daily: daily, Monthly: monthly, Papers: papers}, nil
+	data := siteData{BasePath: cfg.BasePath, Daily: daily, Monthly: monthly, Papers: papers}
+	for i := range data.Daily {
+		if data.Daily[i].ArchiveCount == 0 {
+			continue
+		}
+		data.FeaturedDay = &data.Daily[i]
+		data.FeaturedPapers = limitPapers(data.Daily[i].Archive, 4)
+		break
+	}
+	if data.FeaturedDay == nil && len(data.Daily) > 0 {
+		data.FeaturedDay = &data.Daily[0]
+	}
+	return data, nil
 }
 
 func loadPaperRecords(root string) (map[string]model.PaperRecord, error) {
@@ -205,16 +217,24 @@ func monthlyFromIDs(basePath, month string, ids []string, records map[string]mod
 
 func paperPageFromRecord(basePath string, record model.PaperRecord) paperPage {
 	return paperPage{
-		Record:     record,
-		URL:        siteURL(basePath, "papers/"+slug(record.ID)+"/"),
-		JSONURL:    siteURL(basePath, "data/papers/"+sanitizeFile(record.ID)+".json"),
-		Categories: categoriesLabel(record.Categories),
-		FirstSeen:  record.FirstSeen,
-		Observed:   strings.Join(record.ObservedDates, ", "),
-		Score:      record.Score.Overall,
-		ScoreClass: scoreClass(record.Score.Overall),
-		Links:      linksForRecord(record.Links),
+		Record:        record,
+		URL:           siteURL(basePath, "papers/"+slug(record.ID)+"/"),
+		JSONURL:       siteURL(basePath, "data/papers/"+sanitizeFile(record.ID)+".json"),
+		Categories:    categoriesLabel(record.Categories),
+		FirstSeen:     record.FirstSeen,
+		PublishedDate: publishedDateLabel(record),
+		Observed:      strings.Join(record.ObservedDates, ", "),
+		Score:         record.Score.Overall,
+		ScoreClass:    scoreClass(record.Score.Overall),
+		Links:         linksForRecord(record.Links),
 	}
+}
+
+func publishedDateLabel(record model.PaperRecord) string {
+	if record.PublishedDate == "" {
+		return "Unavailable"
+	}
+	return record.PublishedDate
 }
 
 func linksForRecord(links model.Links) []siteLink {

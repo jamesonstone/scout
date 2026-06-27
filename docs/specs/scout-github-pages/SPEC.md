@@ -26,7 +26,7 @@ Scout remains a standalone repository and publishes a read-only GitHub Pages pro
 - Pipeline orchestration: `internal/pipeline/runner.go`, `Runner.Run`.
 - Validation commands: `make fmt`, `make lint`, `make test`, `make build`.
 - Existing committed artifact paths: `data/papers/*.json`, `data/daily/2026-06/2026-06-26.json`, `reports/daily/2026-06/2026-06-26.md`, `reports/monthly/2026-06.md`.
-- Existing workflow: `.github/workflows/daily-scout.yml` runs `go run ./cmd/scout run` with `SCOUT_DATA_DIR=.scout`; it does not publish Pages or commit artifacts.
+- Existing workflow: `.github/workflows/daily-scout.yml` runs a manual smoke check with `SCOUT_DATA_DIR=.scout`; it does not publish Pages or commit artifacts.
 
 ## Curated Storage Contract
 
@@ -34,7 +34,7 @@ Scout is a curated intelligence artifact, not an archive of papers.
 
 - Product question: Scout answers "Should I care?" Official paper pages answer "What are all the details?"
 - Transient inputs: the run may fetch markdown, abstract, author metadata, and community signals for scoring and summarization.
-- Committed paper records: store only compact distilled output: title, first/observed dates, score, recommendation, capped categories, innovation summary, why it matters, implementation angle, caveat, and source links.
+- Committed paper records: store only compact distilled output: title, publish date when available, first/observed dates, score, recommendation, capped categories, innovation summary, why it matters, implementation angle, caveat, and source links.
 - Forbidden committed fields: `markdown`, `abstract`, `authors`, `community`, `score_history`, `metadata_completeness`, rendered executive prose, and reading-priority prose.
 - Size limits: paper JSON must be 8KB or smaller; category lists are capped; daily reports cap full summaries to the highest-signal papers; archive/lower-signal rows stay one-line.
 - Retention stance: raw paper text belongs in ignored `.scout/cache/` or temp storage only. Month-close compaction should preserve this contract for old low-signal records.
@@ -42,7 +42,7 @@ Scout is a curated intelligence artifact, not an archive of papers.
 ## Reconciliation
 
 - Live behavior matches the desired durable artifact layout: `data/papers/<paper-id>.json`, `data/daily/YYYY-MM/YYYY-MM-DD.json`, `reports/daily/YYYY-MM/YYYY-MM-DD.md`, and `reports/monthly/YYYY-MM.md`.
-- CONFLICT: the repository already has a scheduled GitHub Action named `scout-daily`, but it writes to `.scout` with read-only contents permission and is not the durable publishing/update lane. This implementation preserves Codex Scheduled Automation as the research-update delivery mechanism and adds a separate Pages deployment workflow that publishes committed artifacts.
+- RESOLVED: the repository has a manual GitHub Action smoke workflow, but it writes to `.scout` with read-only contents permission and is not the durable publishing/update lane. Codex Scheduled Automation is the research-update delivery mechanism; GitHub Actions Pages only deploys committed artifacts after merge.
 - CONFLICT: using `docs/` as the Pages source would mix generated site output with repo-local agent documentation. The selected publish directory is `public/`, uploaded through GitHub Actions Pages.
 - UNKNOWN: repository Pages settings are not represented in source. Jameson Stone owns enabling GitHub Pages with GitHub Actions as the source if it is not already enabled.
 
@@ -55,9 +55,9 @@ Scout is a curated intelligence artifact, not an archive of papers.
 - Data strategy: copy compact JSON artifacts from `data/` to `public/data/` and write `public/data/index.json` as a static manifest. `site build` fails if source paper records violate the curated storage contract.
 - Asset strategy: write `public/assets/styles.css` and `public/.nojekyll`; no JavaScript is required.
 - Routes:
-  - `/scout/` -> homepage.
-  - `/scout/daily/` -> daily archive.
-  - `/scout/daily/YYYY-MM-DD/` -> daily briefing page.
+  - `/scout/` -> homepage focused on Scout-branded latest fetched papers, grouped by date.
+  - `/scout/daily/` -> daily archive organized by Scout fetch date.
+  - `/scout/daily/YYYY-MM-DD/` -> daily briefing page for papers fetched on that date.
   - `/scout/monthly/` -> monthly archive.
   - `/scout/monthly/YYYY-MM/` -> monthly ranking page.
   - `/scout/papers/<paper-id>/` -> paper detail page.
@@ -81,9 +81,11 @@ Scout is a curated intelligence artifact, not an archive of papers.
 - Static site architecture, route structure, data strategy, base path, and publish directory are recorded in this spec.
 - `scout site build` consumes existing artifacts and writes a static output directory.
 - `scout site validate` checks required pages, required daily/monthly sections, internal base-path links, JSON score objects, paper JSON size, and forbidden raw fields.
-- Daily pages show Executive Signal, Top Papers, Additional Papers, Watchlist, Archive, score, recommendation, innovation summary, why it matters, implementation angle, caveat, and source links.
+- Homepage and daily pages show Scout as the product, not repository documentation.
+- Daily pages show Executive Signal, Top Papers, Additional Papers, Watchlist, Archive, score, recommendation, publish date when available, innovation summary, why it matters, implementation angle, caveat, and source links.
+- Paper detail pages show publish date, first fetched date, observed dates, source links, and score breakdowns.
 - Monthly pages show Top 10 papers, Rising Papers, Themes, and Complete Monthly Index.
-- Paper pages show source links and score breakdowns.
+- Site validation fails if the homepage contains README-style project documentation instead of the generated Scout paper briefing.
 - Committed paper records and generated `public/data/papers/*.json` omit raw markdown, full abstracts, authors, raw community blobs, score history arrays, metadata completeness counters, and duplicated rendered prose.
 - The Pages workflow publishes static output only; it does not fetch Hugging Face at page view time.
 
@@ -103,8 +105,8 @@ Scout is a curated intelligence artifact, not an archive of papers.
 2. Persist daily observation, paper records, daily report, and monthly report.
 3. Build the static site into `public/`.
 4. Validate the generated site.
-5. Deliver changes through the Kit issue, `GH-123` branch, commit, push, and ready PR workflow.
-6. After merge, GitHub Actions Pages deploys the static `public/` artifact.
+5. Deliver changed `data/`, `reports/`, and `public/` artifacts through the Kit issue, `GH-123` branch, commit, push, and ready PR workflow.
+6. After merge, GitHub Actions Pages deploys the static `public/` artifact. The repository Pages source must be GitHub Actions, not legacy `main`/root.
 
 ## Risks And Owners
 

@@ -81,7 +81,7 @@ func htmlFiles(root string) ([]string, error) {
 }
 
 func validateLink(cfg Config, href string) error {
-	if href == "" || strings.HasPrefix(href, "#") || strings.HasPrefix(href, "mailto:") {
+	if href == "" || strings.HasPrefix(href, "#") || strings.HasPrefix(href, "data:") || strings.HasPrefix(href, "mailto:") {
 		return nil
 	}
 	for _, prefix := range []string{"https://huggingface.co/", "https://arxiv.org/", "https://github.com/", "https://", "http://"} {
@@ -132,13 +132,37 @@ func validateRequiredContent(outDir string) error {
 	if len(paperPages) == 0 {
 		return fmt.Errorf("no paper detail pages generated")
 	}
+	homeBody, err := os.ReadFile(filepath.Join(outDir, "index.html"))
+	if err != nil {
+		return err
+	}
+	home := string(homeBody)
+	for _, token := range []string{"<h1>Scout</h1>", "Papers fetched by Scout", "Latest fetched date", "Published"} {
+		if !strings.Contains(home, token) {
+			return fmt.Errorf("home page missing %q", token)
+		}
+	}
+	for _, token := range []string{"Install From Source", "Quick Start", "Storage Contract", "Repository Notes", "Maintainer"} {
+		if strings.Contains(home, token) {
+			return fmt.Errorf("home page contains README-style content %q", token)
+		}
+	}
 	dailyBody, err := os.ReadFile(dailyPages[0])
 	if err != nil {
 		return err
 	}
-	for _, token := range []string{"Executive Signal", "Top Papers", "Additional Papers", "Watchlist", "Archive", "Innovation Summary", "Why It Matters", "Implementation Angle", "Caveat"} {
+	for _, token := range []string{"Papers fetched on", "Executive Signal", "Top Papers", "Additional Papers", "Watchlist", "Archive", "Innovation Summary", "Why It Matters", "Implementation Angle", "Caveat", "Published"} {
 		if !strings.Contains(string(dailyBody), token) {
 			return fmt.Errorf("daily page missing %q", token)
+		}
+	}
+	paperBody, err := os.ReadFile(paperPages[0])
+	if err != nil {
+		return err
+	}
+	for _, token := range []string{"Published", "First fetched", "Observation History", "Score Breakdown"} {
+		if !strings.Contains(string(paperBody), token) {
+			return fmt.Errorf("paper page missing %q", token)
 		}
 	}
 	monthlyBody, err := os.ReadFile(monthlyPages[0])

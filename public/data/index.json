@@ -1,6 +1,11 @@
 {
   "daily": [
     {
+      "date": "2026-06-27",
+      "url": "/scout/daily/2026-06-27/",
+      "json": "/scout/data/daily/2026-06/2026-06-27.json"
+    },
+    {
       "date": "2026-06-26",
       "url": "/scout/daily/2026-06-26/",
       "json": "/scout/data/daily/2026-06/2026-06-26.json"
@@ -42,6 +47,13 @@
       "score": 97
     },
     {
+      "id": "2606.26080",
+      "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
+      "url": "/scout/papers/2606.26080/",
+      "json": "/scout/data/papers/2606.26080.json",
+      "score": 95
+    },
+    {
       "id": "2606.26907",
       "title": "Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation",
       "url": "/scout/papers/2606.26907/",
@@ -54,6 +66,13 @@
       "url": "/scout/papers/2606.27313/",
       "json": "/scout/data/papers/2606.27313.json",
       "score": 94
+    },
+    {
+      "id": "2606.23835",
+      "title": "ABACUS: Adapting Unified Foundation Model for Bridging Image Count Understanding and Generation",
+      "url": "/scout/papers/2606.23835/",
+      "json": "/scout/data/papers/2606.23835.json",
+      "score": 91
     },
     {
       "id": "2606.26299",

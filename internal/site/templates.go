@@ -6,6 +6,7 @@ const layoutTemplate = `{{define "pageStart"}}<!doctype html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{.PageTitle}}</title>
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="{{asset .Site.BasePath "assets/styles.css"}}">
 </head>
 <body>
@@ -30,22 +31,34 @@ const layoutTemplate = `{{define "pageStart"}}<!doctype html>
 const pageTemplates = `
 {{define "home"}}{{template "pageStart" .}}
 <section class="hero">
-  <p class="eyebrow">Daily Papers intelligence</p>
-  <h1>Signal-dense AI research briefings for builders.</h1>
-  <p class="lede">Scout turns Hugging Face Daily Papers into durable scored records, daily briefings, monthly rankings, and static pages that can be read without a backend.</p>
+  <p class="eyebrow">Papers fetched by Scout</p>
+  <h1>Scout</h1>
+  <p class="lede">Daily AI research signal from Hugging Face Daily Papers, distilled for builders who need to decide what deserves deeper reading.</p>
   <div class="hero-actions">
-    {{with index .Site.Daily 0}}<a class="button" href="{{.URL}}">Latest daily briefing</a>{{end}}
+    {{with .Site.FeaturedDay}}<a class="button" href="{{.URL}}">Latest papers from {{.Date}}</a>{{end}}
     {{with index .Site.Monthly 0}}<a class="button secondary" href="{{.URL}}">Current monthly ranking</a>{{end}}
   </div>
 </section>
+{{with .Site.FeaturedDay}}
+<section class="paper-section home-latest">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Latest fetched date</p>
+      <h2>Papers fetched on {{.Date}}</h2>
+    </div>
+    <a href="{{.URL}}">{{.ArchiveCount}} paper{{if ne .ArchiveCount 1}}s{{end}}</a>
+  </div>
+  {{if $.Site.FeaturedPapers}}<div class="paper-grid">{{range $.Site.FeaturedPapers}}{{template "paperCard" .}}{{end}}</div>{{else}}<p class="empty-state">No papers were fetched for this date yet. The previous populated briefings remain available below.</p>{{end}}
+</section>
+{{end}}
 <section class="section-grid">
   <div class="panel">
-    <h2>Latest Briefings</h2>
-    <ol class="link-list">{{range .Site.Daily}}<li><a href="{{.URL}}">{{.Date}}</a><span>{{.ArchiveCount}} papers</span></li>{{end}}</ol>
+    <h2>Daily Dates</h2>
+    <ol class="link-list">{{range .Site.Daily}}<li><a href="{{.URL}}">{{.Date}}</a><span>{{.ArchiveCount}} paper{{if ne .ArchiveCount 1}}s{{end}} fetched</span></li>{{end}}</ol>
   </div>
   <div class="panel">
-    <h2>Top Papers</h2>
-    <ol class="paper-rank">{{range .Site.Papers | limitHome}}<li><a href="{{.URL}}">{{.Record.Title}}</a><span class="score-bar" aria-label="Score {{.Score}} out of 100"><span style="width: {{.Score}}%"></span></span><strong>{{.Score}}</strong></li>{{end}}</ol>
+    <h2>Highest Signal</h2>
+    <ol class="paper-rank">{{range .Site.Papers | limitHome}}<li><a href="{{.URL}}">{{.Record.Title}}</a><span>Published {{.PublishedDate}}</span><span class="score-bar" aria-label="Score {{.Score}} out of 100"><span style="width: {{.Score}}%"></span></span><strong>{{.Score}}</strong></li>{{end}}</ol>
   </div>
 </section>
 {{template "pageEnd" .}}{{end}}
@@ -54,10 +67,10 @@ const pageTemplates = `
 <section class="page-heading">
   <p class="eyebrow">Archive</p>
   <h1>Daily Briefings</h1>
-  <p>Each page keeps the daily research signal grouped by recommendation, with source JSON alongside the readable brief.</p>
+  <p>Papers are organized by the date Scout fetched them. Each paper page also shows the paper publish date when Hugging Face provides it.</p>
 </section>
 <section class="list-surface">{{range .Site.Daily}}
-  <a class="archive-row" href="{{.URL}}"><span>{{.Date}}</span><strong>{{.ArchiveCount}} papers</strong></a>
+  <a class="archive-row" href="{{.URL}}"><span>Fetched {{.Date}}</span><strong>{{.ArchiveCount}} paper{{if ne .ArchiveCount 1}}s{{end}}</strong></a>
 {{end}}</section>
 {{template "pageEnd" .}}{{end}}
 
@@ -75,7 +88,7 @@ const pageTemplates = `
 {{define "daily"}}{{template "pageStart" .}}
 <section class="page-heading">
   <p class="eyebrow">Daily briefing</p>
-  <h1>{{.Day.Date}}</h1>
+  <h1>Papers fetched on {{.Day.Date}}</h1>
   <h2>Executive Signal</h2>
   <p>{{.Day.ExecutiveSignal}}</p>
   <div class="meta-links"><a href="{{.Day.JSONURL}}">Daily JSON</a><a href="{{.Day.MonthlyURL}}">Monthly ranking</a></div>
@@ -84,7 +97,7 @@ const pageTemplates = `
 <section class="panel archive-note">
   <h2>Archive</h2>
   <p>Daily record count: {{.Day.ArchiveCount}}. Persistent paper JSON lives under <a href="{{asset .Site.BasePath "data/index.json"}}">public data</a>.</p>
-  <ol class="index-list compact">{{range .Day.Archive}}<li><a href="{{.URL}}">{{.Record.Title}}</a><span>{{.Score}}/100 · {{.Record.Recommendation}}</span></li>{{end}}</ol>
+  <ol class="index-list compact">{{range .Day.Archive}}<li><a href="{{.URL}}">{{.Record.Title}}</a><span>Published {{.PublishedDate}} · {{.Score}}/100 · {{.Record.Recommendation}}</span></li>{{end}}</ol>
 </section>
 {{template "pageEnd" .}}{{end}}
 
@@ -119,7 +132,7 @@ const pageTemplates = `
   <section class="page-heading">
     <p class="eyebrow">Paper detail</p>
     <h1>{{.Paper.Record.Title}}</h1>
-    <div class="score-line"><span class="score-pill {{.Paper.ScoreClass}}">{{.Paper.Score}}/100</span><span>{{.Paper.Record.Recommendation}}</span><span>{{.Paper.Categories}}</span></div>
+    <div class="score-line"><span class="score-pill {{.Paper.ScoreClass}}">{{.Paper.Score}}/100</span><span>{{.Paper.Record.Recommendation}}</span><span>Published {{.Paper.PublishedDate}}</span><span>Fetched {{.Paper.FirstSeen}}</span><span>{{.Paper.Categories}}</span></div>
   </section>
   <section class="panel">
     <h2>Innovation Summary</h2>
@@ -134,7 +147,7 @@ const pageTemplates = `
   <section class="section-grid">
     <div class="panel">
       <h2>Observation History</h2>
-      <p>First seen {{.Paper.FirstSeen}}. Observed {{.Paper.Observed}}.</p>
+      <p>Published {{.Paper.PublishedDate}}. First fetched {{.Paper.FirstSeen}}. Observed {{.Paper.Observed}}.</p>
       <p><a href="{{.Paper.JSONURL}}">Paper JSON record</a></p>
     </div>
     <div class="panel">
@@ -170,6 +183,7 @@ const pageTemplates = `
 <article class="compact-row">
   <div>
     <h3><a href="{{.URL}}">{{.Record.Title}}</a></h3>
+    <p class="paper-date">Published {{.PublishedDate}} · Fetched {{.FirstSeen}}</p>
     <p>{{.Record.InnovationSummary}}</p>
   </div>
   <div class="row-meta"><span>{{.Score}}/100</span><span>{{.Record.Recommendation}}</span></div>
@@ -180,6 +194,7 @@ const pageTemplates = `
 <article class="paper-card">
   <div class="card-topline"><span class="score-pill {{.ScoreClass}}">{{.Score}}/100</span><span>{{.Record.Recommendation}}</span></div>
   <h3><a href="{{.URL}}">{{.Record.Title}}</a></h3>
+  <p class="paper-date">Published {{.PublishedDate}} · Fetched {{.FirstSeen}}</p>
   <h4>Innovation Summary</h4>
   <p class="innovation">{{.Record.InnovationSummary}}</p>
   <h4>Why It Matters</h4>

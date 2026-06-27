@@ -16,6 +16,7 @@ func TestBuildAndValidateStaticSite(t *testing.T) {
 		Title:               "Agent Evaluation Paper",
 		Categories:          []string{"agents", "evaluation"},
 		FirstSeen:           "2026-06-26",
+		PublishedDate:       "2026-06-25",
 		ObservedDates:       []string{"2026-06-26"},
 		InnovationSummary:   "Agent Evaluation Paper: We introduce a deterministic agent evaluation benchmark.",
 		WhyItMatters:        []string{"It improves production evaluation signal."},
@@ -36,11 +37,20 @@ func TestBuildAndValidateStaticSite(t *testing.T) {
 	if result.DailyPages != 1 || result.MonthlyPages != 1 || result.PaperPages != 1 {
 		t.Fatalf("unexpected result: %#v", result)
 	}
+	home, err := os.ReadFile(filepath.Join(outDir, "index.html"))
+	if err != nil {
+		t.Fatalf("read home page: %v", err)
+	}
+	for _, token := range []string{"<h1>Scout</h1>", "Papers fetched by Scout", "Papers fetched on 2026-06-26", "Published 2026-06-25"} {
+		if !strings.Contains(string(home), token) {
+			t.Fatalf("home page missing %q", token)
+		}
+	}
 	body, err := os.ReadFile(filepath.Join(outDir, "daily", "2026-06-26", "index.html"))
 	if err != nil {
 		t.Fatalf("read daily page: %v", err)
 	}
-	for _, token := range []string{"Executive Signal", "Top Papers", "Innovation Summary", "Why It Matters", "/scout/papers/2606.00001/"} {
+	for _, token := range []string{"Papers fetched on 2026-06-26", "Executive Signal", "Top Papers", "Innovation Summary", "Why It Matters", "Published 2026-06-25", "/scout/papers/2606.00001/"} {
 		if !strings.Contains(string(body), token) {
 			t.Fatalf("daily page missing %q", token)
 		}
