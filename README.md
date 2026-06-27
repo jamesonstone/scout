@@ -56,6 +56,7 @@ scout site validate --out-dir public --base-path /scout/
 Scout writes durable artifacts beneath the configured data directory:
 
 - `data/papers/<paper-id>.json` — compact curated per-paper records with score, recommendation, distilled summaries, links, and observation dates.
+- `published_date` is stored when Hugging Face provides it so the site can distinguish paper publication date from the date Scout first fetched it.
 - `data/daily/YYYY-MM/YYYY-MM-DD.json` — observed paper IDs for each daily run.
 - `reports/daily/YYYY-MM/YYYY-MM-DD.md` — daily executive briefing.
 - `reports/monthly/YYYY-MM.md` — continuously reranked monthly briefing.
@@ -114,9 +115,17 @@ Expected observable results:
 
 ## Scheduled Automation
 
-`.github/workflows/daily-scout.yml` runs the pipeline on a daily cron schedule and supports manual dispatch.
+`.github/workflows/daily-scout.yml` is a manual smoke workflow only. It writes to ignored `.scout/` storage and does not publish or commit artifacts.
 
 Codex Scheduled Automation is the intended durable research-update path: run Scout for a date, commit the updated `data/` and `reports/` artifacts, build `public/`, validate it, and deliver the result through the Kit-managed issue/branch/PR workflow.
+
+Daily publishing contract:
+
+1. Run `go run ./cmd/scout run --date YYYY-MM-DD --data-dir .`.
+2. Run `go run ./cmd/scout site build --data-dir . --out-dir public --base-path /scout/`.
+3. Run `go run ./cmd/scout site validate --out-dir public --base-path /scout/`.
+4. Deliver the changed `data/`, `reports/`, and `public/` artifacts through the Kit-managed GitHub issue, `GH-123` branch, commit, push, and ready PR workflow.
+5. After merge to `main`, `.github/workflows/pages.yml` deploys the committed static site artifact.
 
 ## Static GitHub Pages Site
 
@@ -136,7 +145,7 @@ Generated output includes:
 - `public/data/**` — copied JSON records and a generated manifest.
 - `public/assets/styles.css` and `public/.nojekyll` — static assets for GitHub Pages.
 
-`.github/workflows/pages.yml` builds and validates `public/`, then deploys it with GitHub Actions Pages. Repository settings should use GitHub Actions as the Pages source. GitHub Pages only serves static files; it does not fetch Hugging Face, execute Go, or mutate Scout storage at page view time.
+`.github/workflows/pages.yml` builds and validates `public/`, then deploys it with GitHub Actions Pages. Repository settings must use GitHub Actions as the Pages source; a legacy `main`/root Pages source will render repository files such as `README.md` instead of the generated Scout site. GitHub Pages only serves static files; it does not fetch Hugging Face, execute Go, or mutate Scout storage at page view time.
 
 ## Repository Notes
 

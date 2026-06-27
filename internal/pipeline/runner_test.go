@@ -21,10 +21,11 @@ type fakeClient struct {
 
 func (f *fakeClient) FetchDailyPapers(_ context.Context, day time.Time) ([]Paper, error) {
 	f.dailyCalls++
+	publishedAt := time.Date(2026, 1, 1, 0, 0, 0, 0, time.UTC)
 	return []Paper{
-		{ID: "2501.00001", Title: "Agent System Paper", Abstract: "A novel agent orchestration framework with open source code.", Categories: []string{"agents", "orchestration"}, Links: Links{GitHub: []string{"https://github.com/example/agent"}, HuggingFace: "https://huggingface.co/papers/2501.00001"}, Upvotes: 4, Comments: 1, SourceDate: day},
-		{ID: "2501.00001", Title: "Agent System Paper", Abstract: "duplicate", Categories: []string{"agents"}, SourceDate: day},
-		{ID: "2501.00002", Title: "Infra Eval Paper", Abstract: "Evaluation for infrastructure and llm memory systems.", Categories: []string{"evaluation", "infrastructure"}, Links: Links{HuggingFace: "https://huggingface.co/papers/2501.00002"}, Upvotes: 2, SourceDate: day},
+		{ID: "2501.00001", Title: "Agent System Paper", Abstract: "A novel agent orchestration framework with open source code.", Categories: []string{"agents", "orchestration"}, PublishedAt: publishedAt, Links: Links{GitHub: []string{"https://github.com/example/agent"}, HuggingFace: "https://huggingface.co/papers/2501.00001"}, Upvotes: 4, Comments: 1, SourceDate: day},
+		{ID: "2501.00001", Title: "Agent System Paper", Abstract: "duplicate", Categories: []string{"agents"}, PublishedAt: publishedAt, SourceDate: day},
+		{ID: "2501.00002", Title: "Infra Eval Paper", Abstract: "Evaluation for infrastructure and llm memory systems.", Categories: []string{"evaluation", "infrastructure"}, PublishedAt: publishedAt, Links: Links{HuggingFace: "https://huggingface.co/papers/2501.00002"}, Upvotes: 2, SourceDate: day},
 	}, nil
 }
 
@@ -88,7 +89,10 @@ func TestRunnerProducesDailyAndMonthlyReportsAndAvoidsReprocessing(t *testing.T)
 	if !strings.Contains(string(data), "2026-01-03") {
 		t.Fatalf("expected observed date update in %s", paperPath)
 	}
-	for _, token := range []string{`"markdown"`, `"abstract"`, `"authors"`, `"community"`, `"score_history"`, `"metadata_completeness"`} {
+	if !strings.Contains(string(data), `"published_date": "2026-01-01"`) {
+		t.Fatalf("expected compact published date in %s", paperPath)
+	}
+	for _, token := range []string{`"markdown"`, `"abstract"`, `"authors"`, `"community"`, `"published_at"`, `"score_history"`, `"metadata_completeness"`} {
 		if strings.Contains(string(data), token) {
 			t.Fatalf("stored paper record contains raw or bulky field %s", token)
 		}

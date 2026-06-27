@@ -1,15 +1,13 @@
-name: scout-daily
+name: scout-smoke
 
 on:
-  schedule:
-    - cron: '15 13 * * *'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  run-scout:
+  run-scout-smoke:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,7 +18,7 @@ jobs:
         with:
           go-version-file: go.mod
 
-      - name: Run Scout pipeline
+      - name: Run Scout pipeline without publishing artifacts
         env:
           SCOUT_DATA_DIR: .scout
         run: |

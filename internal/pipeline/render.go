@@ -39,7 +39,7 @@ func RenderDaily(day time.Time, papers []PaperRecord, signal string, monthlyPath
 	fmt.Fprintf(&b, "- Active monthly report: %s\n", monthlyPath)
 	b.WriteString("- Persistent paper records live under `data/papers/`.\n")
 	for _, paper := range sorted {
-		fmt.Fprintf(&b, "- %d/100 %s — [%s](%s) — %s\n", paper.Score.Overall, paper.Recommendation, paper.Title, bestLink(paper.Links), paper.InnovationSummary)
+		fmt.Fprintf(&b, "- %d/100 %s — published %s — [%s](%s) — %s\n", paper.Score.Overall, paper.Recommendation, publishedDateLabel(paper), paper.Title, bestLink(paper.Links), paper.InnovationSummary)
 	}
 	return b.String()
 }
@@ -55,17 +55,17 @@ func RenderMonthly(month time.Time, papers []PaperRecord) string {
 	fmt.Fprintf(&b, "# Scout Monthly Intelligence Briefing — %s\n\n", month.Format("2006-01"))
 	b.WriteString("## Top 10 Papers\n\n")
 	for i, paper := range top10 {
-		fmt.Fprintf(&b, "%d. **%s** — %d/100 (%s). %s\n", i+1, paper.Title, paper.Score.Overall, paper.Recommendation, paper.InnovationSummary)
+		fmt.Fprintf(&b, "%d. **%s** — %d/100 (%s), published %s. %s\n", i+1, paper.Title, paper.Score.Overall, paper.Recommendation, publishedDateLabel(paper), paper.InnovationSummary)
 	}
 	b.WriteString("\n## Theme Analysis\n\n")
 	b.WriteString(renderThemeAnalysis(sorted))
 	b.WriteString("\n\n## Rising Papers\n\n")
 	for _, paper := range risingPapers(sorted) {
-		fmt.Fprintf(&b, "- **%s** — %d/100, first seen %s\n", paper.Title, paper.Score.Overall, paper.FirstSeen)
+		fmt.Fprintf(&b, "- **%s** — %d/100, published %s, first seen %s\n", paper.Title, paper.Score.Overall, publishedDateLabel(paper), paper.FirstSeen)
 	}
 	b.WriteString("\n## Historical Rankings\n\n")
 	for i, paper := range sorted {
-		fmt.Fprintf(&b, "%d. **%s** — current %d/100; observed %d time(s); first seen %s\n", i+1, paper.Title, paper.Score.Overall, len(paper.ObservedDates), paper.FirstSeen)
+		fmt.Fprintf(&b, "%d. **%s** — current %d/100; published %s; observed %d time(s); first seen %s\n", i+1, paper.Title, paper.Score.Overall, publishedDateLabel(paper), len(paper.ObservedDates), paper.FirstSeen)
 	}
 	b.WriteString("\n## Complete Monthly Index\n\n")
 	for i, paper := range sorted {
@@ -104,6 +104,8 @@ func writePaper(b *strings.Builder, rank int, paper PaperRecord) {
 	fmt.Fprintf(b, "### %d. %s\n\n", rank, paper.Title)
 	fmt.Fprintf(b, "- **Overall score:** %d/100\n", paper.Score.Overall)
 	fmt.Fprintf(b, "- **Recommendation:** %s\n", paper.Recommendation)
+	fmt.Fprintf(b, "- **Published:** %s\n", publishedDateLabel(paper))
+	fmt.Fprintf(b, "- **First fetched:** %s\n", paper.FirstSeen)
 	fmt.Fprintf(b, "- **Categories:** %s\n", categoriesLabel(paper.Categories))
 	fmt.Fprintf(b, "- **Innovation Summary:** %s\n", paper.InnovationSummary)
 	b.WriteString("- **Why It Matters:**\n")
@@ -213,4 +215,11 @@ func categoriesLabel(categories []string) string {
 		return "N/A"
 	}
 	return strings.Join(categories, ", ")
+}
+
+func publishedDateLabel(paper PaperRecord) string {
+	if paper.PublishedDate == "" {
+		return "unavailable"
+	}
+	return paper.PublishedDate
 }

@@ -52,6 +52,7 @@ func (r Runner) Run(ctx context.Context) (RunResult, error) {
 		}
 		if existed {
 			record = mergeObservedDate(record, day)
+			record = mergePublishedDate(record, candidate)
 			record = artifact.CompactPaperRecord(record)
 			if err := r.store.SavePaper(record); err != nil {
 				return RunResult{}, err
@@ -75,6 +76,7 @@ func (r Runner) Run(ctx context.Context) (RunResult, error) {
 			ID:                  paper.ID,
 			Title:               paper.Title,
 			FirstSeen:           day.Format("2006-01-02"),
+			PublishedDate:       paperPublishedDate(paper),
 			ObservedDates:       []string{day.Format("2006-01-02")},
 			Score:               score,
 			Recommendation:      recommendation,
@@ -214,6 +216,21 @@ func mergeObservedDate(record PaperRecord, day time.Time) PaperRecord {
 	record.ObservedDates = append(record.ObservedDates, date)
 	sort.Strings(record.ObservedDates)
 	return record
+}
+
+func mergePublishedDate(record PaperRecord, paper Paper) PaperRecord {
+	if record.PublishedDate != "" {
+		return record
+	}
+	record.PublishedDate = paperPublishedDate(paper)
+	return record
+}
+
+func paperPublishedDate(paper Paper) string {
+	if paper.PublishedAt.IsZero() {
+		return ""
+	}
+	return paper.PublishedAt.UTC().Format("2006-01-02")
 }
 
 func stableCategories(categories []string) []string {

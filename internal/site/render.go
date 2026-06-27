@@ -16,7 +16,7 @@ func renderSite(outDir string, data siteData) error {
 		name string
 		view pageView
 	}{
-		{"index.html", "home", pageView{PageTitle: "Scout Research Intelligence", Site: data}},
+		{"index.html", "home", pageView{PageTitle: "Scout", Site: data}},
 		{"daily/index.html", "dailyArchive", pageView{PageTitle: "Scout Daily Archive", Site: data}},
 		{"monthly/index.html", "monthlyArchive", pageView{PageTitle: "Scout Monthly Rankings", Site: data}},
 	}
