@@ -151,7 +151,7 @@ func validateRequiredContent(outDir string) error {
 	if err != nil {
 		return err
 	}
-	for _, token := range []string{"Papers fetched on", "Executive Signal", "Top Papers", "Additional Papers", "Watchlist", "Archive", "Innovation Summary", "Why It Matters", "Implementation Angle", "Caveat", "Published"} {
+	for _, token := range []string{"Papers fetched on", "Executive Signal", "Top Papers", "Additional Papers", "Watchlist", "Archive", "Innovation Summary", "Executive Summary", "Why It Matters", "Implementation Angle", "Caveat", "Estimated Reading Priority", "Published"} {
 		if !strings.Contains(string(dailyBody), token) {
 			return fmt.Errorf("daily page missing %q", token)
 		}
@@ -160,7 +160,7 @@ func validateRequiredContent(outDir string) error {
 	if err != nil {
 		return err
 	}
-	for _, token := range []string{"Published", "First fetched", "Observation History", "Score Breakdown"} {
+	for _, token := range []string{"Executive Summary", "Estimated Reading Priority", "Published", "First fetched", "Observation History", "Score Breakdown"} {
 		if !strings.Contains(string(paperBody), token) {
 			return fmt.Errorf("paper page missing %q", token)
 		}

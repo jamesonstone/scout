@@ -20,7 +20,7 @@ func TestRenderDailyIncludesRequiredSections(t *testing.T) {
 		Links:               Links{HuggingFace: "hf", Arxiv: "arxiv", GitHub: []string{"gh"}, Paper: "paper"},
 	}
 	body := RenderDaily(day, []PaperRecord{paper}, "Themes are converging around agents.", "/tmp/monthly.md")
-	for _, token := range []string{"## Executive Signal", "## Top Papers", "## Additional Papers", "## Watchlist", "## Archive", "**Recommendation:** Read", "**Innovation Summary:** Scout Paper introduces deterministic scoring for research intelligence."} {
+	for _, token := range []string{"## Executive Signal", "## Top Papers", "## Additional Papers", "## Watchlist", "## Archive", "**Recommendation:** Read", "**Innovation Summary:** Scout Paper introduces deterministic scoring for research intelligence.", "**Executive Summary:**", "**Estimated Reading Priority:** High - 88/100 signal"} {
 		if !strings.Contains(body, token) {
 			t.Fatalf("expected %q in report", token)
 		}

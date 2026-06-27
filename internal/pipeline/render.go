@@ -108,6 +108,7 @@ func writePaper(b *strings.Builder, rank int, paper PaperRecord) {
 	fmt.Fprintf(b, "- **First fetched:** %s\n", paper.FirstSeen)
 	fmt.Fprintf(b, "- **Categories:** %s\n", categoriesLabel(paper.Categories))
 	fmt.Fprintf(b, "- **Innovation Summary:** %s\n", paper.InnovationSummary)
+	fmt.Fprintf(b, "- **Executive Summary:** %s\n", executiveSummary(paper))
 	b.WriteString("- **Why It Matters:**\n")
 	for _, bullet := range paper.WhyItMatters {
 		fmt.Fprintf(b, "  - %s\n", bullet)
@@ -117,8 +118,42 @@ func writePaper(b *strings.Builder, rank int, paper PaperRecord) {
 		fmt.Fprintf(b, "  - %s\n", bullet)
 	}
 	fmt.Fprintf(b, "- **Caveat:** %s\n", paper.Caveat)
+	fmt.Fprintf(b, "- **Estimated Reading Priority:** %s\n", estimatedReadingPriority(paper))
 	fmt.Fprintf(b, "- **Links:** Hugging Face: %s | arXiv: %s | GitHub: %s | Paper: %s\n", nonEmptyLink(paper.Links.HuggingFace), nonEmptyLink(paper.Links.Arxiv), strings.Join(orNA(paper.Links.GitHub), ", "), nonEmptyLink(firstNonEmpty(paper.Links.Paper, paper.Links.PDF)))
 	b.WriteString("\n")
+}
+
+func executiveSummary(paper PaperRecord) string {
+	parts := []string{paper.InnovationSummary}
+	if len(paper.WhyItMatters) > 0 {
+		parts = append(parts, "Why it matters: "+strings.Join(paper.WhyItMatters, " "))
+	}
+	if len(paper.ImplementationAngle) > 0 {
+		parts = append(parts, "Implementation angle: "+strings.Join(paper.ImplementationAngle, " "))
+	}
+	if paper.Caveat != "" {
+		parts = append(parts, "Caveat: "+paper.Caveat)
+	}
+	return limitWords(strings.Join(parts, " "), 280)
+}
+
+func estimatedReadingPriority(paper PaperRecord) string {
+	switch paper.Recommendation {
+	case RecommendationRead:
+		return fmt.Sprintf("High - %d/100 signal; read before acting on adjacent agent, evaluation, inference, or ML systems work.", paper.Score.Overall)
+	case RecommendationWorthWatching:
+		return fmt.Sprintf("Medium - %d/100 signal; scan now and revisit if the technique maps to near-term implementation work.", paper.Score.Overall)
+	default:
+		return fmt.Sprintf("Low - %d/100 signal; archive unless it maps directly to an active problem.", paper.Score.Overall)
+	}
+}
+
+func limitWords(text string, limit int) string {
+	words := strings.Fields(text)
+	if len(words) <= limit {
+		return strings.Join(words, " ")
+	}
+	return strings.Join(words[:limit], " ")
 }
 
 func sortRecords(papers []PaperRecord) []PaperRecord {

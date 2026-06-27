@@ -217,17 +217,52 @@ func monthlyFromIDs(basePath, month string, ids []string, records map[string]mod
 
 func paperPageFromRecord(basePath string, record model.PaperRecord) paperPage {
 	return paperPage{
-		Record:        record,
-		URL:           siteURL(basePath, "papers/"+slug(record.ID)+"/"),
-		JSONURL:       siteURL(basePath, "data/papers/"+sanitizeFile(record.ID)+".json"),
-		Categories:    categoriesLabel(record.Categories),
-		FirstSeen:     record.FirstSeen,
-		PublishedDate: publishedDateLabel(record),
-		Observed:      strings.Join(record.ObservedDates, ", "),
-		Score:         record.Score.Overall,
-		ScoreClass:    scoreClass(record.Score.Overall),
-		Links:         linksForRecord(record.Links),
+		Record:                   record,
+		URL:                      siteURL(basePath, "papers/"+slug(record.ID)+"/"),
+		JSONURL:                  siteURL(basePath, "data/papers/"+sanitizeFile(record.ID)+".json"),
+		Categories:               categoriesLabel(record.Categories),
+		FirstSeen:                record.FirstSeen,
+		PublishedDate:            publishedDateLabel(record),
+		Observed:                 strings.Join(record.ObservedDates, ", "),
+		Score:                    record.Score.Overall,
+		ScoreClass:               scoreClass(record.Score.Overall),
+		Links:                    linksForRecord(record.Links),
+		ExecutiveSummary:         executiveSummary(record),
+		EstimatedReadingPriority: estimatedReadingPriority(record),
 	}
+}
+
+func executiveSummary(record model.PaperRecord) string {
+	parts := []string{record.InnovationSummary}
+	if len(record.WhyItMatters) > 0 {
+		parts = append(parts, "Why it matters: "+strings.Join(record.WhyItMatters, " "))
+	}
+	if len(record.ImplementationAngle) > 0 {
+		parts = append(parts, "Implementation angle: "+strings.Join(record.ImplementationAngle, " "))
+	}
+	if record.Caveat != "" {
+		parts = append(parts, "Caveat: "+record.Caveat)
+	}
+	return limitWords(strings.Join(parts, " "), 280)
+}
+
+func estimatedReadingPriority(record model.PaperRecord) string {
+	switch record.Recommendation {
+	case model.RecommendationRead:
+		return fmt.Sprintf("High - %d/100 signal; read before acting on adjacent agent, evaluation, inference, or ML systems work.", record.Score.Overall)
+	case model.RecommendationWorthWatching:
+		return fmt.Sprintf("Medium - %d/100 signal; scan now and revisit if the technique maps to near-term implementation work.", record.Score.Overall)
+	default:
+		return fmt.Sprintf("Low - %d/100 signal; archive unless it maps directly to an active problem.", record.Score.Overall)
+	}
+}
+
+func limitWords(text string, limit int) string {
+	words := strings.Fields(text)
+	if len(words) <= limit {
+		return strings.Join(words, " ")
+	}
+	return strings.Join(words[:limit], " ")
 }
 
 func publishedDateLabel(record model.PaperRecord) string {
