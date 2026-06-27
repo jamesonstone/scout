@@ -51,7 +51,7 @@ func init() {
 func addSiteFlags(cmd *cobra.Command) {
 	cmd.Flags().String("data-dir", ".", "scout data directory containing data/ and reports/")
 	cmd.Flags().String("out-dir", "public", "static site output directory")
-	cmd.Flags().String("base-path", "/scout/", "GitHub Pages project-site base path")
+	cmd.Flags().String("base-path", "/", "static site base path")
 }
 
 func siteConfigFromFlags(cmd *cobra.Command) site.Config {
