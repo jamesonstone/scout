@@ -1,0 +1,53 @@
+{
+  "id": "2606.28057",
+  "title": "MultiHashFormer: Hash-based Generative Language Models",
+  "first_seen": "2026-06-29",
+  "published_date": "2026-06-26",
+  "observed_dates": [
+    "2026-06-29"
+  ],
+  "score": {
+    "novelty": 59,
+    "practical_impact": 58,
+    "technical_depth": 71,
+    "implementation_potential": 45,
+    "relevance": 54,
+    "community_signal": 88,
+    "summary_confidence": 70,
+    "overall": 61,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Worth Watching",
+  "categories": [
+    "Hash Decoder",
+    "Hash Encoder",
+    "MultiHashFormer",
+    "Transformer decoder",
+    "causal LMs",
+    "discrete hash IDs"
+  ],
+  "innovation_summary": "MultiHashFormer: Hash-based Generative Language Models: In this paper, we propose MultiHashFormer, a new framework that allows hash-based autoregression.",
+  "why_it_matters": [
+    "Overall signal 61/100 driven by novelty 59 and practical impact 58.",
+    "Primary categories: Hash Decoder, Hash Encoder, MultiHashFormer, Transformer decoder, causal LMs, discrete hash IDs.",
+    "Community signal includes 13 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 45/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 71/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.28057",
+    "arxiv": "https://arxiv.org/abs/2606.28057"
+  }
+}

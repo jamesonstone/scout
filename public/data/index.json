@@ -1,6 +1,11 @@
 {
   "daily": [
     {
+      "date": "2026-06-29",
+      "url": "/daily/2026-06-29/",
+      "json": "/data/daily/2026-06/2026-06-29.json"
+    },
+    {
       "date": "2026-06-27",
       "url": "/daily/2026-06-27/",
       "json": "/data/daily/2026-06/2026-06-27.json"
@@ -54,6 +59,20 @@
       "score": 95
     },
     {
+      "id": "2606.22873",
+      "title": "SingGuard: A Policy-Adaptive Multimodal LLM Guardrail with Dynamic Reasoning",
+      "url": "/papers/2606.22873/",
+      "json": "/data/papers/2606.22873.json",
+      "score": 95
+    },
+    {
+      "id": "2606.27378",
+      "title": "Formalizing Latent Thoughts: Four Axioms of Thought Representation in LLMs",
+      "url": "/papers/2606.27378/",
+      "json": "/data/papers/2606.27378.json",
+      "score": 94
+    },
+    {
       "id": "2606.26907",
       "title": "Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation",
       "url": "/papers/2606.26907/",
@@ -66,6 +85,34 @@
       "url": "/papers/2606.27313/",
       "json": "/data/papers/2606.27313.json",
       "score": 94
+    },
+    {
+      "id": "2606.27974",
+      "title": "ProMSA:Progressive Multimodal Search Agents for Knowledge-Based Visual Question Answering",
+      "url": "/papers/2606.27974/",
+      "json": "/data/papers/2606.27974.json",
+      "score": 93
+    },
+    {
+      "id": "2606.26519",
+      "title": "Boundary-Aware Context Grounding for A Low-Channel EEG Agent",
+      "url": "/papers/2606.26519/",
+      "json": "/data/papers/2606.26519.json",
+      "score": 92
+    },
+    {
+      "id": "2606.28187",
+      "title": "GBC: Gradient-Based Connections for Optimizing Multi-Agent Systems",
+      "url": "/papers/2606.28187/",
+      "json": "/data/papers/2606.28187.json",
+      "score": 92
+    },
+    {
+      "id": "2606.28128",
+      "title": "PhysisForcing: Physics Reinforced World Simulator for Robotic Manipulation",
+      "url": "/papers/2606.28128/",
+      "json": "/data/papers/2606.28128.json",
+      "score": 92
     },
     {
       "id": "2606.23835",
@@ -82,6 +129,13 @@
       "score": 91
     },
     {
+      "id": "2606.27163",
+      "title": "Learning to Fold: prizewinning solution at LeHome Challenge 2026 (1st place online, 2nd offline)",
+      "url": "/papers/2606.27163/",
+      "json": "/data/papers/2606.27163.json",
+      "score": 91
+    },
+    {
       "id": "2606.24551",
       "title": "GUI vs. CLI: Execution Bottlenecks in Screen-Only and Skill-Mediated Computer-Use Agents",
       "url": "/papers/2606.24551/",
@@ -89,10 +143,38 @@
       "score": 90
     },
     {
+      "id": "2606.28276",
+      "title": "SimFoundry: Modular and Automated Scene Generation for Policy Learning and Evaluation",
+      "url": "/papers/2606.28276/",
+      "json": "/data/papers/2606.28276.json",
+      "score": 90
+    },
+    {
+      "id": "2511.07397",
+      "title": "Thinking While Speaking: Inference-Time Knowledge Transfer for Responsive and Intelligent Conversational Voice Agents",
+      "url": "/papers/2511.07397/",
+      "json": "/data/papers/2511.07397.json",
+      "score": 89
+    },
+    {
+      "id": "2606.27457",
+      "title": "Cluster, Route, Escalate: Cascaded Framework for Cost-Aware LLM Serving",
+      "url": "/papers/2606.27457/",
+      "json": "/data/papers/2606.27457.json",
+      "score": 88
+    },
+    {
       "id": "2606.26875",
       "title": "Information-Aware KV Cache Compression for Long Reasoning",
       "url": "/papers/2606.26875/",
       "json": "/data/papers/2606.26875.json",
+      "score": 87
+    },
+    {
+      "id": "2606.28277",
+      "title": "Towards Automating Scientific Review with Google's Paper Assistant Tool",
+      "url": "/papers/2606.28277/",
+      "json": "/data/papers/2606.28277.json",
       "score": 87
     },
     {
@@ -145,10 +227,31 @@
       "score": 84
     },
     {
+      "id": "2606.18953",
+      "title": "Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement",
+      "url": "/papers/2606.18953/",
+      "json": "/data/papers/2606.18953.json",
+      "score": 84
+    },
+    {
+      "id": "2606.26015",
+      "title": "The Tatoxa System for Text Detoxification in Low-Resource Languages: The Case of Tatar",
+      "url": "/papers/2606.26015/",
+      "json": "/data/papers/2606.26015.json",
+      "score": 84
+    },
+    {
       "id": "2606.16613",
       "title": "CoffeeBench: Benchmarking Long-Horizon LLM Agents in Heterogeneous Multi-Agent Economies",
       "url": "/papers/2606.16613/",
       "json": "/data/papers/2606.16613.json",
+      "score": 82
+    },
+    {
+      "id": "2606.27595",
+      "title": "Ko-WideSearch: A Korean Breadth-Search Benchmark for Exhaustive Set Enumeration by Web Agents",
+      "url": "/papers/2606.27595/",
+      "json": "/data/papers/2606.27595.json",
       "score": 82
     },
     {
@@ -157,6 +260,20 @@
       "url": "/papers/2606.21959/",
       "json": "/data/papers/2606.21959.json",
       "score": 82
+    },
+    {
+      "id": "2606.27771",
+      "title": "NormGuard: Reward-Preserving Norm Constraints in Flow-Matching Reinforcement Learning",
+      "url": "/papers/2606.27771/",
+      "json": "/data/papers/2606.27771.json",
+      "score": 80
+    },
+    {
+      "id": "2606.28133",
+      "title": "Translation as a Bridging Action: Transferring Manipulation Skills from Humans to Robots",
+      "url": "/papers/2606.28133/",
+      "json": "/data/papers/2606.28133.json",
+      "score": 79
     },
     {
       "id": "2606.26217",
@@ -178,6 +295,20 @@
       "url": "/papers/2606.14397/",
       "json": "/data/papers/2606.14397.json",
       "score": 68
+    },
+    {
+      "id": "2606.27608",
+      "title": "Qwen-Image-2.0-RL Technical Report",
+      "url": "/papers/2606.27608/",
+      "json": "/data/papers/2606.27608.json",
+      "score": 62
+    },
+    {
+      "id": "2606.28057",
+      "title": "MultiHashFormer: Hash-based Generative Language Models",
+      "url": "/papers/2606.28057/",
+      "json": "/data/papers/2606.28057.json",
+      "score": 61
     },
     {
       "id": "2606.27364",
