@@ -1,0 +1,56 @@
+{
+  "id": "2606.27163",
+  "title": "Learning to Fold: prizewinning solution at LeHome Challenge 2026 (1st place online, 2nd offline)",
+  "first_seen": "2026-06-29",
+  "published_date": "2026-06-25",
+  "observed_dates": [
+    "2026-06-29"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 100,
+    "technical_depth": 100,
+    "implementation_potential": 81,
+    "relevance": 98,
+    "community_signal": 43,
+    "summary_confidence": 95,
+    "overall": 91,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "AWR",
+    "DAgger-like HIL",
+    "HuggingFace Hub",
+    "RECAP",
+    "Thompson sampling",
+    "advantage estimation"
+  ],
+  "innovation_summary": "Learning to Fold: prizewinning solution at LeHome Challenge 2026 (1st place online, 2nd offline): The system placed 1st of 62 teams in the online (simulation) round and 2nd in the real-world final.",
+  "why_it_matters": [
+    "Overall signal 91/100 driven by novelty 100 and practical impact 100.",
+    "Primary categories: AWR, DAgger-like HIL, HuggingFace Hub, RECAP, Thompson sampling, advantage estimation.",
+    "Community signal includes 4 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 81/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "The strongest evidence comes from simulated settings, so operational impact may be less certain in live systems.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.27163",
+    "arxiv": "https://arxiv.org/abs/2606.27163",
+    "project": [
+      "https://ilialarchenko.com/projects/lehome2026/"
+    ]
+  }
+}
