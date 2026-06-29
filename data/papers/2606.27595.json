@@ -1,0 +1,56 @@
+{
+  "id": "2606.27595",
+  "title": "Ko-WideSearch: A Korean Breadth-Search Benchmark for Exhaustive Set Enumeration by Web Agents",
+  "first_seen": "2026-06-29",
+  "published_date": "2026-06-25",
+  "observed_dates": [
+    "2026-06-29"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 74,
+    "technical_depth": 87,
+    "implementation_potential": 71,
+    "relevance": 100,
+    "community_signal": 38,
+    "summary_confidence": 95,
+    "overall": 82,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "Column-F1",
+    "Item-F1",
+    "Row-F1",
+    "automated synthesize-and-verify pipeline",
+    "breadth-search",
+    "composite key"
+  ],
+  "innovation_summary": "Ko-WideSearch: A Korean Breadth-Search Benchmark for Exhaustive Set Enumeration by Web Agents: I introduce Ko-WideSearch, a Korean breadth-search benchmark built by an automated synthesize-and-verify pipeline.",
+  "why_it_matters": [
+    "Overall signal 82/100 driven by novelty 100 and practical impact 74.",
+    "Primary categories: Column-F1, Item-F1, Row-F1, automated synthesize-and-verify pipeline, breadth-search, composite key.",
+    "Community signal includes 3 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 71/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 87/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.27595",
+    "arxiv": "https://arxiv.org/abs/2606.27595",
+    "project": [
+      "https://minstar.github.io/Ko-widesearch/"
+    ]
+  }
+}

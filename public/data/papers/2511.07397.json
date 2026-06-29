@@ -1,0 +1,53 @@
+{
+  "id": "2511.07397",
+  "title": "Thinking While Speaking: Inference-Time Knowledge Transfer for Responsive and Intelligent Conversational Voice Agents",
+  "first_seen": "2026-06-29",
+  "published_date": "2026-06-23",
+  "observed_dates": [
+    "2026-06-29"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 96,
+    "technical_depth": 87,
+    "implementation_potential": 89,
+    "relevance": 100,
+    "community_signal": 41,
+    "summary_confidence": 95,
+    "overall": 89,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "Pareto frontier",
+    "conversational infill",
+    "foundation models",
+    "latency",
+    "millisecond-level time-to-first-response",
+    "real-time models"
+  ],
+  "innovation_summary": "Thinking While Speaking: Inference-Time Knowledge Transfer for Responsive and Intelligent Conversational Voice Agents: We introduce conversational infill, where a small talker model both immediately generates contextually grounded responses to hide the latency of an external reasoner model and fluently.",
+  "why_it_matters": [
+    "Overall signal 89/100 driven by novelty 100 and practical impact 96.",
+    "Primary categories: Pareto frontier, conversational infill, foundation models, latency, millisecond-level time-to-first-response, real-time models.",
+    "Community signal includes 3 upvote(s) and 2 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 89/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 87/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2511.07397",
+    "arxiv": "https://arxiv.org/abs/2511.07397"
+  }
+}

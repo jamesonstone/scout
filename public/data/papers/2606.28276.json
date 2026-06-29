@@ -1,0 +1,56 @@
+{
+  "id": "2606.28276",
+  "title": "SimFoundry: Modular and Automated Scene Generation for Policy Learning and Evaluation",
+  "first_seen": "2026-06-29",
+  "published_date": "2026-06-26",
+  "observed_dates": [
+    "2026-06-29"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 100,
+    "technical_depth": 100,
+    "implementation_potential": 71,
+    "relevance": 98,
+    "community_signal": 45,
+    "summary_confidence": 95,
+    "overall": 90,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "affordance-preserving variations",
+    "digital cousins",
+    "digital twins",
+    "policy training",
+    "real-to-sim scene construction",
+    "robotic manipulation"
+  ],
+  "innovation_summary": "SimFoundry: Modular and Automated Scene Generation for Policy Learning and Evaluation: We introduce SimFoundry, a modular and automated system for zero-shot real-to-sim scene construction from a video.",
+  "why_it_matters": [
+    "Overall signal 90/100 driven by novelty 100 and practical impact 100.",
+    "Primary categories: affordance-preserving variations, digital cousins, digital twins, policy training, real-to-sim scene construction, robotic manipulation.",
+    "Community signal includes 5 upvote(s) and 0 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 71/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "The strongest evidence comes from simulated settings, so operational impact may be less certain in live systems.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.28276",
+    "arxiv": "https://arxiv.org/abs/2606.28276",
+    "project": [
+      "https://research.nvidia.com/labs/gear/simfoundry/"
+    ]
+  }
+}
