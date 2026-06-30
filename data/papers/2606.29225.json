@@ -1,0 +1,56 @@
+{
+  "id": "2606.29225",
+  "title": "PolicyGuard: A Dialogue-Grounded Sub-Agent Verifier for Policy Adherence in LLM Agents",
+  "first_seen": "2026-06-30",
+  "published_date": "2026-06-28",
+  "observed_dates": [
+    "2026-06-30"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 100,
+    "technical_depth": 97,
+    "implementation_potential": 73,
+    "relevance": 100,
+    "community_signal": 48,
+    "summary_confidence": 95,
+    "overall": 90,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "LLM agents",
+    "argument-level guards",
+    "conversation context",
+    "dialogue reasoning",
+    "policy adherence",
+    "policy violation recall"
+  ],
+  "innovation_summary": "PolicyGuard: A Dialogue-Grounded Sub-Agent Verifier for Policy Adherence in LLM Agents: We introduce POLICYGUARD, a sub-agent verifier that shares the agent's view of the dialogue, reasons over the policy in context, and provides actionable feedback for the.",
+  "why_it_matters": [
+    "Overall signal 90/100 driven by novelty 100 and practical impact 100.",
+    "Primary categories: LLM agents, argument-level guards, conversation context, dialogue reasoning, policy adherence, policy violation recall.",
+    "Community signal includes 5 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 73/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 97/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.29225",
+    "arxiv": "https://arxiv.org/abs/2606.29225",
+    "project": [
+      "https://huggingface.co/papers/2606.29225"
+    ]
+  }
+}

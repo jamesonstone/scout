@@ -1,0 +1,53 @@
+{
+  "id": "2606.23404",
+  "title": "ReasoningLens: Hierarchical Visualization and Diagnostic Auditing for Large Reasoning Models",
+  "first_seen": "2026-06-30",
+  "published_date": "2026-06-22",
+  "observed_dates": [
+    "2026-06-30"
+  ],
+  "score": {
+    "novelty": 61,
+    "practical_impact": 56,
+    "technical_depth": 53,
+    "implementation_potential": 43,
+    "relevance": 30,
+    "community_signal": 33,
+    "summary_confidence": 70,
+    "overall": 49,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Skip",
+  "categories": [
+    "Chain-of-Thought traces",
+    "agentic auditor",
+    "diagnostic auditing",
+    "hierarchical visualization",
+    "information necropsy",
+    "systemic reasoning profiles"
+  ],
+  "innovation_summary": "ReasoningLens: Hierarchical Visualization and Diagnostic Auditing for Large Reasoning Models: To address this, we present ReasoningLens, an open-source framework designed for the hierarchical visualization and diagnostic auditing of complex reasoning chains.",
+  "why_it_matters": [
+    "Overall signal 49/100 driven by novelty 61 and practical impact 56.",
+    "Primary categories: Chain-of-Thought traces, agentic auditor, diagnostic auditing, hierarchical visualization, information necropsy, systemic reasoning profiles.",
+    "Community signal includes 2 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 43/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 53/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.23404",
+    "arxiv": "https://arxiv.org/abs/2606.23404"
+  }
+}

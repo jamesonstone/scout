@@ -1,0 +1,56 @@
+{
+  "id": "2606.29887",
+  "title": "SafePyramid: A Hierarchical Benchmark for In-context Policy Guardrailing",
+  "first_seen": "2026-06-30",
+  "published_date": "2026-06-29",
+  "observed_dates": [
+    "2026-06-30"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 100,
+    "technical_depth": 100,
+    "implementation_potential": 83,
+    "relevance": 100,
+    "community_signal": 30,
+    "summary_confidence": 95,
+    "overall": 90,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "guardrails",
+    "in-context policy guardrailing",
+    "multi-turn conversations",
+    "natural-language rules",
+    "policy frameworks",
+    "policy specifications"
+  ],
+  "innovation_summary": "SafePyramid: A Hierarchical Benchmark for In-context Policy Guardrailing: To systematically evaluate this capability, we introduce SafePyramid, a safety benchmark comprising 1,000 multi-turn conversations across 10 domains and 3,000 corresponding application-specific policies, which together contain.",
+  "why_it_matters": [
+    "Overall signal 90/100 driven by novelty 100 and practical impact 100.",
+    "Primary categories: guardrails, in-context policy guardrailing, multi-turn conversations, natural-language rules, policy frameworks, policy specifications.",
+    "Community signal includes 2 upvote(s) and 0 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 83/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.29887",
+    "arxiv": "https://arxiv.org/abs/2606.29887",
+    "project": [
+      "https://bytedance.github.io/safepyramid/"
+    ]
+  }
+}

@@ -1,6 +1,11 @@
 {
   "daily": [
     {
+      "date": "2026-06-30",
+      "url": "/daily/2026-06-30/",
+      "json": "/data/daily/2026-06/2026-06-30.json"
+    },
+    {
       "date": "2026-06-29",
       "url": "/daily/2026-06-29/",
       "json": "/data/daily/2026-06/2026-06-29.json"
@@ -29,11 +34,32 @@
   ],
   "papers": [
     {
+      "id": "2606.28733",
+      "title": "Agentic Abstention: Do Agents Know When to Stop Instead of Act?",
+      "url": "/papers/2606.28733/",
+      "json": "/data/papers/2606.28733.json",
+      "score": 100
+    },
+    {
+      "id": "2606.30616",
+      "title": "Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent",
+      "url": "/papers/2606.30616/",
+      "json": "/data/papers/2606.30616.json",
+      "score": 100
+    },
+    {
       "id": "2606.26300",
       "title": "The Verification Horizon: No Silver Bullet for Coding Agent Rewards",
       "url": "/papers/2606.26300/",
       "json": "/data/papers/2606.26300.json",
       "score": 100
+    },
+    {
+      "id": "2606.28480",
+      "title": "TUA-Bench: A Benchmark for General-Purpose Terminal-Use Agents",
+      "url": "/papers/2606.28480/",
+      "json": "/data/papers/2606.28480.json",
+      "score": 99
     },
     {
       "id": "2606.27377",
@@ -50,6 +76,13 @@
       "score": 98
     },
     {
+      "id": "2606.29445",
+      "title": "Bridging VideoQA and Video-Guided Agentic Tasks via Generalized Keyframe Extraction",
+      "url": "/papers/2606.29445/",
+      "json": "/data/papers/2606.29445.json",
+      "score": 97
+    },
+    {
       "id": "2606.18394",
       "title": "JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting",
       "url": "/papers/2606.18394/",
@@ -57,10 +90,24 @@
       "score": 97
     },
     {
+      "id": "2502.16886",
+      "title": "ReFreeKV: Towards Threshold-Free KV Cache Compression",
+      "url": "/papers/2502.16886/",
+      "json": "/data/papers/2502.16886.json",
+      "score": 96
+    },
+    {
       "id": "2606.26080",
       "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
       "url": "/papers/2606.26080/",
       "json": "/data/papers/2606.26080.json",
+      "score": 95
+    },
+    {
+      "id": "2606.29537",
+      "title": "OSWorld2.0: Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks",
+      "url": "/papers/2606.29537/",
+      "json": "/data/papers/2606.29537.json",
       "score": 95
     },
     {
@@ -71,10 +118,24 @@
       "score": 95
     },
     {
+      "id": "2606.30251",
+      "title": "TACO: Tool-Augmented Credit Optimization for Agentic Tool Use",
+      "url": "/papers/2606.30251/",
+      "json": "/data/papers/2606.30251.json",
+      "score": 95
+    },
+    {
       "id": "2606.27378",
       "title": "Formalizing Latent Thoughts: Four Axioms of Thought Representation in LLMs",
       "url": "/papers/2606.27378/",
       "json": "/data/papers/2606.27378.json",
+      "score": 94
+    },
+    {
+      "id": "2606.30017",
+      "title": "Monte Carlo Energy Aggregation for Mobile 3D Gaussian Splatting",
+      "url": "/papers/2606.30017/",
+      "json": "/data/papers/2606.30017.json",
       "score": 94
     },
     {
@@ -92,11 +153,32 @@
       "score": 94
     },
     {
+      "id": "2606.30170",
+      "title": "Beyond Drug Discovery: The Nanotechnology Molecular Optimization (NMO) Benchmark",
+      "url": "/papers/2606.30170/",
+      "json": "/data/papers/2606.30170.json",
+      "score": 93
+    },
+    {
+      "id": "2606.29705",
+      "title": "GUICrafter: Weakly-Supervised GUI Agent Leveraging Massive Unannotated Screenshots",
+      "url": "/papers/2606.29705/",
+      "json": "/data/papers/2606.29705.json",
+      "score": 93
+    },
+    {
       "id": "2606.27974",
       "title": "ProMSA:Progressive Multimodal Search Agents for Knowledge-Based Visual Question Answering",
       "url": "/papers/2606.27974/",
       "json": "/data/papers/2606.27974.json",
       "score": 93
+    },
+    {
+      "id": "2606.24143",
+      "title": "AsyncOPD: How Stale Can On-Policy Distillation Be?",
+      "url": "/papers/2606.24143/",
+      "json": "/data/papers/2606.24143.json",
+      "score": 92
     },
     {
       "id": "2606.26519",
@@ -134,6 +216,13 @@
       "score": 91
     },
     {
+      "id": "2606.30292",
+      "title": "DreamForge-World 0.1 Preview: A Low-Compute Real-Time Controllable World Model",
+      "url": "/papers/2606.30292/",
+      "json": "/data/papers/2606.30292.json",
+      "score": 91
+    },
+    {
       "id": "2606.27163",
       "title": "Learning to Fold: prizewinning solution at LeHome Challenge 2026 (1st place online, 2nd offline)",
       "url": "/papers/2606.27163/",
@@ -141,10 +230,52 @@
       "score": 91
     },
     {
+      "id": "2606.25363",
+      "title": "TheoremGraph: Bridging Formal and Informal Mathematics",
+      "url": "/papers/2606.25363/",
+      "json": "/data/papers/2606.25363.json",
+      "score": 91
+    },
+    {
+      "id": "2606.27828",
+      "title": "Video-MME-Logical: A Controlled Diagnostic Benchmark for Video Temporal-Logical Reasoning",
+      "url": "/papers/2606.27828/",
+      "json": "/data/papers/2606.27828.json",
+      "score": 91
+    },
+    {
       "id": "2606.24551",
       "title": "GUI vs. CLI: Execution Bottlenecks in Screen-Only and Skill-Mediated Computer-Use Agents",
       "url": "/papers/2606.24551/",
       "json": "/data/papers/2606.24551.json",
+      "score": 90
+    },
+    {
+      "id": "2606.30054",
+      "title": "Illuminating Unified Multimodal Model for Free-form Interleaved Text-Image Generation",
+      "url": "/papers/2606.30054/",
+      "json": "/data/papers/2606.30054.json",
+      "score": 90
+    },
+    {
+      "id": "2606.25393",
+      "title": "Large-Scale Tunnel Air-Ground Collaboration With FLISP: Fast LiDAR-IMU Synchronized Path Planner",
+      "url": "/papers/2606.25393/",
+      "json": "/data/papers/2606.25393.json",
+      "score": 90
+    },
+    {
+      "id": "2606.29225",
+      "title": "PolicyGuard: A Dialogue-Grounded Sub-Agent Verifier for Policy Adherence in LLM Agents",
+      "url": "/papers/2606.29225/",
+      "json": "/data/papers/2606.29225.json",
+      "score": 90
+    },
+    {
+      "id": "2606.29887",
+      "title": "SafePyramid: A Hierarchical Benchmark for In-context Policy Guardrailing",
+      "url": "/papers/2606.29887/",
+      "json": "/data/papers/2606.29887.json",
       "score": 90
     },
     {
@@ -162,6 +293,13 @@
       "score": 89
     },
     {
+      "id": "2606.27708",
+      "title": "ZooClaw-FashionSigLIP2: Distilled Fine-tuning for Robust Fashion Retrieval",
+      "url": "/papers/2606.27708/",
+      "json": "/data/papers/2606.27708.json",
+      "score": 89
+    },
+    {
       "id": "2606.27457",
       "title": "Cluster, Route, Escalate: Cascaded Framework for Cost-Aware LLM Serving",
       "url": "/papers/2606.27457/",
@@ -169,10 +307,45 @@
       "score": 88
     },
     {
+      "id": "2606.27282",
+      "title": "How Good Can Linear Models Be for Time-Series Forecasting?",
+      "url": "/papers/2606.27282/",
+      "json": "/data/papers/2606.27282.json",
+      "score": 88
+    },
+    {
+      "id": "2606.26740",
+      "title": "LiveEdit: Towards Real-Time Diffusion-Based Streaming Video Editing",
+      "url": "/papers/2606.26740/",
+      "json": "/data/papers/2606.26740.json",
+      "score": 88
+    },
+    {
+      "id": "2606.30084",
+      "title": "One Forward Beats Two: InnerZoom for Accurate and Efficient GUI Grounding",
+      "url": "/papers/2606.30084/",
+      "json": "/data/papers/2606.30084.json",
+      "score": 88
+    },
+    {
+      "id": "2606.24256",
+      "title": "Trimming the Long-Tail of Visual World Modeling Evaluation",
+      "url": "/papers/2606.24256/",
+      "json": "/data/papers/2606.24256.json",
+      "score": 88
+    },
+    {
       "id": "2606.26875",
       "title": "Information-Aware KV Cache Compression for Long Reasoning",
       "url": "/papers/2606.26875/",
       "json": "/data/papers/2606.26875.json",
+      "score": 87
+    },
+    {
+      "id": "2606.29814",
+      "title": "Nemotron-Labs-Diffusion-Image: Advancing Masked Discrete Diffusion for High-Resolution Image Synthesis",
+      "url": "/papers/2606.29814/",
+      "json": "/data/papers/2606.29814.json",
       "score": 87
     },
     {
@@ -197,6 +370,13 @@
       "score": 87
     },
     {
+      "id": "2606.30045",
+      "title": "Walking in the Implicit: Interactive World Exploration via Neural Scene Representation",
+      "url": "/papers/2606.30045/",
+      "json": "/data/papers/2606.30045.json",
+      "score": 86
+    },
+    {
       "id": "2606.16517",
       "title": "How Post-Training Shapes Biological Reasoning Models",
       "url": "/papers/2606.16517/",
@@ -208,6 +388,13 @@
       "title": "LISA: Likelihood Score Alignment for Visual-condition Controllable Generation",
       "url": "/papers/2606.27192/",
       "json": "/data/papers/2606.27192.json",
+      "score": 85
+    },
+    {
+      "id": "2606.26016",
+      "title": "MIMFlow: Integrating Masked Image Modeling with Normalizing Flows for End-to-End Image Generation",
+      "url": "/papers/2606.26016/",
+      "json": "/data/papers/2606.26016.json",
       "score": 85
     },
     {
@@ -246,6 +433,13 @@
       "score": 84
     },
     {
+      "id": "2606.22749",
+      "title": "RaysUp: Ultra-light Universal Feature Upsampling via Geometry-Aware Ray Representation",
+      "url": "/papers/2606.22749/",
+      "json": "/data/papers/2606.22749.json",
+      "score": 83
+    },
+    {
       "id": "2606.16613",
       "title": "CoffeeBench: Benchmarking Long-Horizon LLM Agents in Heterogeneous Multi-Agent Economies",
       "url": "/papers/2606.16613/",
@@ -267,10 +461,31 @@
       "score": 82
     },
     {
+      "id": "2606.26938",
+      "title": "Focusing on What Matters: Saliency-Harnessing Accurate Routing for Diffusion MoE",
+      "url": "/papers/2606.26938/",
+      "json": "/data/papers/2606.26938.json",
+      "score": 80
+    },
+    {
+      "id": "2606.22473",
+      "title": "Interleaved Speech Language Models Latently Work In Text",
+      "url": "/papers/2606.22473/",
+      "json": "/data/papers/2606.22473.json",
+      "score": 80
+    },
+    {
       "id": "2606.27771",
       "title": "NormGuard: Reward-Preserving Norm Constraints in Flow-Matching Reinforcement Learning",
       "url": "/papers/2606.27771/",
       "json": "/data/papers/2606.27771.json",
+      "score": 80
+    },
+    {
+      "id": "2606.30308",
+      "title": "The Surprising Effectiveness of Video Diffusion Models for Hand Motion Reconstruction",
+      "url": "/papers/2606.30308/",
+      "json": "/data/papers/2606.30308.json",
       "score": 80
     },
     {
@@ -279,6 +494,20 @@
       "url": "/papers/2606.28133/",
       "json": "/data/papers/2606.28133.json",
       "score": 79
+    },
+    {
+      "id": "2606.29501",
+      "title": "Learning Transferable Dynamics Priors from Action to World Modeling",
+      "url": "/papers/2606.29501/",
+      "json": "/data/papers/2606.29501.json",
+      "score": 75
+    },
+    {
+      "id": "2606.29686",
+      "title": "PoseShield: Neural Collision Fields for Human Self-Collision Resolution",
+      "url": "/papers/2606.29686/",
+      "json": "/data/papers/2606.29686.json",
+      "score": 74
     },
     {
       "id": "2606.26217",
@@ -295,11 +524,32 @@
       "score": 68
     },
     {
+      "id": "2606.29655",
+      "title": "Geometric Stability of Neural Population Codes: Regional Variation, Behavioral Relevance, and Circuit Dependence",
+      "url": "/papers/2606.29655/",
+      "json": "/data/papers/2606.29655.json",
+      "score": 68
+    },
+    {
       "id": "2606.14397",
       "title": "Running the Gauntlet: Re-evaluating the Capabilities of Agents Beyond Familiar Environments",
       "url": "/papers/2606.14397/",
       "json": "/data/papers/2606.14397.json",
       "score": 68
+    },
+    {
+      "id": "2606.30410",
+      "title": "Beyond IID: How General Are Tabular Foundation Models, Really?",
+      "url": "/papers/2606.30410/",
+      "json": "/data/papers/2606.30410.json",
+      "score": 62
+    },
+    {
+      "id": "2606.28186",
+      "title": "Cognitive Episodes in LLM Reasoning Traces Enable Interpretable Human Item Difficulty Prediction",
+      "url": "/papers/2606.28186/",
+      "json": "/data/papers/2606.28186.json",
+      "score": 62
     },
     {
       "id": "2606.27608",
@@ -328,6 +578,13 @@
       "url": "/papers/2606.26025/",
       "json": "/data/papers/2606.26025.json",
       "score": 52
+    },
+    {
+      "id": "2606.23404",
+      "title": "ReasoningLens: Hierarchical Visualization and Diagnostic Auditing for Large Reasoning Models",
+      "url": "/papers/2606.23404/",
+      "json": "/data/papers/2606.23404.json",
+      "score": 49
     }
   ]
 }

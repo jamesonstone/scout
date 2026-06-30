@@ -1,0 +1,53 @@
+{
+  "id": "2606.29655",
+  "title": "Geometric Stability of Neural Population Codes: Regional Variation, Behavioral Relevance, and Circuit Dependence",
+  "first_seen": "2026-06-30",
+  "published_date": "2026-06-28",
+  "observed_dates": [
+    "2026-06-30"
+  ],
+  "score": {
+    "novelty": 73,
+    "practical_impact": 56,
+    "technical_depth": 89,
+    "implementation_potential": 79,
+    "relevance": 60,
+    "community_signal": 28,
+    "summary_confidence": 95,
+    "overall": 68,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Worth Watching",
+  "categories": [
+    "Spearman rank correlation",
+    "attractor network model",
+    "feedforward input",
+    "geometric stability",
+    "hippocampal circuits",
+    "pairwise distance structure"
+  ],
+  "innovation_summary": "Geometric Stability of Neural Population Codes: Regional Variation, Behavioral Relevance, and Circuit Dependence: Current models of representational reliability in neural populations focus on temporal stability: whether population centroids are preserved across sessions and days.",
+  "why_it_matters": [
+    "Overall signal 68/100 driven by novelty 73 and practical impact 56.",
+    "Primary categories: Spearman rank correlation, attractor network model, feedforward input, geometric stability, hippocampal circuits, pairwise distance structure.",
+    "Community signal includes 1 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 79/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 89/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.29655",
+    "arxiv": "https://arxiv.org/abs/2606.29655"
+  }
+}
