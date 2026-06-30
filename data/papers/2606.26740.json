@@ -1,0 +1,56 @@
+{
+  "id": "2606.26740",
+  "title": "LiveEdit: Towards Real-Time Diffusion-Based Streaming Video Editing",
+  "first_seen": "2026-06-30",
+  "published_date": "2026-06-25",
+  "observed_dates": [
+    "2026-06-30"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 100,
+    "technical_depth": 100,
+    "implementation_potential": 55,
+    "relevance": 66,
+    "community_signal": 100,
+    "summary_confidence": 95,
+    "overall": 88,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "AR-oriented mask cache",
+    "augmented reality",
+    "bidirectional foundation model",
+    "causal editing",
+    "content preservation",
+    "frame-by-frame editing"
+  ],
+  "innovation_summary": "LiveEdit: Towards Real-Time Diffusion-Based Streaming Video Editing: In this work, we present a novel streaming video editing framework that performs causal, frame-by-frame editing with strong content preservation and real-time responsiveness.",
+  "why_it_matters": [
+    "Overall signal 88/100 driven by novelty 100 and practical impact 100.",
+    "Primary categories: AR-oriented mask cache, augmented reality, bidirectional foundation model, causal editing, content preservation, frame-by-frame editing.",
+    "Community signal includes 60 upvote(s) and 2 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 55/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.26740",
+    "arxiv": "https://arxiv.org/abs/2606.26740",
+    "project": [
+      "https://arxiv.org/abs/2606.26740"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "2606.30084",
+  "title": "One Forward Beats Two: InnerZoom for Accurate and Efficient GUI Grounding",
+  "first_seen": "2026-06-30",
+  "published_date": "2026-06-29",
+  "observed_dates": [
+    "2026-06-30"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 100,
+    "technical_depth": 100,
+    "implementation_potential": 73,
+    "relevance": 100,
+    "community_signal": 25,
+    "summary_confidence": 95,
+    "overall": 88,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "MLLM-based GUI grounding",
+    "SFT+RL",
+    "TFLOPs",
+    "ZoomIn-style methods",
+    "autoregressive coordinate generation",
+    "cross-layer evidence bridging"
+  ],
+  "innovation_summary": "One Forward Beats Two: InnerZoom for Accurate and Efficient GUI Grounding: To retain the accuracy benefits of two-pass zooming without this extra cost, we propose InnerZoom, a single-forward framework for cross-layer evidence bridging.",
+  "why_it_matters": [
+    "Overall signal 88/100 driven by novelty 100 and practical impact 100.",
+    "Primary categories: MLLM-based GUI grounding, SFT+RL, TFLOPs, ZoomIn-style methods, autoregressive coordinate generation, cross-layer evidence bridging.",
+    "Community signal includes 1 upvote(s) and 0 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 73/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.30084",
+    "arxiv": "https://arxiv.org/abs/2606.30084"
+  }
+}

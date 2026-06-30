@@ -1,0 +1,53 @@
+{
+  "id": "2606.29814",
+  "title": "Nemotron-Labs-Diffusion-Image: Advancing Masked Discrete Diffusion for High-Resolution Image Synthesis",
+  "first_seen": "2026-06-30",
+  "published_date": "2026-06-29",
+  "observed_dates": [
+    "2026-06-30"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 94,
+    "technical_depth": 100,
+    "implementation_potential": 57,
+    "relevance": 98,
+    "community_signal": 48,
+    "summary_confidence": 95,
+    "overall": 87,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "DPG",
+    "GenEval",
+    "Grouped Cross-Entropy",
+    "HPSv3",
+    "VRAM usage",
+    "discrete tokens"
+  ],
+  "innovation_summary": "Nemotron-Labs-Diffusion-Image: Advancing Masked Discrete Diffusion for High-Resolution Image Synthesis: We propose Nemotron-Labs-Diffusion-Image, a state-of-the-art masked discrete diffusion model (MDM) for high-resolution text-to-image synthesis.",
+  "why_it_matters": [
+    "Overall signal 87/100 driven by novelty 100 and practical impact 94.",
+    "Primary categories: DPG, GenEval, Grouped Cross-Entropy, HPSv3, VRAM usage, discrete tokens.",
+    "Community signal includes 5 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 57/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.29814",
+    "arxiv": "https://arxiv.org/abs/2606.29814"
+  }
+}
