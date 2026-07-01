@@ -1,0 +1,53 @@
+{
+  "id": "2606.30626",
+  "title": "DOPD: Dual On-policy Distillation",
+  "first_seen": "2026-07-01",
+  "published_date": "2026-06-29",
+  "observed_dates": [
+    "2026-07-01"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 96,
+    "technical_depth": 100,
+    "implementation_potential": 65,
+    "relevance": 98,
+    "community_signal": 100,
+    "summary_confidence": 95,
+    "overall": 93,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "advantage-aware dual distillation",
+    "capability transfer",
+    "dynamic routing",
+    "large language models",
+    "on-policy distillation",
+    "privilege illusion"
+  ],
+  "innovation_summary": "DOPD: Dual On-policy Distillation: To this end, we propose DOPD, an advantage-aware dual distillation paradigm that dynamically routes token-level supervision between privileged teacher and privileged student policies based on their.",
+  "why_it_matters": [
+    "Overall signal 93/100 driven by novelty 100 and practical impact 96.",
+    "Primary categories: advantage-aware dual distillation, capability transfer, dynamic routing, large language models, on-policy distillation, privilege illusion.",
+    "Community signal includes 70 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 65/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.30626",
+    "arxiv": "https://arxiv.org/abs/2606.30626"
+  }
+}
