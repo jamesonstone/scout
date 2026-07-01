@@ -1,0 +1,53 @@
+{
+  "id": "2606.32032",
+  "title": "Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs",
+  "first_seen": "2026-07-01",
+  "published_date": "2026-06-30",
+  "observed_dates": [
+    "2026-07-01"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 100,
+    "technical_depth": 100,
+    "implementation_potential": 83,
+    "relevance": 100,
+    "community_signal": 58,
+    "summary_confidence": 95,
+    "overall": 93,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "active learning",
+    "decoupled approach",
+    "faithful calibration",
+    "intrinsic feedback methods",
+    "intrinsic uncertainty",
+    "metacognitive data selection"
+  ],
+  "innovation_summary": "Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs: We adopt a two-stage, decoupled approach, first using these methods to calibrate the faithfulness of models' self-reported confidence scores, then mapping to natural, context-adaptable linguistic uncertainty.",
+  "why_it_matters": [
+    "Overall signal 93/100 driven by novelty 100 and practical impact 100.",
+    "Primary categories: active learning, decoupled approach, faithful calibration, intrinsic feedback methods, intrinsic uncertainty, metacognitive data selection.",
+    "Community signal includes 7 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 83/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.32032",
+    "arxiv": "https://arxiv.org/abs/2606.32032"
+  }
+}

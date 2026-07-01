@@ -1,6 +1,11 @@
 {
   "daily": [
     {
+      "date": "2026-07-01",
+      "url": "/daily/2026-07-01/",
+      "json": "/data/daily/2026-07/2026-07-01.json"
+    },
+    {
       "date": "2026-06-30",
       "url": "/daily/2026-06-30/",
       "json": "/data/daily/2026-06/2026-06-30.json"
@@ -27,6 +32,10 @@
     }
   ],
   "monthly": [
+    {
+      "month": "2026-07",
+      "url": "/monthly/2026-07/"
+    },
     {
       "month": "2026-06",
       "url": "/monthly/2026-06/"
@@ -55,11 +64,25 @@
       "score": 100
     },
     {
+      "id": "2606.29082",
+      "title": "Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks",
+      "url": "/papers/2606.29082/",
+      "json": "/data/papers/2606.29082.json",
+      "score": 99
+    },
+    {
       "id": "2606.28480",
       "title": "TUA-Bench: A Benchmark for General-Purpose Terminal-Use Agents",
       "url": "/papers/2606.28480/",
       "json": "/data/papers/2606.28480.json",
       "score": 99
+    },
+    {
+      "id": "2606.31315",
+      "title": "BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding",
+      "url": "/papers/2606.31315/",
+      "json": "/data/papers/2606.31315.json",
+      "score": 98
     },
     {
       "id": "2606.27377",
@@ -73,6 +96,13 @@
       "title": "OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning",
       "url": "/papers/2606.26790/",
       "json": "/data/papers/2606.26790.json",
+      "score": 98
+    },
+    {
+      "id": "2606.26968",
+      "title": "RedVox: Safety and Fairness Gaps in Speech Models Across Languages",
+      "url": "/papers/2606.26968/",
+      "json": "/data/papers/2606.26968.json",
       "score": 98
     },
     {
@@ -111,6 +141,13 @@
       "score": 95
     },
     {
+      "id": "2606.30534",
+      "title": "Orca: The World is in Your Mind",
+      "url": "/papers/2606.30534/",
+      "json": "/data/papers/2606.30534.json",
+      "score": 95
+    },
+    {
       "id": "2606.22873",
       "title": "SingGuard: A Policy-Adaptive Multimodal LLM Guardrail with Dynamic Reasoning",
       "url": "/papers/2606.22873/",
@@ -125,6 +162,13 @@
       "score": 95
     },
     {
+      "id": "2606.28436",
+      "title": "Dockerless: Environment-Free Program Verifier for Coding Agents",
+      "url": "/papers/2606.28436/",
+      "json": "/data/papers/2606.28436.json",
+      "score": 94
+    },
+    {
       "id": "2606.27378",
       "title": "Formalizing Latent Thoughts: Four Axioms of Thought Representation in LLMs",
       "url": "/papers/2606.27378/",
@@ -132,10 +176,31 @@
       "score": 94
     },
     {
+      "id": "2606.23127",
+      "title": "Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation",
+      "url": "/papers/2606.23127/",
+      "json": "/data/papers/2606.23127.json",
+      "score": 94
+    },
+    {
+      "id": "2606.31734",
+      "title": "MemLearner: Learning to Query Context memory for Video World Models",
+      "url": "/papers/2606.31734/",
+      "json": "/data/papers/2606.31734.json",
+      "score": 94
+    },
+    {
       "id": "2606.30017",
       "title": "Monte Carlo Energy Aggregation for Mobile 3D Gaussian Splatting",
       "url": "/papers/2606.30017/",
       "json": "/data/papers/2606.30017.json",
+      "score": 94
+    },
+    {
+      "id": "2606.29215",
+      "title": "Multi-Block Diffusion Language Models",
+      "url": "/papers/2606.29215/",
+      "json": "/data/papers/2606.29215.json",
       "score": 94
     },
     {
@@ -160,6 +225,13 @@
       "score": 93
     },
     {
+      "id": "2606.30626",
+      "title": "DOPD: Dual On-policy Distillation",
+      "url": "/papers/2606.30626/",
+      "json": "/data/papers/2606.30626.json",
+      "score": 93
+    },
+    {
       "id": "2606.29705",
       "title": "GUICrafter: Weakly-Supervised GUI Agent Leveraging Massive Unannotated Screenshots",
       "url": "/papers/2606.29705/",
@@ -171,6 +243,13 @@
       "title": "ProMSA:Progressive Multimodal Search Agents for Knowledge-Based Visual Question Answering",
       "url": "/papers/2606.27974/",
       "json": "/data/papers/2606.27974.json",
+      "score": 93
+    },
+    {
+      "id": "2606.32032",
+      "title": "Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs",
+      "url": "/papers/2606.32032/",
+      "json": "/data/papers/2606.32032.json",
       "score": 93
     },
     {
@@ -202,6 +281,13 @@
       "score": 92
     },
     {
+      "id": "2606.08671",
+      "title": "SkillHone: A Harness for Continual Agent Skill Evolution Through Persistent Decision History",
+      "url": "/papers/2606.08671/",
+      "json": "/data/papers/2606.08671.json",
+      "score": 92
+    },
+    {
       "id": "2606.23835",
       "title": "ABACUS: Adapting Unified Foundation Model for Bridging Image Count Understanding and Generation",
       "url": "/papers/2606.23835/",
@@ -213,6 +299,13 @@
       "title": "COrigami: An AI Pipeline for Co-Designing Flat-Foldable Visually Recognisable Origami",
       "url": "/papers/2606.26299/",
       "json": "/data/papers/2606.26299.json",
+      "score": 91
+    },
+    {
+      "id": "2606.31537",
+      "title": "DataEvolver: Self-Evolving Multi-Agent Data Construction for Text-Rich Image Generation",
+      "url": "/papers/2606.31537/",
+      "json": "/data/papers/2606.31537.json",
       "score": 91
     },
     {
@@ -258,10 +351,24 @@
       "score": 90
     },
     {
+      "id": "2606.30697",
+      "title": "LUMOS: A Semantic Operating-System Layer for Accessibility-Grounded AI Agents",
+      "url": "/papers/2606.30697/",
+      "json": "/data/papers/2606.30697.json",
+      "score": 90
+    },
+    {
       "id": "2606.25393",
       "title": "Large-Scale Tunnel Air-Ground Collaboration With FLISP: Fast LiDAR-IMU Synchronized Path Planner",
       "url": "/papers/2606.25393/",
       "json": "/data/papers/2606.25393.json",
+      "score": 90
+    },
+    {
+      "id": "2606.30062",
+      "title": "Little Brains, Big Feats: Exploring Compact Language Models",
+      "url": "/papers/2606.30062/",
+      "json": "/data/papers/2606.30062.json",
       "score": 90
     },
     {
@@ -272,10 +379,24 @@
       "score": 90
     },
     {
+      "id": "2606.30673",
+      "title": "PolyFlow: Continuous Topology Embedding Flow Matching for Artist-style Mesh Generation",
+      "url": "/papers/2606.30673/",
+      "json": "/data/papers/2606.30673.json",
+      "score": 90
+    },
+    {
       "id": "2606.29887",
       "title": "SafePyramid: A Hierarchical Benchmark for In-context Policy Guardrailing",
       "url": "/papers/2606.29887/",
       "json": "/data/papers/2606.29887.json",
+      "score": 90
+    },
+    {
+      "id": "2606.29513",
+      "title": "Scenes as Objects, Not Primitives: Instance-Structured 3D Tokenization from Unposed Views",
+      "url": "/papers/2606.29513/",
+      "json": "/data/papers/2606.29513.json",
       "score": 90
     },
     {
@@ -284,6 +405,20 @@
       "url": "/papers/2606.28276/",
       "json": "/data/papers/2606.28276.json",
       "score": 90
+    },
+    {
+      "id": "2606.30319",
+      "title": "BrainJanus: A Unified Model for Understanding and Generation across Brain, Vision, and Language",
+      "url": "/papers/2606.30319/",
+      "json": "/data/papers/2606.30319.json",
+      "score": 89
+    },
+    {
+      "id": "2606.32039",
+      "title": "GEAR: Guided End-to-End AutoRegression for Image Synthesis",
+      "url": "/papers/2606.32039/",
+      "json": "/data/papers/2606.32039.json",
+      "score": 89
     },
     {
       "id": "2511.07397",
@@ -298,6 +433,13 @@
       "url": "/papers/2606.27708/",
       "json": "/data/papers/2606.27708.json",
       "score": 89
+    },
+    {
+      "id": "2606.30811",
+      "title": "AVTok: 1D Unified Tokenization for Holistic Audio-Video Generation",
+      "url": "/papers/2606.30811/",
+      "json": "/data/papers/2606.30811.json",
+      "score": 88
     },
     {
       "id": "2606.27457",
@@ -398,6 +540,20 @@
       "score": 85
     },
     {
+      "id": "2606.30968",
+      "title": "PhotoQuilt: Training-Free Arbitrary-Resolution Photomosaics via Bootstrapped Tiled Denoising",
+      "url": "/papers/2606.30968/",
+      "json": "/data/papers/2606.30968.json",
+      "score": 85
+    },
+    {
+      "id": "2606.31029",
+      "title": "TerraDiT-Ω: Unified Spatial Control for Satellite Image Synthesis with Any Geospatial Primitive",
+      "url": "/papers/2606.31029/",
+      "json": "/data/papers/2606.31029.json",
+      "score": 85
+    },
+    {
       "id": "2606.21795",
       "title": "Discretizing Reward Models",
       "url": "/papers/2606.21795/",
@@ -451,6 +607,13 @@
       "title": "Ko-WideSearch: A Korean Breadth-Search Benchmark for Exhaustive Set Enumeration by Web Agents",
       "url": "/papers/2606.27595/",
       "json": "/data/papers/2606.27595.json",
+      "score": 82
+    },
+    {
+      "id": "2606.31811",
+      "title": "MuSViT: A Foundation Vision Model for Sheet Music Representation",
+      "url": "/papers/2606.31811/",
+      "json": "/data/papers/2606.31811.json",
       "score": 82
     },
     {
@@ -508,6 +671,13 @@
       "url": "/papers/2606.29686/",
       "json": "/data/papers/2606.29686.json",
       "score": 74
+    },
+    {
+      "id": "2606.31410",
+      "title": "Xiaomi-GUI-0 Technical Report",
+      "url": "/papers/2606.31410/",
+      "json": "/data/papers/2606.31410.json",
+      "score": 73
     },
     {
       "id": "2606.26217",

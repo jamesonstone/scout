@@ -1,0 +1,56 @@
+{
+  "id": "2606.31410",
+  "title": "Xiaomi-GUI-0 Technical Report",
+  "first_seen": "2026-07-01",
+  "published_date": "2026-06-30",
+  "observed_dates": [
+    "2026-07-01"
+  ],
+  "score": {
+    "novelty": 79,
+    "practical_impact": 82,
+    "technical_depth": 71,
+    "implementation_potential": 43,
+    "relevance": 100,
+    "community_signal": 50,
+    "summary_confidence": 70,
+    "overall": 73,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Worth Watching",
+  "categories": [
+    "agentic reinforcement learning",
+    "data flywheel",
+    "hybrid infrastructure",
+    "interface actions",
+    "real-device closed loop",
+    "reinforcement learning"
+  ],
+  "innovation_summary": "Xiaomi-GUI-0 Technical Report: To close this gap, we propose Xiaomi-GUI-0, a native multimodal GUI agent for real mobile environments, trained and evaluated within a real-device closed loop.",
+  "why_it_matters": [
+    "Overall signal 73/100 driven by novelty 79 and practical impact 82.",
+    "Primary categories: agentic reinforcement learning, data flywheel, hybrid infrastructure, interface actions, real-device closed loop, reinforcement learning.",
+    "Community signal includes 6 upvote(s) and 0 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 43/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 71/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.31410",
+    "arxiv": "https://arxiv.org/abs/2606.31410",
+    "project": [
+      "https://seerray-lab.github.io/Xiaomi-GUI-0/"
+    ]
+  }
+}
