@@ -1,0 +1,56 @@
+{
+  "id": "2607.00666",
+  "title": "Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts",
+  "first_seen": "2026-07-02",
+  "published_date": "2026-07-01",
+  "observed_dates": [
+    "2026-07-02"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 100,
+    "technical_depth": 100,
+    "implementation_potential": 73,
+    "relevance": 98,
+    "community_signal": 98,
+    "summary_confidence": 95,
+    "overall": 95,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "Vision-Language-Action models",
+    "domain-specific information",
+    "embodiment shifts",
+    "environmental shifts",
+    "one-shot adaptation",
+    "subspace alignment"
+  ],
+  "innovation_summary": "Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts: To reduce the burden of data curation and training, we propose an analogy-based method that adapts VLA models under environmental shifts through weight vector arithmetic with.",
+  "why_it_matters": [
+    "Overall signal 95/100 driven by novelty 100 and practical impact 100.",
+    "Primary categories: Vision-Language-Action models, domain-specific information, embodiment shifts, environmental shifts, one-shot adaptation, subspace alignment.",
+    "Community signal includes 15 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 73/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.00666",
+    "arxiv": "https://arxiv.org/abs/2607.00666",
+    "project": [
+      "https://twkang43.github.io/projects/dart/"
+    ]
+  }
+}

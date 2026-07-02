@@ -1,0 +1,56 @@
+{
+  "id": "2607.00678",
+  "title": "ABot-M0.5: Unified Mobility-and-Manipulation World Action Model",
+  "first_seen": "2026-07-02",
+  "published_date": "2026-07-01",
+  "observed_dates": [
+    "2026-07-02"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 100,
+    "technical_depth": 100,
+    "implementation_potential": 89,
+    "relevance": 96,
+    "community_signal": 63,
+    "summary_confidence": 95,
+    "overall": 94,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "Mixture-of-Transformers",
+    "World Action Models",
+    "action space",
+    "autoregressive prediction",
+    "dream-forcing",
+    "fine-grained control"
+  ],
+  "innovation_summary": "ABot-M05: Unified Mobility-and-Manipulation World Action Model: To align inference conditions, we propose the dream-forcing training strategy that progressively trains inverse dynamics on model-predicted videos, improving train-test alignment and robustness during autoregressive prediction.",
+  "why_it_matters": [
+    "Overall signal 94/100 driven by novelty 100 and practical impact 100.",
+    "Primary categories: Mixture-of-Transformers, World Action Models, action space, autoregressive prediction, dream-forcing, fine-grained control.",
+    "Community signal includes 8 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 89/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.00678",
+    "arxiv": "https://arxiv.org/abs/2607.00678",
+    "project": [
+      "https://amap-cvlab.github.io/ABot-Manipulation/"
+    ]
+  }
+}
