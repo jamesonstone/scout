@@ -1,6 +1,11 @@
 {
   "daily": [
     {
+      "date": "2026-07-06",
+      "url": "/daily/2026-07-06/",
+      "json": "/data/daily/2026-07/2026-07-06.json"
+    },
+    {
       "date": "2026-07-05",
       "url": "/daily/2026-07-05/",
       "json": "/data/daily/2026-07/2026-07-05.json"
@@ -72,6 +77,13 @@
       "score": 100
     },
     {
+      "id": "2606.29526",
+      "title": "The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning",
+      "url": "/papers/2606.29526/",
+      "json": "/data/papers/2606.29526.json",
+      "score": 100
+    },
+    {
       "id": "2606.26300",
       "title": "The Verification Horizon: No Silver Bullet for Coding Agent Rewards",
       "url": "/papers/2606.26300/",
@@ -104,6 +116,13 @@
       "title": "DanceOPD: On-Policy Generative Field Distillation",
       "url": "/papers/2606.27377/",
       "json": "/data/papers/2606.27377.json",
+      "score": 98
+    },
+    {
+      "id": "2607.02501",
+      "title": "Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots",
+      "url": "/papers/2607.02501/",
+      "json": "/data/papers/2607.02501.json",
       "score": 98
     },
     {
@@ -163,6 +182,13 @@
       "score": 96
     },
     {
+      "id": "2606.28551",
+      "title": "DataComp-VLM: Improved Open Datasets for Vision-Language Models",
+      "url": "/papers/2606.28551/",
+      "json": "/data/papers/2606.28551.json",
+      "score": 95
+    },
+    {
       "id": "2607.00666",
       "title": "Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts",
       "url": "/papers/2607.00666/",
@@ -195,6 +221,13 @@
       "title": "Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning",
       "url": "/papers/2607.01191/",
       "json": "/data/papers/2607.01191.json",
+      "score": 95
+    },
+    {
+      "id": "2606.31227",
+      "title": "Securing the AI Agent: A Unified Framework for Multi-Layer Agent Red Teaming",
+      "url": "/papers/2606.31227/",
+      "json": "/data/papers/2606.31227.json",
       "score": 95
     },
     {
@@ -342,6 +375,13 @@
       "title": "GBC: Gradient-Based Connections for Optimizing Multi-Agent Systems",
       "url": "/papers/2606.28187/",
       "json": "/data/papers/2606.28187.json",
+      "score": 92
+    },
+    {
+      "id": "2607.02461",
+      "title": "OrbitQuant: Data-Agnostic Quantization for Image and Video Diffusion Transformers",
+      "url": "/papers/2607.02461/",
+      "json": "/data/papers/2607.02461.json",
       "score": 92
     },
     {
@@ -534,6 +574,13 @@
       "score": 89
     },
     {
+      "id": "2607.00052",
+      "title": "AGE: Adaptive-masking for Graph Embedding in Graph Retrieval-Augmented Generation",
+      "url": "/papers/2607.00052/",
+      "json": "/data/papers/2607.00052.json",
+      "score": 88
+    },
+    {
       "id": "2606.26040",
       "title": "AI translation of literary texts is \"fine\", but readers still prefer human translations",
       "url": "/papers/2606.26040/",
@@ -664,6 +711,13 @@
       "title": "CausalMix: Data Mixture as Causal Inference for Language Model Training",
       "url": "/papers/2607.01104/",
       "json": "/data/papers/2607.01104.json",
+      "score": 86
+    },
+    {
+      "id": "2607.01420",
+      "title": "MultAttnAttrib: Training-Free Multimodal Attribution in Long Document Question Answering",
+      "url": "/papers/2607.01420/",
+      "json": "/data/papers/2607.01420.json",
       "score": 86
     },
     {
@@ -828,6 +882,13 @@
       "score": 79
     },
     {
+      "id": "2607.02471",
+      "title": "Interpretation-Oriented Cloud Removal via Observation-Anchored Residual Flow with Geo-Contextual Alignment",
+      "url": "/papers/2607.02471/",
+      "json": "/data/papers/2607.02471.json",
+      "score": 75
+    },
+    {
       "id": "2606.29501",
       "title": "Learning Transferable Dynamics Priors from Action to World Modeling",
       "url": "/papers/2606.29501/",
@@ -910,6 +971,13 @@
       "url": "/papers/2606.28057/",
       "json": "/data/papers/2606.28057.json",
       "score": 61
+    },
+    {
+      "id": "2607.01804",
+      "title": "VLA-Corrector: Lightweight Detect-and-Correct Inference for Adaptive Action Horizon",
+      "url": "/papers/2607.01804/",
+      "json": "/data/papers/2607.01804.json",
+      "score": 57
     },
     {
       "id": "2606.27364",
