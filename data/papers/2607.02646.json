@@ -1,0 +1,56 @@
+{
+  "id": "2607.02646",
+  "title": "EVA-Client: A Unified Data Collection, Inference, and Deployment Framework for Embodied Policies on Real Robots",
+  "first_seen": "2026-07-07",
+  "published_date": "2026-07-02",
+  "observed_dates": [
+    "2026-07-07"
+  ],
+  "score": {
+    "novelty": 87,
+    "practical_impact": 100,
+    "technical_depth": 100,
+    "implementation_potential": 100,
+    "relevance": 82,
+    "community_signal": 100,
+    "summary_confidence": 95,
+    "overall": 94,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "asynchronous execution",
+    "collect workflow",
+    "debug workflow",
+    "eval workflow",
+    "inference strategies",
+    "naive-async ablation baseline"
+  ],
+  "innovation_summary": "EVA-Client: A Unified Data Collection, Inference, and Deployment Framework for Embodied Policies on Real Robots: We present EVA-Client, an open-source framework for deployment, data collection, and evaluation of trained manipulation policies on real robots.",
+  "why_it_matters": [
+    "Overall signal 94/100 driven by novelty 87 and practical impact 100.",
+    "Primary categories: asynchronous execution, collect workflow, debug workflow, eval workflow, inference strategies, naive-async ablation baseline.",
+    "Community signal includes 21 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 100/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "The strongest evidence comes from simulated settings, so operational impact may be less certain in live systems.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.02646",
+    "arxiv": "https://arxiv.org/abs/2607.02646",
+    "project": [
+      "https://colalab.net/projects/eva-client/"
+    ]
+  }
+}
