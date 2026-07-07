@@ -1,0 +1,56 @@
+{
+  "id": "2607.04064",
+  "title": "Speaker-Disentangled Chunk-Wise Regression for Syllabic Tokenization",
+  "first_seen": "2026-07-07",
+  "published_date": "2026-07-05",
+  "observed_dates": [
+    "2026-07-07"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 84,
+    "technical_depth": 100,
+    "implementation_potential": 81,
+    "relevance": 100,
+    "community_signal": 23,
+    "summary_confidence": 95,
+    "overall": 86,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "HuBERT",
+    "SpiRit-LM",
+    "cross-entropy objective",
+    "latent speech frame representations",
+    "speaker-disentangled",
+    "speech language model"
+  ],
+  "innovation_summary": "Speaker-Disentangled Chunk-Wise Regression for Syllabic Tokenization: To address this problem, we propose a speaker-disentangled syllabic tokenizer that regresses speaker-perturbed student representations toward clean teacher targets within fixed-length chunks.",
+  "why_it_matters": [
+    "Overall signal 86/100 driven by novelty 100 and practical impact 84.",
+    "Primary categories: HuBERT, SpiRit-LM, cross-entropy objective, latent speech frame representations, speaker-disentangled, speech language model.",
+    "Community signal includes 0 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 81/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.04064",
+    "arxiv": "https://arxiv.org/abs/2607.04064",
+    "project": [
+      "https://ryota-komatsu.github.io/speaker_disentangled_hubert/"
+    ]
+  }
+}

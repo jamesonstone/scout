@@ -1,0 +1,53 @@
+{
+  "id": "2606.28393",
+  "title": "Transition-Aware best-of-N sampling for Longitudinal Chest X-ray Reports",
+  "first_seen": "2026-07-07",
+  "published_date": "2026-06-23",
+  "observed_dates": [
+    "2026-07-07"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 82,
+    "technical_depth": 95,
+    "implementation_potential": 61,
+    "relevance": 98,
+    "community_signal": 33,
+    "summary_confidence": 95,
+    "overall": 83,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "AP-PA cohort",
+    "best-of-N sampling",
+    "chest X-ray report generation",
+    "cosine distance",
+    "directional vector",
+    "ground-truth training transition vectors"
+  ],
+  "innovation_summary": "Transition-Aware best-of-N sampling for Longitudinal Chest X-ray Reports: To the best of our knowledge, we present the first training-free best-of-N sampling scheme for pre-trained chest X-ray report generators that is explicitly aware of this.",
+  "why_it_matters": [
+    "Overall signal 83/100 driven by novelty 100 and practical impact 82.",
+    "Primary categories: AP-PA cohort, best-of-N sampling, chest X-ray report generation, cosine distance, directional vector, ground-truth training transition vectors.",
+    "Community signal includes 2 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 61/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 95/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2606.28393",
+    "arxiv": "https://arxiv.org/abs/2606.28393"
+  }
+}
