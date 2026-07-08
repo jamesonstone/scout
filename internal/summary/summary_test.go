@@ -41,3 +41,39 @@ func TestInnovationSentencePrefersContributionCue(t *testing.T) {
 		t.Fatalf("expected contribution sentence, got %q", got)
 	}
 }
+
+func TestExecutiveSignalUsesTopRankedPaperTitles(t *testing.T) {
+	builder := New()
+	papers := []model.PaperRecord{
+		{
+			Title:      "Low Signal Agent Benchmark",
+			Score:      model.ScoreBreakdown{Overall: 53},
+			Categories: []string{"ALFWorld"},
+		},
+		{
+			Title:      "SkillOpt-Lite: Better and Faster Agent Self-evolution via One Line of Vibe",
+			Score:      model.ScoreBreakdown{Overall: 99},
+			Categories: []string{"HarnessOpt"},
+		},
+		{
+			Title:      "Gemma 4 Technical Report",
+			Score:      model.ScoreBreakdown{Overall: 98},
+			Categories: []string{"Mixture-of-Experts architectures"},
+		},
+		{
+			Title:      "Hierarchical Sparse Attention Done Right",
+			Score:      model.ScoreBreakdown{Overall: 98},
+			Categories: []string{"attention mechanism"},
+		},
+	}
+
+	signal := builder.ExecutiveSignal(papers, "2026-07-08")
+	for _, want := range []string{"SkillOpt-Lite", "Gemma 4 Technical Report", "Hierarchical Sparse Attention"} {
+		if !strings.Contains(signal, want) {
+			t.Fatalf("signal %q missing top paper %q", signal, want)
+		}
+	}
+	if strings.Contains(signal, "ALFWorld") {
+		t.Fatalf("signal should not prefer low-ranked category ties: %q", signal)
+	}
+}
