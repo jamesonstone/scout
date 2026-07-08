@@ -1,0 +1,56 @@
+{
+  "id": "2607.05992",
+  "title": "PluraMath: Extending Mathematical Reasoning Evaluation Beyond High-Resource Languages",
+  "first_seen": "2026-07-08",
+  "published_date": "2026-07-07",
+  "observed_dates": [
+    "2026-07-08"
+  ],
+  "score": {
+    "novelty": 71,
+    "practical_impact": 56,
+    "technical_depth": 77,
+    "implementation_potential": 35,
+    "relevance": 84,
+    "community_signal": 33,
+    "summary_confidence": 70,
+    "overall": 62,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Worth Watching",
+  "categories": [
+    "Large Language Models",
+    "PolyMath",
+    "instruction-following ability",
+    "mathematical reasoning",
+    "multilingual benchmark",
+    "underrepresented languages"
+  ],
+  "innovation_summary": "PluraMath: Extending Mathematical Reasoning Evaluation Beyond High-Resource Languages: To address this gap, we introduce PluraMath, an extension of PolyMath to 18 additional {underrepresented languages spanning 6 language families -- ranging from mid-resource to extreme.",
+  "why_it_matters": [
+    "Overall signal 62/100 driven by novelty 71 and practical impact 56.",
+    "Primary categories: Large Language Models, PolyMath, instruction-following ability, mathematical reasoning, multilingual benchmark, underrepresented languages.",
+    "Community signal includes 2 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 35/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 77/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.05992",
+    "arxiv": "https://arxiv.org/abs/2607.05992",
+    "project": [
+      "https://tum-nlp.github.io/pluramath/"
+    ]
+  }
+}

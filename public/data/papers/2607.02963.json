@@ -1,0 +1,56 @@
+{
+  "id": "2607.02963",
+  "title": "Parallelized Autoregressive Decoding for Omni-Modal Dense Video Captioning",
+  "first_seen": "2026-07-08",
+  "published_date": "2026-07-03",
+  "observed_dates": [
+    "2026-07-08"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 94,
+    "technical_depth": 100,
+    "implementation_potential": 89,
+    "relevance": 100,
+    "community_signal": 100,
+    "summary_confidence": 95,
+    "overall": 97,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "autoregressive video large language models",
+    "causal dependency graph",
+    "dense video captioning",
+    "event-factorized parallel decoding",
+    "latent global planning mechanism",
+    "lossless parallel generation"
+  ],
+  "innovation_summary": "Parallelized Autoregressive Decoding for Omni-Modal Dense Video Captioning: In this work, we propose a parallelized autoregressive framework that not only improves generation efficiency but also enhances temporally grounded captioning performance.",
+  "why_it_matters": [
+    "Overall signal 97/100 driven by novelty 100 and practical impact 94.",
+    "Primary categories: autoregressive video large language models, causal dependency graph, dense video captioning, event-factorized parallel decoding, latent global planning mechanism, lossless parallel generation.",
+    "Community signal includes 16 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 89/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.02963",
+    "arxiv": "https://arxiv.org/abs/2607.02963",
+    "project": [
+      "https://github.com/showlab/PadCaptioner"
+    ]
+  }
+}

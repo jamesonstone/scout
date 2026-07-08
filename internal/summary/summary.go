@@ -59,6 +59,10 @@ func (Builder) ExecutiveSignal(papers []model.PaperRecord, day string) string {
 	if len(papers) == 0 {
 		return fmt.Sprintf("No papers were available for %s.", day)
 	}
+	leaders := topPaperTitles(papers, 3)
+	if len(leaders) > 0 {
+		return fmt.Sprintf("%s is led by %s, with the strongest papers skewing toward production-minded advances that pair novelty with implementation value.", day, joinThemes(leaders))
+	}
 	counts := map[string]int{}
 	for _, paper := range papers {
 		for _, category := range paper.Categories {
@@ -70,6 +74,29 @@ func (Builder) ExecutiveSignal(papers []model.PaperRecord, day string) string {
 		themes = []string{"AI systems", "evaluation", "infrastructure"}
 	}
 	return fmt.Sprintf("%s is led by %s, with the strongest papers skewing toward production-minded advances that pair novelty with implementation value.", day, joinThemes(themes))
+}
+
+func topPaperTitles(papers []model.PaperRecord, limit int) []string {
+	sorted := append([]model.PaperRecord(nil), papers...)
+	sort.Slice(sorted, func(i, j int) bool {
+		if sorted[i].Score.Overall == sorted[j].Score.Overall {
+			return sorted[i].Title < sorted[j].Title
+		}
+		return sorted[i].Score.Overall > sorted[j].Score.Overall
+	})
+
+	titles := make([]string, 0, limit)
+	for _, paper := range sorted {
+		title := truncateWords(strings.TrimSpace(paper.Title), 12)
+		if title == "" {
+			continue
+		}
+		titles = append(titles, title)
+		if len(titles) == limit {
+			break
+		}
+	}
+	return titles
 }
 
 func cleanTitle(title string) string {

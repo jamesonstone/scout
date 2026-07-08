@@ -1,6 +1,11 @@
 {
   "daily": [
     {
+      "date": "2026-07-08",
+      "url": "/daily/2026-07-08/",
+      "json": "/data/daily/2026-07/2026-07-08.json"
+    },
+    {
       "date": "2026-07-07",
       "url": "/daily/2026-07-07/",
       "json": "/data/daily/2026-07/2026-07-07.json"
@@ -110,6 +115,13 @@
       "score": 99
     },
     {
+      "id": "2607.03451",
+      "title": "SkillOpt-Lite: Better and Faster Agent Self-evolution via One Line of Vibe",
+      "url": "/papers/2607.03451/",
+      "json": "/data/papers/2607.03451.json",
+      "score": 99
+    },
+    {
       "id": "2606.28480",
       "title": "TUA-Bench: A Benchmark for General-Purpose Terminal-Use Agents",
       "url": "/papers/2606.28480/",
@@ -135,6 +147,27 @@
       "title": "Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots",
       "url": "/papers/2607.02501/",
       "json": "/data/papers/2607.02501.json",
+      "score": 98
+    },
+    {
+      "id": "2607.02770",
+      "title": "Gemma 4 Technical Report",
+      "url": "/papers/2607.02770/",
+      "json": "/data/papers/2607.02770.json",
+      "score": 98
+    },
+    {
+      "id": "2607.02980",
+      "title": "Hierarchical Sparse Attention Done Right: Toward Infinite Context Modeling",
+      "url": "/papers/2607.02980/",
+      "json": "/data/papers/2607.02980.json",
+      "score": 98
+    },
+    {
+      "id": "2607.05511",
+      "title": "Light-Omni: Reflex over Reasoning in Agentic Video Understanding with Long-Term Memory",
+      "url": "/papers/2607.05511/",
+      "json": "/data/papers/2607.05511.json",
       "score": 98
     },
     {
@@ -187,6 +220,20 @@
       "score": 97
     },
     {
+      "id": "2607.02963",
+      "title": "Parallelized Autoregressive Decoding for Omni-Modal Dense Video Captioning",
+      "url": "/papers/2607.02963/",
+      "json": "/data/papers/2607.02963.json",
+      "score": 97
+    },
+    {
+      "id": "2607.05147",
+      "title": "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation",
+      "url": "/papers/2607.05147/",
+      "json": "/data/papers/2607.05147.json",
+      "score": 96
+    },
+    {
       "id": "2606.28322",
       "title": "PerceptionRubrics: Calibrating Multimodal Evaluation to Human Perception",
       "url": "/papers/2606.28322/",
@@ -220,6 +267,13 @@
       "url": "/papers/2607.05247/",
       "json": "/data/papers/2607.05247.json",
       "score": 96
+    },
+    {
+      "id": "2607.06291",
+      "title": "AlayaWorld: Long-Horizon and Playable Video World Generation",
+      "url": "/papers/2607.06291/",
+      "json": "/data/papers/2607.06291.json",
+      "score": 95
     },
     {
       "id": "2606.28551",
@@ -376,6 +430,13 @@
       "score": 94
     },
     {
+      "id": "2607.00394",
+      "title": "When Classic Cache Policies Fail: Learning-Augmented Replacement for Semantic Retrieval Buffers",
+      "url": "/papers/2607.00394/",
+      "json": "/data/papers/2607.00394.json",
+      "score": 94
+    },
+    {
       "id": "2607.00272",
       "title": "ASPIRE: Agentic /Skills Discovery for Robotics",
       "url": "/papers/2607.00272/",
@@ -401,6 +462,13 @@
       "title": "GUICrafter: Weakly-Supervised GUI Agent Leveraging Massive Unannotated Screenshots",
       "url": "/papers/2606.29705/",
       "json": "/data/papers/2606.29705.json",
+      "score": 93
+    },
+    {
+      "id": "2607.03530",
+      "title": "MentalThink: Shaping Thoughts in Mental SVG World",
+      "url": "/papers/2607.03530/",
+      "json": "/data/papers/2607.03530.json",
       "score": 93
     },
     {
@@ -450,6 +518,13 @@
       "title": "Boundary-Aware Context Grounding for A Low-Channel EEG Agent",
       "url": "/papers/2606.26519/",
       "json": "/data/papers/2606.26519.json",
+      "score": 92
+    },
+    {
+      "id": "2607.06403",
+      "title": "From Foundation to Application: Improving VLA Models in Practice",
+      "url": "/papers/2607.06403/",
+      "json": "/data/papers/2607.06403.json",
       "score": 92
     },
     {
@@ -558,6 +633,27 @@
       "score": 91
     },
     {
+      "id": "2607.06559",
+      "title": "RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation",
+      "url": "/papers/2607.06559/",
+      "json": "/data/papers/2607.06559.json",
+      "score": 91
+    },
+    {
+      "id": "2607.06558",
+      "title": "RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation",
+      "url": "/papers/2607.06558/",
+      "json": "/data/papers/2607.06558.json",
+      "score": 91
+    },
+    {
+      "id": "2607.05339",
+      "title": "TREK: Distill to Explore, Reinforce to Refine",
+      "url": "/papers/2607.05339/",
+      "json": "/data/papers/2607.05339.json",
+      "score": 91
+    },
+    {
       "id": "2606.25363",
       "title": "TheoremGraph: Bridging Formal and Informal Mathematics",
       "url": "/papers/2606.25363/",
@@ -570,6 +666,13 @@
       "url": "/papers/2606.27828/",
       "json": "/data/papers/2606.27828.json",
       "score": 91
+    },
+    {
+      "id": "2607.05465",
+      "title": "CanvasAgent: Enabling Complex Image Creation and Editing via Visual Tool Orchestration",
+      "url": "/papers/2607.05465/",
+      "json": "/data/papers/2607.05465.json",
+      "score": 90
     },
     {
       "id": "2602.11688",
@@ -593,6 +696,13 @@
       "score": 90
     },
     {
+      "id": "2607.05765",
+      "title": "Image2Sim: Scaling Embodied Navigation via Generative Neural Simulator",
+      "url": "/papers/2607.05765/",
+      "json": "/data/papers/2607.05765.json",
+      "score": 90
+    },
+    {
       "id": "2606.30697",
       "title": "LUMOS: A Semantic Operating-System Layer for Accessibility-Grounded AI Agents",
       "url": "/papers/2606.30697/",
@@ -611,6 +721,20 @@
       "title": "Little Brains, Big Feats: Exploring Compact Language Models",
       "url": "/papers/2606.30062/",
       "json": "/data/papers/2606.30062.json",
+      "score": 90
+    },
+    {
+      "id": "2606.30026",
+      "title": "MuseBench: Benchmarking Intent-Level Audiovisual Arts Understanding in MLLMs",
+      "url": "/papers/2606.30026/",
+      "json": "/data/papers/2606.30026.json",
+      "score": 90
+    },
+    {
+      "id": "2607.05722",
+      "title": "Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding",
+      "url": "/papers/2607.05722/",
+      "json": "/data/papers/2607.05722.json",
       "score": 90
     },
     {
@@ -647,6 +771,13 @@
       "url": "/papers/2606.28276/",
       "json": "/data/papers/2606.28276.json",
       "score": 90
+    },
+    {
+      "id": "2606.31329",
+      "title": "3D HAMSTER: Bridging Planning and Control in Hierarchical Vision Language Action Models through 3D Trajectory Guidance",
+      "url": "/papers/2606.31329/",
+      "json": "/data/papers/2606.31329.json",
+      "score": 89
     },
     {
       "id": "2606.30319",
@@ -688,6 +819,13 @@
       "title": "Thinking While Speaking: Inference-Time Knowledge Transfer for Responsive and Intelligent Conversational Voice Agents",
       "url": "/papers/2511.07397/",
       "json": "/data/papers/2511.07397.json",
+      "score": 89
+    },
+    {
+      "id": "2607.06560",
+      "title": "Vision as Unified Multimodal Generation",
+      "url": "/papers/2607.06560/",
+      "json": "/data/papers/2607.06560.json",
       "score": 89
     },
     {
@@ -817,6 +955,13 @@
       "score": 87
     },
     {
+      "id": "2607.05691",
+      "title": "Where to cut, how deep: BPE and Unigram-LM on chemistry SMILES",
+      "url": "/papers/2607.05691/",
+      "json": "/data/papers/2607.05691.json",
+      "score": 87
+    },
+    {
       "id": "2606.26027",
       "title": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It",
       "url": "/papers/2606.26027/",
@@ -857,6 +1002,13 @@
       "url": "/papers/2606.30045/",
       "json": "/data/papers/2606.30045.json",
       "score": 86
+    },
+    {
+      "id": "2607.03509",
+      "title": "Flex-Forcing: Towards a Unified Autoregressive and Bidirectional Video Diffusion Model",
+      "url": "/papers/2607.03509/",
+      "json": "/data/papers/2607.03509.json",
+      "score": 85
     },
     {
       "id": "2606.16517",
@@ -906,6 +1058,13 @@
       "url": "/papers/2606.32029/",
       "json": "/data/papers/2606.32029.json",
       "score": 85
+    },
+    {
+      "id": "2607.03819",
+      "title": "CGGS: Consistency-Augmented Geometric Gaussian Splatting for Ego-centric 3D Scene Generation",
+      "url": "/papers/2607.03819/",
+      "json": "/data/papers/2607.03819.json",
+      "score": 84
     },
     {
       "id": "2606.21795",
@@ -999,6 +1158,13 @@
       "score": 82
     },
     {
+      "id": "2607.05803",
+      "title": "Quantifying and Expanding the Theoretical Capacity of Late-Interaction Retrieval Models",
+      "url": "/papers/2607.05803/",
+      "json": "/data/papers/2607.05803.json",
+      "score": 81
+    },
+    {
       "id": "2607.04428",
       "title": "dOPSD: On-Policy Self-Distillation for Diffusion Language Models",
       "url": "/papers/2607.04428/",
@@ -1048,6 +1214,13 @@
       "score": 80
     },
     {
+      "id": "2607.06442",
+      "title": "SIEVE: Structure-Aware Data Selection for Imitation Learning with VLA Models",
+      "url": "/papers/2607.06442/",
+      "json": "/data/papers/2607.06442.json",
+      "score": 80
+    },
+    {
       "id": "2606.30308",
       "title": "The Surprising Effectiveness of Video Diffusion Models for Hand Motion Reconstruction",
       "url": "/papers/2606.30308/",
@@ -1074,6 +1247,27 @@
       "url": "/papers/2606.28133/",
       "json": "/data/papers/2606.28133.json",
       "score": 79
+    },
+    {
+      "id": "2607.02515",
+      "title": "PointDiT: Pixel-Space Diffusion for Monocular Geometry Estimation",
+      "url": "/papers/2607.02515/",
+      "json": "/data/papers/2607.02515.json",
+      "score": 77
+    },
+    {
+      "id": "2607.02920",
+      "title": "Layer-wise Cross-Lingual Depression Detection from Speech: Analysis with Contrastive Alignment",
+      "url": "/papers/2607.02920/",
+      "json": "/data/papers/2607.02920.json",
+      "score": 76
+    },
+    {
+      "id": "2607.05435",
+      "title": "Bibby AI: An Editor-Native Agentic Platform for Academic Research, Writing, and Publishing",
+      "url": "/papers/2607.05435/",
+      "json": "/data/papers/2607.05435.json",
+      "score": 75
     },
     {
       "id": "2607.02471",
@@ -1174,6 +1368,13 @@
       "score": 62
     },
     {
+      "id": "2607.05992",
+      "title": "PluraMath: Extending Mathematical Reasoning Evaluation Beyond High-Resource Languages",
+      "url": "/papers/2607.05992/",
+      "json": "/data/papers/2607.05992.json",
+      "score": 62
+    },
+    {
       "id": "2606.27608",
       "title": "Qwen-Image-2.0-RL Technical Report",
       "url": "/papers/2606.27608/",
@@ -1214,6 +1415,13 @@
       "url": "/papers/2607.00248/",
       "json": "/data/papers/2607.00248.json",
       "score": 54
+    },
+    {
+      "id": "2607.05804",
+      "title": "TurnOPD: Making On-Policy Distillation Turn-Aware for Efficient Long-Horizon Agent Training",
+      "url": "/papers/2607.05804/",
+      "json": "/data/papers/2607.05804.json",
+      "score": 53
     },
     {
       "id": "2606.26025",
