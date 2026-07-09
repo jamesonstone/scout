@@ -1,6 +1,11 @@
 {
   "daily": [
     {
+      "date": "2026-07-09",
+      "url": "/daily/2026-07-09/",
+      "json": "/data/daily/2026-07/2026-07-09.json"
+    },
+    {
       "date": "2026-07-08",
       "url": "/daily/2026-07-08/",
       "json": "/data/daily/2026-07/2026-07-08.json"
@@ -196,6 +201,13 @@
       "title": "Bridging VideoQA and Video-Guided Agentic Tasks via Generalized Keyframe Extraction",
       "url": "/papers/2606.29445/",
       "json": "/data/papers/2606.29445.json",
+      "score": 97
+    },
+    {
+      "id": "2607.07608",
+      "title": "Dual Latent Memory in Vision-Language-Action Models for Robotic Manipulation",
+      "url": "/papers/2607.07608/",
+      "json": "/data/papers/2607.07608.json",
       "score": 97
     },
     {
@@ -500,6 +512,13 @@
       "score": 93
     },
     {
+      "id": "2607.04434",
+      "title": "RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies",
+      "url": "/papers/2607.04434/",
+      "json": "/data/papers/2607.04434.json",
+      "score": 93
+    },
+    {
       "id": "2607.01793",
       "title": "Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification",
       "url": "/papers/2607.01793/",
@@ -511,6 +530,13 @@
       "title": "AsyncOPD: How Stale Can On-Policy Distillation Be?",
       "url": "/papers/2606.24143/",
       "json": "/data/papers/2606.24143.json",
+      "score": 92
+    },
+    {
+      "id": "2606.30111",
+      "title": "Automating the Design of Embodied Agent Architectures",
+      "url": "/papers/2606.30111/",
+      "json": "/data/papers/2606.30111.json",
       "score": 92
     },
     {
@@ -532,6 +558,13 @@
       "title": "GBC: Gradient-Based Connections for Optimizing Multi-Agent Systems",
       "url": "/papers/2606.28187/",
       "json": "/data/papers/2606.28187.json",
+      "score": 92
+    },
+    {
+      "id": "2607.07534",
+      "title": "Infinite Worlds with Versatile Interactions",
+      "url": "/papers/2607.07534/",
+      "json": "/data/papers/2607.07534.json",
       "score": 92
     },
     {
@@ -665,6 +698,13 @@
       "title": "Video-MME-Logical: A Controlled Diagnostic Benchmark for Video Temporal-Logical Reasoning",
       "url": "/papers/2606.27828/",
       "json": "/data/papers/2606.27828.json",
+      "score": 91
+    },
+    {
+      "id": "2607.06838",
+      "title": "WildCity: A Real-World City-Scale Testbed for Rendering, Simulation, and Spatial Intelligence",
+      "url": "/papers/2607.06838/",
+      "json": "/data/papers/2607.06838.json",
       "score": 91
     },
     {
@@ -1340,11 +1380,25 @@
       "score": 68
     },
     {
+      "id": "2607.07708",
+      "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+      "url": "/papers/2607.07708/",
+      "json": "/data/papers/2607.07708.json",
+      "score": 66
+    },
+    {
       "id": "2606.31551",
       "title": "AutoTrainess: Teaching Language Models to Improve Language Models Autonomously",
       "url": "/papers/2606.31551/",
       "json": "/data/papers/2606.31551.json",
       "score": 66
+    },
+    {
+      "id": "2607.07675",
+      "title": "Scaling Mixture-of-Experts Video Pretraining for Embodied Intelligence",
+      "url": "/papers/2607.07675/",
+      "json": "/data/papers/2607.07675.json",
+      "score": 64
     },
     {
       "id": "2606.30410",
@@ -1379,6 +1433,13 @@
       "title": "Qwen-Image-2.0-RL Technical Report",
       "url": "/papers/2606.27608/",
       "json": "/data/papers/2606.27608.json",
+      "score": 62
+    },
+    {
+      "id": "2607.04939",
+      "title": "Teaching LLMs a Low-Resource Language: Enhancing Code Completion in Pharo",
+      "url": "/papers/2607.04939/",
+      "json": "/data/papers/2607.04939.json",
       "score": 62
     },
     {
@@ -1436,6 +1497,13 @@
       "url": "/papers/2606.23404/",
       "json": "/data/papers/2606.23404.json",
       "score": 49
+    },
+    {
+      "id": "2607.05966",
+      "title": "Imagined Rollouts are Kinematic, Not Dynamic: A Diagnosis of Long-Horizon World-Model Failure",
+      "url": "/papers/2607.05966/",
+      "json": "/data/papers/2607.05966.json",
+      "score": 41
     }
   ]
 }
