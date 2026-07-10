@@ -1,6 +1,11 @@
 {
   "daily": [
     {
+      "date": "2026-07-10",
+      "url": "/daily/2026-07-10/",
+      "json": "/data/daily/2026-07/2026-07-10.json"
+    },
+    {
       "date": "2026-07-09",
       "url": "/daily/2026-07-09/",
       "json": "/data/daily/2026-07/2026-07-09.json"
@@ -358,6 +363,20 @@
       "score": 95
     },
     {
+      "id": "2607.08768",
+      "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+      "url": "/papers/2607.08768/",
+      "json": "/data/papers/2607.08768.json",
+      "score": 95
+    },
+    {
+      "id": "2603.29616",
+      "title": "Video-Oasis: Rethinking Evaluation of Video Understanding",
+      "url": "/papers/2603.29616/",
+      "json": "/data/papers/2603.29616.json",
+      "score": 95
+    },
+    {
       "id": "2607.00678",
       "title": "ABot-M0.5: Unified Mobility-and-Manipulation World Action Model",
       "url": "/papers/2607.00678/",
@@ -526,6 +545,13 @@
       "score": 93
     },
     {
+      "id": "2607.08526",
+      "title": "A Quantized Native Runtime for On-Device Semantic Audio Generation",
+      "url": "/papers/2607.08526/",
+      "json": "/data/papers/2607.08526.json",
+      "score": 92
+    },
+    {
       "id": "2606.24143",
       "title": "AsyncOPD: How Stale Can On-Policy Distillation Be?",
       "url": "/papers/2606.24143/",
@@ -610,6 +636,13 @@
       "score": 91
     },
     {
+      "id": "2607.08093",
+      "title": "CausalDS: Benchmarking Causal Reasoning in Data-Science Agents",
+      "url": "/papers/2607.08093/",
+      "json": "/data/papers/2607.08093.json",
+      "score": 91
+    },
+    {
       "id": "2606.31537",
       "title": "DataEvolver: Self-Evolving Multi-Agent Data Construction for Text-Rich Image Generation",
       "url": "/papers/2606.31537/",
@@ -649,6 +682,13 @@
       "title": "Learning to Fold: prizewinning solution at LeHome Challenge 2026 (1st place online, 2nd offline)",
       "url": "/papers/2606.27163/",
       "json": "/data/papers/2606.27163.json",
+      "score": 91
+    },
+    {
+      "id": "2607.08770",
+      "title": "LongE2V: Long-Horizon Event-based Video Reconstruction, Prediction, and Frame Interpolation with Video Diffusion Models",
+      "url": "/papers/2607.08770/",
+      "json": "/data/papers/2607.08770.json",
       "score": 91
     },
     {
@@ -820,6 +860,13 @@
       "score": 89
     },
     {
+      "id": "2607.08741",
+      "title": "ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation",
+      "url": "/papers/2607.08741/",
+      "json": "/data/papers/2607.08741.json",
+      "score": 89
+    },
+    {
       "id": "2606.30319",
       "title": "BrainJanus: A Unified Model for Understanding and Generation across Brain, Vision, and Language",
       "url": "/papers/2606.30319/",
@@ -911,6 +958,13 @@
       "score": 88
     },
     {
+      "id": "2607.08404",
+      "title": "DrugGen 2: A disease-aware language model for enhancing drug discovery",
+      "url": "/papers/2607.08404/",
+      "json": "/data/papers/2607.08404.json",
+      "score": 88
+    },
+    {
       "id": "2606.27282",
       "title": "How Good Can Linear Models Be for Time-Series Forecasting?",
       "url": "/papers/2606.27282/",
@@ -946,10 +1000,24 @@
       "score": 88
     },
     {
+      "id": "2601.16211",
+      "title": "Why Can't I Open My Drawer? Mitigating Object-Driven Shortcuts in Zero-Shot Compositional Action Recognition",
+      "url": "/papers/2601.16211/",
+      "json": "/data/papers/2601.16211.json",
+      "score": 88
+    },
+    {
       "id": "2606.31292",
       "title": "AtomiMed: Hierarchical Atomic Fact-Checking for Universal Clinical-Aware Medical Report Evaluation",
       "url": "/papers/2606.31292/",
       "json": "/data/papers/2606.31292.json",
+      "score": 87
+    },
+    {
+      "id": "2607.03936",
+      "title": "Can Dialects Be Steered Like Languages? Sparse Neurons and Distributed Directions in Arabic LLMs",
+      "url": "/papers/2607.03936/",
+      "json": "/data/papers/2607.03936.json",
       "score": 87
     },
     {
@@ -967,6 +1035,20 @@
       "score": 87
     },
     {
+      "id": "2607.07740",
+      "title": "Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE",
+      "url": "/papers/2607.07740/",
+      "json": "/data/papers/2607.07740.json",
+      "score": 87
+    },
+    {
+      "id": "2607.07953",
+      "title": "Linear Attention Architectures: Mechanisms, Trade-offs, and Cross-Layer Routing",
+      "url": "/papers/2607.07953/",
+      "json": "/data/papers/2607.07953.json",
+      "score": 87
+    },
+    {
       "id": "2606.29814",
       "title": "Nemotron-Labs-Diffusion-Image: Advancing Masked Discrete Diffusion for High-Resolution Image Synthesis",
       "url": "/papers/2606.29814/",
@@ -978,6 +1060,13 @@
       "title": "Personalization as Inverse Planning: Learning Latent Design Intents for Agentic Slide Generation via Structural Denoising",
       "url": "/papers/2607.00407/",
       "json": "/data/papers/2607.00407.json",
+      "score": 87
+    },
+    {
+      "id": "2607.06238",
+      "title": "PhyMRI-SR: Toward Physics-Aware MRI Image Super-Resolution",
+      "url": "/papers/2607.06238/",
+      "json": "/data/papers/2607.06238.json",
       "score": 87
     },
     {
@@ -1020,6 +1109,13 @@
       "title": "CausalMix: Data Mixture as Causal Inference for Language Model Training",
       "url": "/papers/2607.01104/",
       "json": "/data/papers/2607.01104.json",
+      "score": 86
+    },
+    {
+      "id": "2607.08765",
+      "title": "Enhancing In-context Panoramic Generation via Geometric-aware Pretraining",
+      "url": "/papers/2607.08765/",
+      "json": "/data/papers/2607.08765.json",
       "score": 86
     },
     {
@@ -1121,6 +1217,13 @@
       "score": 84
     },
     {
+      "id": "2607.04461",
+      "title": "Flash-BoN: Instant Drafts for Inference-Time Scaling in Diffusion Models",
+      "url": "/papers/2607.04461/",
+      "json": "/data/papers/2607.04461.json",
+      "score": 84
+    },
+    {
       "id": "2606.27326",
       "title": "Hallucination in World Models is Predictable and Preventable",
       "url": "/papers/2606.27326/",
@@ -1219,6 +1322,13 @@
       "score": 80
     },
     {
+      "id": "2607.03803",
+      "title": "CineMobile: On-Device Image-to-Video Diffusion for Cinematic Camera Motion Generation",
+      "url": "/papers/2607.03803/",
+      "json": "/data/papers/2607.03803.json",
+      "score": 80
+    },
+    {
       "id": "2606.26938",
       "title": "Focusing on What Matters: Saliency-Harnessing Accurate Routing for Diffusion MoE",
       "url": "/papers/2606.26938/",
@@ -1244,6 +1354,13 @@
       "title": "NormGuard: Reward-Preserving Norm Constraints in Flow-Matching Reinforcement Learning",
       "url": "/papers/2606.27771/",
       "json": "/data/papers/2606.27771.json",
+      "score": 80
+    },
+    {
+      "id": "2607.08763",
+      "title": "OpenCoF: Learning to Reason Through Video Generation",
+      "url": "/papers/2607.08763/",
+      "json": "/data/papers/2607.08763.json",
       "score": 80
     },
     {
@@ -1324,6 +1441,13 @@
       "score": 75
     },
     {
+      "id": "2607.07816",
+      "title": "A Sparse and Truncated State Vector Simulator for Peaked Circuits",
+      "url": "/papers/2607.07816/",
+      "json": "/data/papers/2607.07816.json",
+      "score": 74
+    },
+    {
       "id": "2606.29686",
       "title": "PoseShield: Neural Collision Fields for Human Self-Collision Resolution",
       "url": "/papers/2606.29686/",
@@ -1394,6 +1518,13 @@
       "score": 66
     },
     {
+      "id": "2607.08758",
+      "title": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation",
+      "url": "/papers/2607.08758/",
+      "json": "/data/papers/2607.08758.json",
+      "score": 64
+    },
+    {
       "id": "2607.07675",
       "title": "Scaling Mixture-of-Experts Video Pretraining for Embodied Intelligence",
       "url": "/papers/2607.07675/",
@@ -1457,6 +1588,13 @@
       "score": 61
     },
     {
+      "id": "2607.06987",
+      "title": "UP: Unbounded Positive Asymmetric Optimization for Breaking the Exploration-Stability Dilemma",
+      "url": "/papers/2607.06987/",
+      "json": "/data/papers/2607.06987.json",
+      "score": 59
+    },
+    {
       "id": "2607.01804",
       "title": "VLA-Corrector: Lightweight Detect-and-Correct Inference for Adaptive Action Horizon",
       "url": "/papers/2607.01804/",
@@ -1490,6 +1628,13 @@
       "url": "/papers/2606.26025/",
       "json": "/data/papers/2606.26025.json",
       "score": 52
+    },
+    {
+      "id": "2607.03118",
+      "title": "Vidu S1: A Real-Time Interactive Video Generation Model",
+      "url": "/papers/2607.03118/",
+      "json": "/data/papers/2607.03118.json",
+      "score": 51
     },
     {
       "id": "2606.23404",

@@ -1,0 +1,56 @@
+{
+  "id": "2607.08768",
+  "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+  "first_seen": "2026-07-10",
+  "published_date": "2026-07-09",
+  "observed_dates": [
+    "2026-07-10"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 100,
+    "technical_depth": 73,
+    "implementation_potential": 97,
+    "relevance": 100,
+    "community_signal": 100,
+    "summary_confidence": 95,
+    "overall": 95,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "Docker containers",
+    "capability-driven benchmark",
+    "closed-loop evaluation",
+    "cross-platform coordination",
+    "executor agent",
+    "exploration"
+  ],
+  "innovation_summary": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks: Through comprehensive comparisons across both models and frameworks, we show how base model capabilities and agent framework designs jointly shape performance in real-world environments.",
+  "why_it_matters": [
+    "Overall signal 95/100 driven by novelty 100 and practical impact 100.",
+    "Primary categories: Docker containers, capability-driven benchmark, closed-loop evaluation, cross-platform coordination, executor agent, exploration.",
+    "Community signal includes 21 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 97/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 73/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.08768",
+    "arxiv": "https://arxiv.org/abs/2607.08768",
+    "project": [
+      "https://uniclawbench.github.io/"
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "2607.08758",
+  "title": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation",
+  "first_seen": "2026-07-10",
+  "published_date": "2026-07-09",
+  "observed_dates": [
+    "2026-07-10"
+  ],
+  "score": {
+    "novelty": 71,
+    "practical_impact": 56,
+    "technical_depth": 63,
+    "implementation_potential": 35,
+    "relevance": 68,
+    "community_signal": 100,
+    "summary_confidence": 70,
+    "overall": 64,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Worth Watching",
+  "categories": [
+    "GenomeDiff",
+    "IG-Arena",
+    "IG-Bench",
+    "IG-Exam",
+    "Idea Genome objects",
+    "IdeaGene framework"
+  ],
+  "innovation_summary": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation: We present IdeaGene-Bench (IG-Bench), a benchmark for scientific lineage reasoning and lineage-grounded idea generation.",
+  "why_it_matters": [
+    "Overall signal 64/100 driven by novelty 71 and practical impact 56.",
+    "Primary categories: GenomeDiff, IG-Arena, IG-Bench, IG-Exam, Idea Genome objects, IdeaGene framework.",
+    "Community signal includes 19 upvote(s) and 3 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 35/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 63/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.08758",
+    "arxiv": "https://arxiv.org/abs/2607.08758",
+    "project": [
+      "https://visionxlab.github.io/IdeasHaveGenomes/"
+    ]
+  }
+}
