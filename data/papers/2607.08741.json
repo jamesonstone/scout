@@ -1,0 +1,56 @@
+{
+  "id": "2607.08741",
+  "title": "ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation",
+  "first_seen": "2026-07-10",
+  "published_date": "2026-07-09",
+  "observed_dates": [
+    "2026-07-10"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 100,
+    "technical_depth": 100,
+    "implementation_potential": 81,
+    "relevance": 100,
+    "community_signal": 20,
+    "summary_confidence": 95,
+    "overall": 89,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "categories": [
+    "Bones Rigplay dataset",
+    "HumanML3D benchmark",
+    "autoregressive transformer denoiser",
+    "hybrid representation",
+    "kinematic constraints",
+    "latent body embedding"
+  ],
+  "innovation_summary": "ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation: In this work, we introduce ARDY, a streaming generation framework that bridges this gap by enabling high-fidelity motion generation controllable via online text prompts and flexible.",
+  "why_it_matters": [
+    "Overall signal 89/100 driven by novelty 100 and practical impact 100.",
+    "Primary categories: Bones Rigplay dataset, HumanML3D benchmark, autoregressive transformer denoiser, hybrid representation, kinematic constraints, latent body embedding.",
+    "Community signal is still emerging, so the score leans more on technical and implementation cues than popularity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 81/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.08741",
+    "arxiv": "https://arxiv.org/abs/2607.08741",
+    "project": [
+      "https://research.nvidia.com/labs/sil/projects/ardy/"
+    ]
+  }
+}
