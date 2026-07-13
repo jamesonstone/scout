@@ -1,6 +1,11 @@
 {
   "daily": [
     {
+      "date": "2026-07-13",
+      "url": "/daily/2026-07-13/",
+      "json": "/data/daily/2026-07/2026-07-13.json"
+    },
+    {
       "date": "2026-07-10",
       "url": "/daily/2026-07-10/",
       "json": "/data/daily/2026-07/2026-07-10.json"
@@ -122,6 +127,13 @@
       "title": "Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks",
       "url": "/papers/2606.29082/",
       "json": "/data/papers/2606.29082.json",
+      "score": 99
+    },
+    {
+      "id": "2607.08964",
+      "title": "Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading",
+      "url": "/papers/2607.08964/",
+      "json": "/data/papers/2607.08964.json",
       "score": 99
     },
     {
@@ -276,6 +288,13 @@
       "title": "UI-MOPD: Multi-Platform On-Policy Distillation for Continual GUI Agent Learning",
       "url": "/papers/2607.04425/",
       "json": "/data/papers/2607.04425.json",
+      "score": 96
+    },
+    {
+      "id": "2607.09024",
+      "title": "Video Generation Models are General-Purpose Vision Learners",
+      "url": "/papers/2607.09024/",
+      "json": "/data/papers/2607.09024.json",
       "score": 96
     },
     {
@@ -545,6 +564,13 @@
       "score": 93
     },
     {
+      "id": "2607.04751",
+      "title": "Trust Region Policy Distillation",
+      "url": "/papers/2607.04751/",
+      "json": "/data/papers/2607.04751.json",
+      "score": 93
+    },
+    {
       "id": "2607.08526",
       "title": "A Quantized Native Runtime for On-Device Semantic Audio Generation",
       "url": "/papers/2607.08526/",
@@ -622,6 +648,13 @@
       "score": 92
     },
     {
+      "id": "2607.09424",
+      "title": "A Sovereign, Open-Source Foundation Model for German and English",
+      "url": "/papers/2607.09424/",
+      "json": "/data/papers/2607.09424.json",
+      "score": 91
+    },
+    {
       "id": "2606.23835",
       "title": "ABACUS: Adapting Unified Foundation Model for Bridging Image Count Understanding and Generation",
       "url": "/papers/2606.23835/",
@@ -692,6 +725,20 @@
       "score": 91
     },
     {
+      "id": "2607.07673",
+      "title": "MedPMC: A Systematic Framework for Scaling High-Fidelity Medical Multimodal Data for Foundation Models",
+      "url": "/papers/2607.07673/",
+      "json": "/data/papers/2607.07673.json",
+      "score": 91
+    },
+    {
+      "id": "2607.09661",
+      "title": "PanoWorld: Real-World Panoramic Generation",
+      "url": "/papers/2607.09661/",
+      "json": "/data/papers/2607.09661.json",
+      "score": 91
+    },
+    {
       "id": "2607.00115",
       "title": "PixelEyes: Decoupling Perception and Reasoning for Pinpoint Visual Evidence Seeking",
       "url": "/papers/2607.00115/",
@@ -731,6 +778,13 @@
       "title": "TheoremGraph: Bridging Formal and Informal Mathematics",
       "url": "/papers/2606.25363/",
       "json": "/data/papers/2606.25363.json",
+      "score": 91
+    },
+    {
+      "id": "2607.06374",
+      "title": "VaseMuseum: Digital Intelligent Museum for Ancient Greek Pottery",
+      "url": "/papers/2607.06374/",
+      "json": "/data/papers/2607.06374.json",
       "score": 91
     },
     {
@@ -965,6 +1019,13 @@
       "score": 88
     },
     {
+      "id": "2607.06957",
+      "title": "Flow-ERD: Agent-type Aware Flow Matching with Entropy-Regularized Distillation for Diverse Traffic Simulation",
+      "url": "/papers/2607.06957/",
+      "json": "/data/papers/2607.06957.json",
+      "score": 88
+    },
+    {
       "id": "2606.27282",
       "title": "How Good Can Linear Models Be for Time-Series Forecasting?",
       "url": "/papers/2606.27282/",
@@ -990,6 +1051,13 @@
       "title": "The State-Prediction Separation Hypothesis",
       "url": "/papers/2607.01218/",
       "json": "/data/papers/2607.01218.json",
+      "score": 88
+    },
+    {
+      "id": "2607.08393",
+      "title": "Towards Mechanistically Understanding Why Memorized Knowledge Fails to Generalize in Large Language Model Finetuning",
+      "url": "/papers/2607.08393/",
+      "json": "/data/papers/2607.08393.json",
       "score": 88
     },
     {
@@ -1175,6 +1243,13 @@
       "score": 85
     },
     {
+      "id": "2607.09020",
+      "title": "Phone Segmentation and Recognition through Phonological Activation Mapping",
+      "url": "/papers/2607.09020/",
+      "json": "/data/papers/2607.09020.json",
+      "score": 85
+    },
+    {
       "id": "2606.30968",
       "title": "PhotoQuilt: Training-Free Arbitrary-Resolution Photomosaics via Bootstrapped Tiled Denoising",
       "url": "/papers/2606.30968/",
@@ -1256,6 +1331,13 @@
       "title": "RaysUp: Ultra-light Universal Feature Upsampling via Geometry-Aware Ray Representation",
       "url": "/papers/2606.22749/",
       "json": "/data/papers/2606.22749.json",
+      "score": 83
+    },
+    {
+      "id": "2607.09415",
+      "title": "Self-Guided Test-Time Training for Long-Context LLMs",
+      "url": "/papers/2607.09415/",
+      "json": "/data/papers/2607.09415.json",
       "score": 83
     },
     {
@@ -1383,6 +1465,13 @@
       "url": "/papers/2606.30308/",
       "json": "/data/papers/2606.30308.json",
       "score": 80
+    },
+    {
+      "id": "2607.06553",
+      "title": "From RGB Generation to Dense Field Readout: Pixel-Space Dense Prediction with Text-to-Image Models",
+      "url": "/papers/2607.06553/",
+      "json": "/data/papers/2607.06553.json",
+      "score": 79
     },
     {
       "id": "2607.03068",
@@ -1602,11 +1691,25 @@
       "score": 57
     },
     {
+      "id": "2607.09657",
+      "title": "Scalable Visual Pretraining for Language Intelligence",
+      "url": "/papers/2607.09657/",
+      "json": "/data/papers/2607.09657.json",
+      "score": 56
+    },
+    {
       "id": "2606.27364",
       "title": "PhysiFormer: Learning to Simulate Mechanics in World Space",
       "url": "/papers/2606.27364/",
       "json": "/data/papers/2606.27364.json",
       "score": 55
+    },
+    {
+      "id": "2607.07964",
+      "title": "KronQ: LLM Quantization via Kronecker-Factored Hessian",
+      "url": "/papers/2607.07964/",
+      "json": "/data/papers/2607.07964.json",
+      "score": 54
     },
     {
       "id": "2607.00248",
