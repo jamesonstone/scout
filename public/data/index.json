@@ -1,6 +1,11 @@
 {
   "daily": [
     {
+      "date": "2026-07-16",
+      "url": "/daily/2026-07-16/",
+      "json": "/data/daily/2026-07/2026-07-16.json"
+    },
+    {
       "date": "2026-07-13",
       "url": "/daily/2026-07-13/",
       "json": "/data/daily/2026-07/2026-07-13.json"
@@ -130,10 +135,24 @@
       "score": 99
     },
     {
+      "id": "2607.13285",
+      "title": "Harness Handbook: Making Evolving Agent Harnesses Readable,Navigable, and Editable",
+      "url": "/papers/2607.13285/",
+      "json": "/data/papers/2607.13285.json",
+      "score": 99
+    },
+    {
       "id": "2607.08964",
       "title": "Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading",
       "url": "/papers/2607.08964/",
       "json": "/data/papers/2607.08964.json",
+      "score": 99
+    },
+    {
+      "id": "2607.12395",
+      "title": "Ring-Zero: Scaling Zero RL to a Trillion Parameters for Emergent Reasoning",
+      "url": "/papers/2607.12395/",
+      "json": "/data/papers/2607.12395.json",
       "score": 99
     },
     {
@@ -249,6 +268,13 @@
       "score": 97
     },
     {
+      "id": "2607.12625",
+      "title": "KnowAct-GUIClaw: Know Deeply, Act Perfectly, Personal GUI Assistant with Self-Evolving Memory and Skill",
+      "url": "/papers/2607.12625/",
+      "json": "/data/papers/2607.12625.json",
+      "score": 97
+    },
+    {
       "id": "2607.02963",
       "title": "Parallelized Autoregressive Decoding for Omni-Modal Dense Video Captioning",
       "url": "/papers/2607.02963/",
@@ -260,6 +286,13 @@
       "title": "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation",
       "url": "/papers/2607.05147/",
       "json": "/data/papers/2607.05147.json",
+      "score": 96
+    },
+    {
+      "id": "2607.13639",
+      "title": "OvisOCR2 Technical Report",
+      "url": "/papers/2607.13639/",
+      "json": "/data/papers/2607.13639.json",
       "score": 96
     },
     {
@@ -368,6 +401,13 @@
       "score": 95
     },
     {
+      "id": "2607.13104",
+      "title": "Self-Improvements in Modern Agentic Systems: A Survey",
+      "url": "/papers/2607.13104/",
+      "json": "/data/papers/2607.13104.json",
+      "score": 95
+    },
+    {
       "id": "2606.22873",
       "title": "SingGuard: A Policy-Adaptive Multimodal LLM Guardrail with Dynamic Reasoning",
       "url": "/papers/2606.22873/",
@@ -428,6 +468,20 @@
       "title": "Formalizing Latent Thoughts: Four Axioms of Thought Representation in LLMs",
       "url": "/papers/2606.27378/",
       "json": "/data/papers/2606.27378.json",
+      "score": 94
+    },
+    {
+      "id": "2607.07702",
+      "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+      "url": "/papers/2607.07702/",
+      "json": "/data/papers/2607.07702.json",
+      "score": 94
+    },
+    {
+      "id": "2607.12752",
+      "title": "Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation",
+      "url": "/papers/2607.12752/",
+      "json": "/data/papers/2607.12752.json",
       "score": 94
     },
     {
@@ -564,6 +618,13 @@
       "score": 93
     },
     {
+      "id": "2607.12747",
+      "title": "Tracing Agentic Failure from the Flow of Success",
+      "url": "/papers/2607.12747/",
+      "json": "/data/papers/2607.12747.json",
+      "score": 93
+    },
+    {
       "id": "2607.04751",
       "title": "Trust Region Policy Distillation",
       "url": "/papers/2607.04751/",
@@ -575,6 +636,13 @@
       "title": "A Quantized Native Runtime for On-Device Semantic Audio Generation",
       "url": "/papers/2607.08526/",
       "json": "/data/papers/2607.08526.json",
+      "score": 92
+    },
+    {
+      "id": "2607.13705",
+      "title": "AgentCompass: A Unified Evaluation Infrastructure for Agent Capabilities",
+      "url": "/papers/2607.13705/",
+      "json": "/data/papers/2607.13705.json",
       "score": 92
     },
     {
@@ -596,6 +664,13 @@
       "title": "Boundary-Aware Context Grounding for A Low-Channel EEG Agent",
       "url": "/papers/2606.26519/",
       "json": "/data/papers/2606.26519.json",
+      "score": 92
+    },
+    {
+      "id": "2605.10834",
+      "title": "From Controlled to the Wild: Evaluation of Pentesting Agents for the Real-World",
+      "url": "/papers/2605.10834/",
+      "json": "/data/papers/2605.10834.json",
       "score": 92
     },
     {
@@ -687,6 +762,13 @@
       "title": "DreamForge-World 0.1 Preview: A Low-Compute Real-Time Controllable World Model",
       "url": "/papers/2606.30292/",
       "json": "/data/papers/2606.30292.json",
+      "score": 91
+    },
+    {
+      "id": "2607.13960",
+      "title": "GigaWorld-Policy-0.5: A Faster and Stronger WAM Empowered by AutoResearch",
+      "url": "/papers/2607.13960/",
+      "json": "/data/papers/2607.13960.json",
       "score": 91
     },
     {
@@ -1047,6 +1129,13 @@
       "score": 88
     },
     {
+      "id": "2607.13027",
+      "title": "PalmClaw: A Native On-Device Agent Framework for Mobile Phones",
+      "url": "/papers/2607.13027/",
+      "json": "/data/papers/2607.13027.json",
+      "score": 88
+    },
+    {
       "id": "2607.01218",
       "title": "The State-Prediction Separation Hypothesis",
       "url": "/papers/2607.01218/",
@@ -1187,6 +1276,13 @@
       "score": 86
     },
     {
+      "id": "2607.12000",
+      "title": "MetaView: Monocular Novel View Synthesis with Scale-Aware Implicit Geometry Priors",
+      "url": "/papers/2607.12000/",
+      "json": "/data/papers/2607.12000.json",
+      "score": 86
+    },
+    {
       "id": "2607.01420",
       "title": "MultAttnAttrib: Training-Free Multimodal Attribution in Long Document Question Answering",
       "url": "/papers/2607.01420/",
@@ -1254,6 +1350,13 @@
       "title": "PhotoQuilt: Training-Free Arbitrary-Resolution Photomosaics via Bootstrapped Tiled Denoising",
       "url": "/papers/2606.30968/",
       "json": "/data/papers/2606.30968.json",
+      "score": 85
+    },
+    {
+      "id": "2607.13124",
+      "title": "ShortOPD: Recovering Pruned LLMs with Short-to-Long On-Policy Distillation",
+      "url": "/papers/2607.13124/",
+      "json": "/data/papers/2607.13124.json",
       "score": 85
     },
     {
@@ -1495,6 +1598,13 @@
       "score": 79
     },
     {
+      "id": "2605.16147",
+      "title": "Registers Matter for Pixel-Space Diffusion Transformers",
+      "url": "/papers/2605.16147/",
+      "json": "/data/papers/2605.16147.json",
+      "score": 78
+    },
+    {
       "id": "2607.02515",
       "title": "PointDiT: Pixel-Space Diffusion for Monocular Geometry Estimation",
       "url": "/papers/2607.02515/",
@@ -1558,6 +1668,13 @@
       "score": 73
     },
     {
+      "id": "2607.13125",
+      "title": "Boogu-Image-0.1: Boosting Open-Source Unified Multimodal Understanding and Generation",
+      "url": "/papers/2607.13125/",
+      "json": "/data/papers/2607.13125.json",
+      "score": 71
+    },
+    {
       "id": "2606.26217",
       "title": "Fast LeWorldModel",
       "url": "/papers/2606.26217/",
@@ -1593,6 +1710,13 @@
       "score": 68
     },
     {
+      "id": "2607.11523",
+      "title": "Vinci2: Providing Proactive Assistance in Continuous Egocentric Videos",
+      "url": "/papers/2607.11523/",
+      "json": "/data/papers/2607.11523.json",
+      "score": 68
+    },
+    {
       "id": "2607.07708",
       "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
       "url": "/papers/2607.07708/",
@@ -1619,6 +1743,13 @@
       "url": "/papers/2607.07675/",
       "json": "/data/papers/2607.07675.json",
       "score": 64
+    },
+    {
+      "id": "2607.05910",
+      "title": "PolicyShiftGuard: Benchmarking and Improving Policy-Adaptive Image Guardrails",
+      "url": "/papers/2607.05910/",
+      "json": "/data/papers/2607.05910.json",
+      "score": 63
     },
     {
       "id": "2606.30410",
