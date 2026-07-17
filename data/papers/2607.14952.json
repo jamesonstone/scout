@@ -1,0 +1,45 @@
+{
+  "id": "2607.14952",
+  "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+  "first_seen": "2026-07-17",
+  "published_date": "2026-07-16",
+  "observed_dates": [
+    "2026-07-17"
+  ],
+  "score": {
+    "novelty": 63,
+    "practical_impact": 78,
+    "technical_depth": 81,
+    "implementation_potential": 43,
+    "relevance": 78,
+    "community_signal": 100,
+    "summary_confidence": 60,
+    "overall": 72,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Worth Watching",
+  "innovation_summary": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget: A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below.",
+  "why_it_matters": [
+    "Overall signal 72/100 driven by novelty 63 and practical impact 78.",
+    "It maps to cross-cutting AI systems work even without explicit category metadata.",
+    "Community signal includes 24 upvote(s) and 2 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 43/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 81/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.14952",
+    "arxiv": "https://arxiv.org/abs/2607.14952"
+  }
+}
