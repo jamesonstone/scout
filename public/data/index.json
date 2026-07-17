@@ -1,6 +1,11 @@
 {
   "daily": [
     {
+      "date": "2026-07-17",
+      "url": "/daily/2026-07-17/",
+      "json": "/data/daily/2026-07/2026-07-17.json"
+    },
+    {
       "date": "2026-07-16",
       "url": "/daily/2026-07-16/",
       "json": "/data/daily/2026-07/2026-07-16.json"
@@ -156,6 +161,13 @@
       "score": 99
     },
     {
+      "id": "2607.14777",
+      "title": "SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning",
+      "url": "/papers/2607.14777/",
+      "json": "/data/papers/2607.14777.json",
+      "score": 99
+    },
+    {
       "id": "2607.03451",
       "title": "SkillOpt-Lite: Better and Faster Agent Self-evolution via One Line of Vibe",
       "url": "/papers/2607.03451/",
@@ -163,10 +175,24 @@
       "score": 99
     },
     {
+      "id": "2607.03065",
+      "title": "Spectral Rewiring for Exploration, Purification, and Model Merging",
+      "url": "/papers/2607.03065/",
+      "json": "/data/papers/2607.03065.json",
+      "score": 99
+    },
+    {
       "id": "2606.28480",
       "title": "TUA-Bench: A Benchmark for General-Purpose Terminal-Use Agents",
       "url": "/papers/2606.28480/",
       "json": "/data/papers/2606.28480.json",
+      "score": 99
+    },
+    {
+      "id": "2607.14935",
+      "title": "VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding",
+      "url": "/papers/2607.14935/",
+      "json": "/data/papers/2607.14935.json",
       "score": 99
     },
     {
@@ -233,6 +259,13 @@
       "score": 98
     },
     {
+      "id": "2607.12800",
+      "title": "UniVR: Thinking in Visual Space for Unified Visual Reasoning",
+      "url": "/papers/2607.12800/",
+      "json": "/data/papers/2607.12800.json",
+      "score": 98
+    },
+    {
       "id": "2606.29445",
       "title": "Bridging VideoQA and Video-Guided Agentic Tasks via Generalized Keyframe Extraction",
       "url": "/papers/2606.29445/",
@@ -279,6 +312,13 @@
       "title": "Parallelized Autoregressive Decoding for Omni-Modal Dense Video Captioning",
       "url": "/papers/2607.02963/",
       "json": "/data/papers/2607.02963.json",
+      "score": 97
+    },
+    {
+      "id": "2607.15257",
+      "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
+      "url": "/papers/2607.15257/",
+      "json": "/data/papers/2607.15257.json",
       "score": 97
     },
     {
@@ -391,6 +431,13 @@
       "title": "Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning",
       "url": "/papers/2607.01191/",
       "json": "/data/papers/2607.01191.json",
+      "score": 95
+    },
+    {
+      "id": "2607.15275",
+      "title": "RoboTTT: Context Scaling for Robot Policies",
+      "url": "/papers/2607.15275/",
+      "json": "/data/papers/2607.15275.json",
       "score": 95
     },
     {
@@ -562,6 +609,13 @@
       "score": 93
     },
     {
+      "id": "2607.10463",
+      "title": "GRASP: GRanularity-Aware Search Policy for Agentic RAG",
+      "url": "/papers/2607.10463/",
+      "json": "/data/papers/2607.10463.json",
+      "score": 93
+    },
+    {
       "id": "2606.29705",
       "title": "GUICrafter: Weakly-Supervised GUI Agent Leveraging Massive Unannotated Screenshots",
       "url": "/papers/2606.29705/",
@@ -678,6 +732,13 @@
       "title": "From Foundation to Application: Improving VLA Models in Practice",
       "url": "/papers/2607.06403/",
       "json": "/data/papers/2607.06403.json",
+      "score": 92
+    },
+    {
+      "id": "2607.14076",
+      "title": "From Pixels to States: Rethinking Interactive World Models as Game Engines",
+      "url": "/papers/2607.14076/",
+      "json": "/data/papers/2607.14076.json",
       "score": 92
     },
     {
@@ -849,6 +910,13 @@
       "score": 91
     },
     {
+      "id": "2607.14431",
+      "title": "Smarter and Cheaper at Once: Byte-Exact KV-Cache Grafting Turns a Frozen Small Model into a Verified-Knowledge Flywheel",
+      "url": "/papers/2607.14431/",
+      "json": "/data/papers/2607.14431.json",
+      "score": 91
+    },
+    {
       "id": "2607.05339",
       "title": "TREK: Distill to Explore, Reinforce to Refine",
       "url": "/papers/2607.05339/",
@@ -860,6 +928,13 @@
       "title": "TheoremGraph: Bridging Formal and Informal Mathematics",
       "url": "/papers/2606.25363/",
       "json": "/data/papers/2606.25363.json",
+      "score": 91
+    },
+    {
+      "id": "2607.14660",
+      "title": "VIABench: A Comprehensive Video Benchmark Collected from Blind Individuals for Visual Impairment Assistance",
+      "url": "/papers/2607.14660/",
+      "json": "/data/papers/2607.14660.json",
       "score": 91
     },
     {
@@ -882,6 +957,13 @@
       "url": "/papers/2607.06838/",
       "json": "/data/papers/2607.06838.json",
       "score": 91
+    },
+    {
+      "id": "2607.15207",
+      "title": "BadWAM: When World-Action Models Dream Right but Act Wrong",
+      "url": "/papers/2607.15207/",
+      "json": "/data/papers/2607.15207.json",
+      "score": 90
     },
     {
       "id": "2607.05465",
@@ -1021,6 +1103,13 @@
       "title": "GEAR: Guided End-to-End AutoRegression for Image Synthesis",
       "url": "/papers/2606.32039/",
       "json": "/data/papers/2606.32039.json",
+      "score": 89
+    },
+    {
+      "id": "2607.14189",
+      "title": "MultiRef-Compass: Towards Comprehensive Evaluation of Multi-Reference-to-Audio-Video Generation",
+      "url": "/papers/2607.14189/",
+      "json": "/data/papers/2607.14189.json",
       "score": 89
     },
     {
@@ -1206,6 +1295,13 @@
       "score": 87
     },
     {
+      "id": "2607.15273",
+      "title": "MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators",
+      "url": "/papers/2607.15273/",
+      "json": "/data/papers/2607.15273.json",
+      "score": 87
+    },
+    {
       "id": "2606.29814",
       "title": "Nemotron-Labs-Diffusion-Image: Advancing Masked Discrete Diffusion for High-Resolution Image Synthesis",
       "url": "/papers/2606.29814/",
@@ -1266,6 +1362,13 @@
       "title": "CausalMix: Data Mixture as Causal Inference for Language Model Training",
       "url": "/papers/2607.01104/",
       "json": "/data/papers/2607.01104.json",
+      "score": 86
+    },
+    {
+      "id": "2607.13188",
+      "title": "Concurrent Image Understanding and Generation: Self-Correcting Coupled Markov Jump Processes",
+      "url": "/papers/2607.13188/",
+      "json": "/data/papers/2607.13188.json",
       "score": 86
     },
     {
@@ -1458,6 +1561,13 @@
       "score": 82
     },
     {
+      "id": "2607.13399",
+      "title": "Demystifying On-Policy Distillation: Roles, Pathologies, and Regulations",
+      "url": "/papers/2607.13399/",
+      "json": "/data/papers/2607.13399.json",
+      "score": 82
+    },
+    {
       "id": "2606.27595",
       "title": "Ko-WideSearch: A Korean Breadth-Search Benchmark for Exhaustive Set Enumeration by Web Agents",
       "url": "/papers/2606.27595/",
@@ -1598,6 +1708,13 @@
       "score": 79
     },
     {
+      "id": "2607.14749",
+      "title": "WanSong v1.0 Technical Report",
+      "url": "/papers/2607.14749/",
+      "json": "/data/papers/2607.14749.json",
+      "score": 79
+    },
+    {
       "id": "2605.16147",
       "title": "Registers Matter for Pixel-Space Diffusion Transformers",
       "url": "/papers/2605.16147/",
@@ -1610,6 +1727,13 @@
       "url": "/papers/2607.02515/",
       "json": "/data/papers/2607.02515.json",
       "score": 77
+    },
+    {
+      "id": "2607.13491",
+      "title": "DeepLoop: Depth Scaling for Looped Transformers",
+      "url": "/papers/2607.13491/",
+      "json": "/data/papers/2607.13491.json",
+      "score": 76
     },
     {
       "id": "2607.02920",
@@ -1654,6 +1778,13 @@
       "score": 74
     },
     {
+      "id": "2607.15038",
+      "title": "Video = World + Event Stream",
+      "url": "/papers/2607.15038/",
+      "json": "/data/papers/2607.15038.json",
+      "score": 74
+    },
+    {
       "id": "2607.04443",
       "title": "Wan-Streamer v0.2: Higher Resolution, Same Latency",
       "url": "/papers/2607.04443/",
@@ -1666,6 +1797,13 @@
       "url": "/papers/2606.31410/",
       "json": "/data/papers/2606.31410.json",
       "score": 73
+    },
+    {
+      "id": "2607.14952",
+      "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+      "url": "/papers/2607.14952/",
+      "json": "/data/papers/2607.14952.json",
+      "score": 72
     },
     {
       "id": "2607.13125",
@@ -1794,6 +1932,13 @@
       "score": 62
     },
     {
+      "id": "2607.14202",
+      "title": "KeyFrame-Compass: Towards Comprehensive Evaluation of Keyframe-Conditioned Video Generation",
+      "url": "/papers/2607.14202/",
+      "json": "/data/papers/2607.14202.json",
+      "score": 61
+    },
+    {
       "id": "2606.28057",
       "title": "MultiHashFormer: Hash-based Generative Language Models",
       "url": "/papers/2606.28057/",
@@ -1822,6 +1967,13 @@
       "score": 57
     },
     {
+      "id": "2607.10995",
+      "title": "AsySplat: Efficient Asymmetric 3D Gaussian Splatting for Long-Sequence Scene Modeling",
+      "url": "/papers/2607.10995/",
+      "json": "/data/papers/2607.10995.json",
+      "score": 56
+    },
+    {
       "id": "2607.09657",
       "title": "Scalable Visual Pretraining for Language Intelligence",
       "url": "/papers/2607.09657/",
@@ -1840,6 +1992,13 @@
       "title": "KronQ: LLM Quantization via Kronecker-Factored Hessian",
       "url": "/papers/2607.07964/",
       "json": "/data/papers/2607.07964.json",
+      "score": 54
+    },
+    {
+      "id": "2607.15277",
+      "title": "Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models",
+      "url": "/papers/2607.15277/",
+      "json": "/data/papers/2607.15277.json",
       "score": 54
     },
     {
