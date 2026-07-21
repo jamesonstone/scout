@@ -1,6 +1,11 @@
 {
   "daily": [
     {
+      "date": "2026-07-21",
+      "url": "/daily/2026-07-21/",
+      "json": "/data/daily/2026-07/2026-07-21.json"
+    },
+    {
       "date": "2026-07-17",
       "url": "/daily/2026-07-17/",
       "json": "/data/daily/2026-07/2026-07-17.json"
@@ -287,6 +292,13 @@
       "score": 97
     },
     {
+      "id": "2607.17250",
+      "title": "EvolvingWorld: An Open-Schema Framework for Co-Evolving Role-Play Agents and World Model in Interactive Literary World",
+      "url": "/papers/2607.17250/",
+      "json": "/data/papers/2607.17250.json",
+      "score": 97
+    },
+    {
       "id": "2607.02642",
       "title": "GigaWorld-1: A Roadmap to Build World Models for Robot Policy Evaluation",
       "url": "/papers/2607.02642/",
@@ -329,6 +341,13 @@
       "score": 96
     },
     {
+      "id": "2607.14183",
+      "title": "Open-AoE: An Open Egocentric Manipulation Dataset and Toolchain for Embodied Learning",
+      "url": "/papers/2607.14183/",
+      "json": "/data/papers/2607.14183.json",
+      "score": 96
+    },
+    {
       "id": "2607.13639",
       "title": "OvisOCR2 Technical Report",
       "url": "/papers/2607.13639/",
@@ -357,6 +376,27 @@
       "score": 96
     },
     {
+      "id": "2607.17977",
+      "title": "RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model",
+      "url": "/papers/2607.17977/",
+      "json": "/data/papers/2607.17977.json",
+      "score": 96
+    },
+    {
+      "id": "2607.18213",
+      "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+      "url": "/papers/2607.18213/",
+      "json": "/data/papers/2607.18213.json",
+      "score": 96
+    },
+    {
+      "id": "2607.17423",
+      "title": "TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs",
+      "url": "/papers/2607.17423/",
+      "json": "/data/papers/2607.17423.json",
+      "score": 96
+    },
+    {
       "id": "2607.04425",
       "title": "UI-MOPD: Multi-Platform On-Policy Distillation for Continual GUI Agent Learning",
       "url": "/papers/2607.04425/",
@@ -382,6 +422,13 @@
       "title": "AlayaWorld: Long-Horizon and Playable Video World Generation",
       "url": "/papers/2607.06291/",
       "json": "/data/papers/2607.06291.json",
+      "score": 95
+    },
+    {
+      "id": "2607.16401",
+      "title": "Apple-π: Benchmarking Thinking with Video Towards Law-Grounded Physical Intelligence",
+      "url": "/papers/2607.16401/",
+      "json": "/data/papers/2607.16401.json",
       "score": 95
     },
     {
@@ -525,6 +572,13 @@
       "score": 94
     },
     {
+      "id": "2607.18217",
+      "title": "HOMIE: Human-object Centric Video Personalization via Multimodal Intelligent Enchancement",
+      "url": "/papers/2607.18217/",
+      "json": "/data/papers/2607.18217.json",
+      "score": 94
+    },
+    {
       "id": "2607.12752",
       "title": "Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation",
       "url": "/papers/2607.12752/",
@@ -623,6 +677,13 @@
       "score": 93
     },
     {
+      "id": "2607.16074",
+      "title": "JoyNexus: Service-Oriented Multi-Tenant Post-Training for VLA Models",
+      "url": "/papers/2607.16074/",
+      "json": "/data/papers/2607.16074.json",
+      "score": 93
+    },
+    {
       "id": "2607.03530",
       "title": "MentalThink: Shaping Thoughts in Mental SVG World",
       "url": "/papers/2607.03530/",
@@ -669,6 +730,13 @@
       "title": "Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification",
       "url": "/papers/2607.01793/",
       "json": "/data/papers/2607.01793.json",
+      "score": 93
+    },
+    {
+      "id": "2607.17986",
+      "title": "Self-State Attacks on Self-Hosted AI Agents: How Far Can OS Defenses Go?",
+      "url": "/papers/2607.17986/",
+      "json": "/data/papers/2607.17986.json",
       "score": 93
     },
     {
@@ -746,6 +814,13 @@
       "title": "GBC: Gradient-Based Connections for Optimizing Multi-Agent Systems",
       "url": "/papers/2606.28187/",
       "json": "/data/papers/2606.28187.json",
+      "score": 92
+    },
+    {
+      "id": "2607.17097",
+      "title": "HarmoHOI: Harmonizing Appearance and 3D Motion for Multi-view Hand-Object Interaction Synthesis",
+      "url": "/papers/2607.17097/",
+      "json": "/data/papers/2607.17097.json",
       "score": 92
     },
     {
@@ -973,6 +1048,13 @@
       "score": 90
     },
     {
+      "id": "2607.18171",
+      "title": "FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications",
+      "url": "/papers/2607.18171/",
+      "json": "/data/papers/2607.18171.json",
+      "score": 90
+    },
+    {
       "id": "2602.11688",
       "title": "GORGO: Online Tuning for Cross-Region Network-Aware LLM Serving",
       "url": "/papers/2602.11688/",
@@ -984,6 +1066,13 @@
       "title": "GUI vs. CLI: Execution Bottlenecks in Screen-Only and Skill-Mediated Computer-Use Agents",
       "url": "/papers/2606.24551/",
       "json": "/data/papers/2606.24551.json",
+      "score": 90
+    },
+    {
+      "id": "2607.16850",
+      "title": "Group Entropy-Controlled Policy Optimization",
+      "url": "/papers/2607.16850/",
+      "json": "/data/papers/2607.16850.json",
       "score": 90
     },
     {
@@ -1099,6 +1188,20 @@
       "score": 89
     },
     {
+      "id": "2607.07050",
+      "title": "Diagnosing and Calibrating Tool-Call Boundary Drift in Multi-Teacher On-Policy Distillation",
+      "url": "/papers/2607.07050/",
+      "json": "/data/papers/2607.07050.json",
+      "score": 89
+    },
+    {
+      "id": "2607.13365",
+      "title": "DiffGI: Differentiable Geometry Images for High-Fidelity Thin-Shell 3D Generation",
+      "url": "/papers/2607.13365/",
+      "json": "/data/papers/2607.13365.json",
+      "score": 89
+    },
+    {
       "id": "2606.32039",
       "title": "GEAR: Guided End-to-End AutoRegression for Image Synthesis",
       "url": "/papers/2606.32039/",
@@ -1124,6 +1227,13 @@
       "title": "PixWorld: Unifying 3D Scene Generation and Reconstruction in Pixel Space",
       "url": "/papers/2607.05373/",
       "json": "/data/papers/2607.05373.json",
+      "score": 89
+    },
+    {
+      "id": "2607.17146",
+      "title": "The Geometry of Semantic Space: A Continuous Geometric Framework for the Transformer Architecture",
+      "url": "/papers/2607.17146/",
+      "json": "/data/papers/2607.17146.json",
       "score": 89
     },
     {
@@ -1201,6 +1311,13 @@
       "title": "How Good Can Linear Models Be for Time-Series Forecasting?",
       "url": "/papers/2606.27282/",
       "json": "/data/papers/2606.27282.json",
+      "score": 88
+    },
+    {
+      "id": "2607.18110",
+      "title": "LLM-as-a-Coach: Experiential Learning for Non-Verifiable Tasks",
+      "url": "/papers/2607.18110/",
+      "json": "/data/papers/2607.18110.json",
       "score": 88
     },
     {
@@ -1323,6 +1440,13 @@
       "score": 87
     },
     {
+      "id": "2607.17675",
+      "title": "ShotPlan: Cinematic Video Generation with Learnable Planning Token",
+      "url": "/papers/2607.17675/",
+      "json": "/data/papers/2607.17675.json",
+      "score": 87
+    },
+    {
       "id": "2606.28277",
       "title": "Towards Automating Scientific Review with Google's Paper Assistant Tool",
       "url": "/papers/2606.28277/",
@@ -1348,6 +1472,13 @@
       "title": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It",
       "url": "/papers/2606.26027/",
       "json": "/data/papers/2606.26027.json",
+      "score": 87
+    },
+    {
+      "id": "2607.18084",
+      "title": "WorldCupArena: Fine-Grained Evaluation of Language Models and Deep-Research Agents on Football Forecasting",
+      "url": "/papers/2607.18084/",
+      "json": "/data/papers/2607.18084.json",
       "score": 87
     },
     {
@@ -1407,6 +1538,13 @@
       "score": 86
     },
     {
+      "id": "2607.17247",
+      "title": "Distilled Reinforcement Learning for LLM Post-training",
+      "url": "/papers/2607.17247/",
+      "json": "/data/papers/2607.17247.json",
+      "score": 85
+    },
+    {
       "id": "2607.03509",
       "title": "Flex-Forcing: Towards a Unified Autoregressive and Bidirectional Video Diffusion Model",
       "url": "/papers/2607.03509/",
@@ -1453,6 +1591,13 @@
       "title": "PhotoQuilt: Training-Free Arbitrary-Resolution Photomosaics via Bootstrapped Tiled Denoising",
       "url": "/papers/2606.30968/",
       "json": "/data/papers/2606.30968.json",
+      "score": 85
+    },
+    {
+      "id": "2607.17790",
+      "title": "ReViV: Reconstructing the Viewer and the View in 4D from Monocular Egocentric Video",
+      "url": "/papers/2607.17790/",
+      "json": "/data/papers/2607.17790.json",
       "score": 85
     },
     {
@@ -1533,6 +1678,13 @@
       "score": 83
     },
     {
+      "id": "2607.17972",
+      "title": "DiFA: Inference-Time Forward-Process Alignment for Diffusion Models",
+      "url": "/papers/2607.17972/",
+      "json": "/data/papers/2607.17972.json",
+      "score": 83
+    },
+    {
       "id": "2606.22749",
       "title": "RaysUp: Ultra-light Universal Feature Upsampling via Geometry-Aware Ray Representation",
       "url": "/papers/2606.22749/",
@@ -1552,6 +1704,13 @@
       "url": "/papers/2606.28393/",
       "json": "/data/papers/2606.28393.json",
       "score": 83
+    },
+    {
+      "id": "2607.16609",
+      "title": "Can Multimodal Large Language Models Understand OCT?",
+      "url": "/papers/2607.16609/",
+      "json": "/data/papers/2607.16609.json",
+      "score": 82
     },
     {
       "id": "2606.16613",
@@ -1586,6 +1745,13 @@
       "title": "OpenBioRQ: Unsolved Biomedical Research Questions for Agents",
       "url": "/papers/2606.21959/",
       "json": "/data/papers/2606.21959.json",
+      "score": 82
+    },
+    {
+      "id": "2607.09655",
+      "title": "OpenLongTail: Generative Scaling of Long-Tail Driving Data",
+      "url": "/papers/2607.09655/",
+      "json": "/data/papers/2607.09655.json",
       "score": 82
     },
     {
@@ -1743,6 +1909,13 @@
       "score": 76
     },
     {
+      "id": "2607.17524",
+      "title": "Token-Level Off-Policy Learning for Faithful Generation Under Distribution Shift",
+      "url": "/papers/2607.17524/",
+      "json": "/data/papers/2607.17524.json",
+      "score": 76
+    },
+    {
       "id": "2607.05435",
       "title": "Bibby AI: An Editor-Native Agentic Platform for Academic Research, Writing, and Publishing",
       "url": "/papers/2607.05435/",
@@ -1855,6 +2028,13 @@
       "score": 68
     },
     {
+      "id": "2607.09759",
+      "title": "ReflectWorld-MM: An Entity-Oriented Multimodal Memory System for Open-Ended Video Streams",
+      "url": "/papers/2607.09759/",
+      "json": "/data/papers/2607.09759.json",
+      "score": 67
+    },
+    {
       "id": "2607.07708",
       "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
       "url": "/papers/2607.07708/",
@@ -1867,6 +2047,20 @@
       "url": "/papers/2606.31551/",
       "json": "/data/papers/2606.31551.json",
       "score": 66
+    },
+    {
+      "id": "2607.16900",
+      "title": "Environment-free Synthetic Data Generation for API-Calling Agents",
+      "url": "/papers/2607.16900/",
+      "json": "/data/papers/2607.16900.json",
+      "score": 66
+    },
+    {
+      "id": "2607.18144",
+      "title": "Do Language Models Dream of Binding Molecules? Benchmarking LLMs under Spatial Constraints",
+      "url": "/papers/2607.18144/",
+      "json": "/data/papers/2607.18144.json",
+      "score": 65
     },
     {
       "id": "2607.08758",
@@ -1932,6 +2126,13 @@
       "score": 62
     },
     {
+      "id": "2607.07820",
+      "title": "DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment",
+      "url": "/papers/2607.07820/",
+      "json": "/data/papers/2607.07820.json",
+      "score": 61
+    },
+    {
       "id": "2607.14202",
       "title": "KeyFrame-Compass: Towards Comprehensive Evaluation of Keyframe-Conditioned Video Generation",
       "url": "/papers/2607.14202/",
@@ -1951,6 +2152,13 @@
       "url": "/papers/2607.05352/",
       "json": "/data/papers/2607.05352.json",
       "score": 61
+    },
+    {
+      "id": "2607.10387",
+      "title": "GigaChat Audio: Time-aware Large Audio Language Model",
+      "url": "/papers/2607.10387/",
+      "json": "/data/papers/2607.10387.json",
+      "score": 60
     },
     {
       "id": "2607.06987",
@@ -1979,6 +2187,13 @@
       "url": "/papers/2607.09657/",
       "json": "/data/papers/2607.09657.json",
       "score": 56
+    },
+    {
+      "id": "2607.10371",
+      "title": "GigaAM Multilingual: Foundation Model for Underrepresented Languages",
+      "url": "/papers/2607.10371/",
+      "json": "/data/papers/2607.10371.json",
+      "score": 55
     },
     {
       "id": "2606.27364",
@@ -2014,6 +2229,13 @@
       "url": "/papers/2607.05804/",
       "json": "/data/papers/2607.05804.json",
       "score": 53
+    },
+    {
+      "id": "2607.18227",
+      "title": "FlowMimic: Mask-free Visual Editing and Generation with Pixel-pair Warped Flow Field for Online Video Editing Data Generation and Modality Mimicry",
+      "url": "/papers/2607.18227/",
+      "json": "/data/papers/2607.18227.json",
+      "score": 52
     },
     {
       "id": "2606.26025",

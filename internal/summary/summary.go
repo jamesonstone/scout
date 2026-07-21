@@ -2,14 +2,11 @@ package summary
 
 import (
 	"fmt"
-	"regexp"
 	"sort"
 	"strings"
 
 	"github.com/jamesonstone/scout/internal/model"
 )
-
-var sentenceBoundary = regexp.MustCompile(`[.!?]+`)
 
 type Builder struct{}
 
@@ -157,7 +154,7 @@ func cleanMarkdownText(text string) string {
 }
 
 func innovationSentence(text string) string {
-	sentences := sentenceBoundary.Split(strings.TrimSpace(text), -1)
+	sentences := splitSentences(text)
 	best := ""
 	bestScore := 0
 	for _, sentence := range sentences {
@@ -209,23 +206,70 @@ func innovationCueScore(sentence string) int {
 }
 
 func firstSentence(text string) string {
-	text = strings.TrimSpace(text)
-	if text == "" {
+	sentences := splitSentences(text)
+	if len(sentences) == 0 {
 		return ""
 	}
-	parts := sentenceBoundary.Split(text, -1)
-	if len(parts) == 0 {
-		return text
-	}
-	return strings.TrimSpace(parts[0])
+	return strings.TrimSpace(sentences[0])
 }
 
 func ensureSingleSentence(text string) string {
-	text = strings.TrimSpace(sentenceBoundary.ReplaceAllString(text, ""))
+	text = strings.TrimSpace(strings.Join(strings.Fields(text), " "))
+	text = strings.TrimRight(text, ".!?")
 	if text == "" {
 		return "This paper introduces a research contribution for AI systems."
 	}
 	return text + "."
+}
+
+func splitSentences(text string) []string {
+	text = strings.TrimSpace(strings.Join(strings.Fields(text), " "))
+	if text == "" {
+		return nil
+	}
+
+	sentences := []string{}
+	start := 0
+	for i := 0; i < len(text); i++ {
+		if !isSentencePunctuation(text[i]) {
+			continue
+		}
+		if text[i] == '.' && i > 0 && i+1 < len(text) && isASCIIDigit(text[i-1]) && isASCIIDigit(text[i+1]) {
+			continue
+		}
+
+		end := i + 1
+		for end < len(text) && isSentencePunctuation(text[end]) {
+			end++
+		}
+		if end < len(text) && text[end] != ' ' {
+			continue
+		}
+
+		if sentence := strings.TrimSpace(text[start:end]); sentence != "" {
+			sentences = append(sentences, sentence)
+		}
+		start = end
+		for start < len(text) && text[start] == ' ' {
+			start++
+		}
+		i = start - 1
+	}
+
+	if start < len(text) {
+		if sentence := strings.TrimSpace(text[start:]); sentence != "" {
+			sentences = append(sentences, sentence)
+		}
+	}
+	return sentences
+}
+
+func isSentencePunctuation(ch byte) bool {
+	return ch == '.' || ch == '!' || ch == '?'
+}
+
+func isASCIIDigit(ch byte) bool {
+	return ch >= '0' && ch <= '9'
 }
 
 func truncateWords(text string, limit int) string {
