@@ -1,0 +1,45 @@
+{
+  "id": "2607.18110",
+  "title": "LLM-as-a-Coach: Experiential Learning for Non-Verifiable Tasks",
+  "first_seen": "2026-07-21",
+  "published_date": "2026-07-20",
+  "observed_dates": [
+    "2026-07-21"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 84,
+    "technical_depth": 100,
+    "implementation_potential": 77,
+    "relevance": 100,
+    "community_signal": 58,
+    "summary_confidence": 85,
+    "overall": 88,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "innovation_summary": "LLM-as-a-Coach: Experiential Learning for Non-Verifiable Tasks: We propose Experiential Learning (EL), which repurposes the feedback model from an LLM-as-a-Judge into an LLM-as-a-Coach.",
+  "why_it_matters": [
+    "Overall signal 88/100 driven by novelty 100 and practical impact 84.",
+    "It maps to cross-cutting AI systems work even without explicit category metadata.",
+    "Community signal includes 7 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 77/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.18110",
+    "arxiv": "https://arxiv.org/abs/2607.18110"
+  }
+}

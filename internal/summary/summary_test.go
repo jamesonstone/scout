@@ -42,6 +42,30 @@ func TestInnovationSentencePrefersContributionCue(t *testing.T) {
 	}
 }
 
+func TestInnovationSentencePreservesDecimalVersions(t *testing.T) {
+	text := "RynnBrain 1.1 is an embodied foundation model. We present RynnBrain 1.1, a generalizable embodied foundation model for robotics workflows."
+	got := innovationSentence(text)
+	if !strings.Contains(got, "RynnBrain 1.1, a generalizable embodied foundation model") {
+		t.Fatalf("expected decimal version in contribution sentence, got %q", got)
+	}
+}
+
+func TestInnovationSummaryPreservesTitlePunctuation(t *testing.T) {
+	builder := New()
+	paper := model.Paper{
+		Title:    "RynnBrain 1.1: Towards More Capable Embodied Models",
+		Abstract: "We present RynnBrain 1.1, a generalizable embodied foundation model for robotics workflows.",
+	}
+
+	summary := builder.InnovationSummary(paper)
+	if !strings.Contains(summary, "RynnBrain 1.1: Towards More Capable Embodied Models") {
+		t.Fatalf("expected title punctuation preserved, got %q", summary)
+	}
+	if !strings.Contains(summary, "We present RynnBrain 1.1") {
+		t.Fatalf("expected decimal version preserved in summary detail, got %q", summary)
+	}
+}
+
 func TestExecutiveSignalUsesTopRankedPaperTitles(t *testing.T) {
 	builder := New()
 	papers := []model.PaperRecord{

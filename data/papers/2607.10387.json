@@ -1,0 +1,48 @@
+{
+  "id": "2607.10387",
+  "title": "GigaChat Audio: Time-aware Large Audio Language Model",
+  "first_seen": "2026-07-21",
+  "published_date": "2026-07-11",
+  "observed_dates": [
+    "2026-07-21"
+  ],
+  "score": {
+    "novelty": 51,
+    "practical_impact": 48,
+    "technical_depth": 75,
+    "implementation_potential": 35,
+    "relevance": 70,
+    "community_signal": 100,
+    "summary_confidence": 60,
+    "overall": 60,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Worth Watching",
+  "innovation_summary": "GigaChat Audio: Time-aware Large Audio Language Model: We present a time-aware audio LLM that answers questions with explicit timestamps over up to 120 minutes of input.",
+  "why_it_matters": [
+    "Overall signal 60/100 driven by novelty 51 and practical impact 48.",
+    "It maps to cross-cutting AI systems work even without explicit category metadata.",
+    "Community signal includes 24 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 35/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 75/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.10387",
+    "arxiv": "https://arxiv.org/abs/2607.10387",
+    "project": [
+      "https://huggingface.co/ai-sage/GigaChat3.1-Audio-10B-A1.8B"
+    ]
+  }
+}
