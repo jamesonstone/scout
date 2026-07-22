@@ -1,0 +1,45 @@
+{
+  "id": "2607.18529",
+  "title": "EduPanel: A Three-Agent LLM Judge for Teaching Videos -- Reliability, Complementarity, and Human Trust Calibration",
+  "first_seen": "2026-07-22",
+  "published_date": "2026-07-20",
+  "observed_dates": [
+    "2026-07-22"
+  ],
+  "score": {
+    "novelty": 95,
+    "practical_impact": 100,
+    "technical_depth": 100,
+    "implementation_potential": 87,
+    "relevance": 100,
+    "community_signal": 38,
+    "summary_confidence": 85,
+    "overall": 90,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "innovation_summary": "EduPanel: A Three-Agent LLM Judge for Teaching Videos -- Reliability, Complementarity, and Human Trust Calibration: We present EduPanel, a rubric-grounded, learner-conditioned LLM judge that decomposes evaluation across specialized agents to produce interpretable assessments for different aspects of teaching quality.",
+  "why_it_matters": [
+    "Overall signal 90/100 driven by novelty 95 and practical impact 100.",
+    "It maps to cross-cutting AI systems work even without explicit category metadata.",
+    "Community signal includes 3 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 87/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.18529",
+    "arxiv": "https://arxiv.org/abs/2607.18529"
+  }
+}

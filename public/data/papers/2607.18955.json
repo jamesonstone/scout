@@ -1,0 +1,45 @@
+{
+  "id": "2607.18955",
+  "title": "H^2SD: Hybrid Hindsight Self-Distillation",
+  "first_seen": "2026-07-22",
+  "published_date": "2026-07-21",
+  "observed_dates": [
+    "2026-07-22"
+  ],
+  "score": {
+    "novelty": 87,
+    "practical_impact": 84,
+    "technical_depth": 100,
+    "implementation_potential": 73,
+    "relevance": 84,
+    "community_signal": 35,
+    "summary_confidence": 85,
+    "overall": 81,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "innovation_summary": "H^2SD: Hybrid Hindsight Self-Distillation: To address this tradeoff, we introduce H^{2}SD, a hybrid hindsight self distillation framework that uses the teacher differently according to trajectory correctness.",
+  "why_it_matters": [
+    "Overall signal 81/100 driven by novelty 87 and practical impact 84.",
+    "It maps to cross-cutting AI systems work even without explicit category metadata.",
+    "Community signal includes 3 upvote(s) and 0 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 73/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.18955",
+    "arxiv": "https://arxiv.org/abs/2607.18955"
+  }
+}
