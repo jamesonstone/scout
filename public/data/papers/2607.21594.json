@@ -1,0 +1,48 @@
+{
+  "id": "2607.21594",
+  "title": "Streaming Multi-Agent Autoregressive Diffusion Model with World State Registers",
+  "first_seen": "2026-07-24",
+  "published_date": "2026-07-23",
+  "observed_dates": [
+    "2026-07-24"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 96,
+    "technical_depth": 100,
+    "implementation_potential": 89,
+    "relevance": 90,
+    "community_signal": 60,
+    "summary_confidence": 85,
+    "overall": 91,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "innovation_summary": "Streaming Multi-Agent Autoregressive Diffusion Model with World State Registers: We present WorldWeaver (W^2), a streaming multi-agent video diffusion model that augments rollout with cross-agent world state registers: learnable tokens that store shared world information, track.",
+  "why_it_matters": [
+    "Overall signal 91/100 driven by novelty 100 and practical impact 96.",
+    "It maps to cross-cutting AI systems work even without explicit category metadata.",
+    "Community signal includes 8 upvote(s) and 0 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 89/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.21594",
+    "arxiv": "https://arxiv.org/abs/2607.21594",
+    "project": [
+      "https://vail-ucla.github.io/worldweaver/"
+    ]
+  }
+}

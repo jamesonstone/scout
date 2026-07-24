@@ -1,0 +1,48 @@
+{
+  "id": "2607.21580",
+  "title": "GraphVid: Interactive Graph-Controllable Video Generation",
+  "first_seen": "2026-07-24",
+  "published_date": "2026-07-23",
+  "observed_dates": [
+    "2026-07-24"
+  ],
+  "score": {
+    "novelty": 45,
+    "practical_impact": 40,
+    "technical_depth": 69,
+    "implementation_potential": 35,
+    "relevance": 30,
+    "community_signal": 33,
+    "summary_confidence": 60,
+    "overall": 43,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Skip",
+  "innovation_summary": "GraphVid: Interactive Graph-Controllable Video Generation: To enable flexible yet precise multi-subject control, we introduce GraphVid, a graph-conditioned image-to-video generation model that enables interactive control through structured interaction graphs.",
+  "why_it_matters": [
+    "Overall signal 43/100 driven by novelty 45 and practical impact 40.",
+    "It maps to cross-cutting AI systems work even without explicit category metadata.",
+    "Community signal includes 2 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 35/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 69/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.21580",
+    "arxiv": "https://arxiv.org/abs/2607.21580",
+    "project": [
+      "https://plan-lab.github.io/projects/graphvid"
+    ]
+  }
+}
