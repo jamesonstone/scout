@@ -1,6 +1,11 @@
 {
   "daily": [
     {
+      "date": "2026-07-24",
+      "url": "/daily/2026-07-24/",
+      "json": "/data/daily/2026-07/2026-07-24.json"
+    },
+    {
       "date": "2026-07-22",
       "url": "/daily/2026-07-22/",
       "json": "/data/daily/2026-07/2026-07-22.json"
@@ -168,6 +173,13 @@
       "title": "Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading",
       "url": "/papers/2607.08964/",
       "json": "/data/papers/2607.08964.json",
+      "score": 99
+    },
+    {
+      "id": "2607.20709",
+      "title": "NVIDIA-labs OO Agents: Native Python Object-Oriented Agents",
+      "url": "/papers/2607.20709/",
+      "json": "/data/papers/2607.20709.json",
       "score": 99
     },
     {
@@ -360,6 +372,13 @@
       "score": 97
     },
     {
+      "id": "2607.20911",
+      "title": "Tencent WorkBuddy Bench: A Multi-Domain Coding-Agent Benchmark with Contamination-Resistant Task Construction",
+      "url": "/papers/2607.20911/",
+      "json": "/data/papers/2607.20911.json",
+      "score": 97
+    },
+    {
       "id": "2607.19191",
       "title": "ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU",
       "url": "/papers/2607.19191/",
@@ -399,6 +418,13 @@
       "title": "ReFreeKV: Towards Threshold-Free KV Cache Compression",
       "url": "/papers/2502.16886/",
       "json": "/data/papers/2502.16886.json",
+      "score": 96
+    },
+    {
+      "id": "2607.20061",
+      "title": "ReferTrack: Referring Then Tracking for Embodied Visual Tracking",
+      "url": "/papers/2607.20061/",
+      "json": "/data/papers/2607.20061.json",
       "score": 96
     },
     {
@@ -521,6 +547,13 @@
       "score": 95
     },
     {
+      "id": "2607.21553",
+      "title": "SANA-Video 2.0: Hybrid Linear Attention with Attention Residuals for Efficient Video Generation",
+      "url": "/papers/2607.21553/",
+      "json": "/data/papers/2607.21553.json",
+      "score": 95
+    },
+    {
       "id": "2606.31227",
       "title": "Securing the AI Agent: A Unified Framework for Multi-Layer Agent Red Teaming",
       "url": "/papers/2606.31227/",
@@ -532,6 +565,13 @@
       "title": "Self-Improvements in Modern Agentic Systems: A Survey",
       "url": "/papers/2607.13104/",
       "json": "/data/papers/2607.13104.json",
+      "score": 95
+    },
+    {
+      "id": "2607.21072",
+      "title": "Show, Don't Tell: Evaluating Spatial Cognition in Generative Pixels Rather Than LLM Text",
+      "url": "/papers/2607.21072/",
+      "json": "/data/papers/2607.21072.json",
       "score": 95
     },
     {
@@ -871,6 +911,13 @@
       "score": 92
     },
     {
+      "id": "2605.09635",
+      "title": "K12-KGraph: A Curriculum-Aligned Knowledge Graph for Benchmarking and Training Educational LLMs",
+      "url": "/papers/2605.09635/",
+      "json": "/data/papers/2605.09635.json",
+      "score": 92
+    },
+    {
       "id": "2607.02461",
       "title": "OrbitQuant: Data-Agnostic Quantization for Image and Video Diffusion Transformers",
       "url": "/papers/2607.02461/",
@@ -941,6 +988,13 @@
       "score": 91
     },
     {
+      "id": "2607.19238",
+      "title": "FinanceComplexQA: Benchmarking Agentic Reasoning on Industrial-grade Financial Documents",
+      "url": "/papers/2607.19238/",
+      "json": "/data/papers/2607.19238.json",
+      "score": 91
+    },
+    {
       "id": "2607.13960",
       "title": "GigaWorld-Policy-0.5: A Faster and Stronger WAM Empowered by AutoResearch",
       "url": "/papers/2607.13960/",
@@ -997,6 +1051,13 @@
       "score": 91
     },
     {
+      "id": "2607.04763",
+      "title": "Multi-Turn On-Policy Distillation with Prefix Replay",
+      "url": "/papers/2607.04763/",
+      "json": "/data/papers/2607.04763.json",
+      "score": 91
+    },
+    {
       "id": "2607.09661",
       "title": "PanoWorld: Real-World Panoramic Generation",
       "url": "/papers/2607.09661/",
@@ -1018,6 +1079,13 @@
       "score": 91
     },
     {
+      "id": "2607.20785",
+      "title": "Robostral Navigate",
+      "url": "/papers/2607.20785/",
+      "json": "/data/papers/2607.20785.json",
+      "score": 91
+    },
+    {
       "id": "2607.06559",
       "title": "RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation",
       "url": "/papers/2607.06559/",
@@ -1036,6 +1104,13 @@
       "title": "Smarter and Cheaper at Once: Byte-Exact KV-Cache Grafting Turns a Frozen Small Model into a Verified-Knowledge Flywheel",
       "url": "/papers/2607.14431/",
       "json": "/data/papers/2607.14431.json",
+      "score": 91
+    },
+    {
+      "id": "2607.21594",
+      "title": "Streaming Multi-Agent Autoregressive Diffusion Model with World State Registers",
+      "url": "/papers/2607.21594/",
+      "json": "/data/papers/2607.21594.json",
       "score": 91
     },
     {
@@ -1079,6 +1154,13 @@
       "url": "/papers/2607.06838/",
       "json": "/data/papers/2607.06838.json",
       "score": 91
+    },
+    {
+      "id": "2607.21461",
+      "title": "AREX: Towards a Recursively Self-Improving Agent for Deep Research",
+      "url": "/papers/2607.21461/",
+      "json": "/data/papers/2607.21461.json",
+      "score": 90
     },
     {
       "id": "2607.18367",
@@ -1232,6 +1314,13 @@
       "title": "SimFoundry: Modular and Automated Scene Generation for Policy Learning and Evaluation",
       "url": "/papers/2606.28276/",
       "json": "/data/papers/2606.28276.json",
+      "score": 90
+    },
+    {
+      "id": "2607.21017",
+      "title": "TableVerse: A Large-scale Tabletop Dataset with Real-world Grounded Layouts for Generalizable Manipulation",
+      "url": "/papers/2607.21017/",
+      "json": "/data/papers/2607.21017.json",
       "score": 90
     },
     {
@@ -1522,6 +1611,13 @@
       "score": 87
     },
     {
+      "id": "2607.10848",
+      "title": "Predictive Divergence Masks for LLM RL",
+      "url": "/papers/2607.10848/",
+      "json": "/data/papers/2607.10848.json",
+      "score": 87
+    },
+    {
       "id": "2607.17675",
       "title": "ShotPlan: Cinematic Video Generation with Learnable Planning Token",
       "url": "/papers/2607.17675/",
@@ -1617,6 +1713,13 @@
       "title": "Speaker-Disentangled Chunk-Wise Regression for Syllabic Tokenization",
       "url": "/papers/2607.04064/",
       "json": "/data/papers/2607.04064.json",
+      "score": 86
+    },
+    {
+      "id": "2607.21556",
+      "title": "Visual Contrastive Self-Distillation",
+      "url": "/papers/2607.21556/",
+      "json": "/data/papers/2607.21556.json",
       "score": 86
     },
     {
@@ -1816,10 +1919,24 @@
       "score": 83
     },
     {
+      "id": "2607.21485",
+      "title": "Recurrent Sinusoidal INRs for Efficient High-Fidelity Representation",
+      "url": "/papers/2607.21485/",
+      "json": "/data/papers/2607.21485.json",
+      "score": 83
+    },
+    {
       "id": "2607.09415",
       "title": "Self-Guided Test-Time Training for Long-Context LLMs",
       "url": "/papers/2607.09415/",
       "json": "/data/papers/2607.09415.json",
+      "score": 83
+    },
+    {
+      "id": "2607.21576",
+      "title": "Self-Supervised Learning of Structured Dynamics from Videos",
+      "url": "/papers/2607.21576/",
+      "json": "/data/papers/2607.21576.json",
       "score": 83
     },
     {
@@ -1918,6 +2035,13 @@
       "title": "CineMobile: On-Device Image-to-Video Diffusion for Cinematic Camera Motion Generation",
       "url": "/papers/2607.03803/",
       "json": "/data/papers/2607.03803.json",
+      "score": 80
+    },
+    {
+      "id": "2607.12746",
+      "title": "Color Pass-Through via Camera-Display Coupling",
+      "url": "/papers/2607.12746/",
+      "json": "/data/papers/2607.12746.json",
       "score": 80
     },
     {
@@ -2145,6 +2269,13 @@
       "score": 69
     },
     {
+      "id": "2607.20734",
+      "title": "LLMs Get Lost in Evolving User Intent",
+      "url": "/papers/2607.20734/",
+      "json": "/data/papers/2607.20734.json",
+      "score": 69
+    },
+    {
       "id": "2606.26904",
       "title": "Confidence-Aware Tool Orchestration for Robust Video Understanding",
       "url": "/papers/2606.26904/",
@@ -2313,6 +2444,13 @@
       "score": 59
     },
     {
+      "id": "2607.21051",
+      "title": "Sample-Efficient Learning from Agent Experience",
+      "url": "/papers/2607.21051/",
+      "json": "/data/papers/2607.21051.json",
+      "score": 58
+    },
+    {
       "id": "2607.01804",
       "title": "VLA-Corrector: Lightweight Detect-and-Correct Inference for Adaptive Action Horizon",
       "url": "/papers/2607.01804/",
@@ -2416,6 +2554,13 @@
       "url": "/papers/2606.23404/",
       "json": "/data/papers/2606.23404.json",
       "score": 49
+    },
+    {
+      "id": "2607.21580",
+      "title": "GraphVid: Interactive Graph-Controllable Video Generation",
+      "url": "/papers/2607.21580/",
+      "json": "/data/papers/2607.21580.json",
+      "score": 43
     },
     {
       "id": "2607.05966",

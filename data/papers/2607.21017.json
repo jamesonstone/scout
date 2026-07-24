@@ -1,0 +1,48 @@
+{
+  "id": "2607.21017",
+  "title": "TableVerse: A Large-scale Tabletop Dataset with Real-world Grounded Layouts for Generalizable Manipulation",
+  "first_seen": "2026-07-24",
+  "published_date": "2026-07-23",
+  "observed_dates": [
+    "2026-07-24"
+  ],
+  "score": {
+    "novelty": 100,
+    "practical_impact": 100,
+    "technical_depth": 100,
+    "implementation_potential": 89,
+    "relevance": 84,
+    "community_signal": 45,
+    "summary_confidence": 85,
+    "overall": 90,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Read",
+  "innovation_summary": "TableVerse: A Large-scale Tabletop Dataset with Real-world Grounded Layouts for Generalizable Manipulation: In this paper, we introduce TableVerse, a fully automated Real2Sim pipeline that shifts the paradigm from imaginative layout generation to deterministic reconstruction from unstructured, in-the-wild image.",
+  "why_it_matters": [
+    "Overall signal 90/100 driven by novelty 100 and practical impact 100.",
+    "It maps to cross-cutting AI systems work even without explicit category metadata.",
+    "Community signal includes 5 upvote(s) and 0 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 89/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 100/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "The strongest evidence comes from simulated settings, so operational impact may be less certain in live systems.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.21017",
+    "arxiv": "https://arxiv.org/abs/2607.21017",
+    "project": [
+      "https://bytedance.github.io/TableVerse/"
+    ]
+  }
+}
