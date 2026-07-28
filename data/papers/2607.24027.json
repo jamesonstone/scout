@@ -1,0 +1,48 @@
+{
+  "id": "2607.24027",
+  "title": "Sol-Attn: Accelerating Video Generation Inference via On-the-Fly Attention Sparsification",
+  "first_seen": "2026-07-28",
+  "published_date": "2026-07-27",
+  "observed_dates": [
+    "2026-07-28"
+  ],
+  "score": {
+    "novelty": 45,
+    "practical_impact": 68,
+    "technical_depth": 79,
+    "implementation_potential": 35,
+    "relevance": 30,
+    "community_signal": 100,
+    "summary_confidence": 60,
+    "overall": 57,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Skip",
+  "innovation_summary": "Sol-Attn: Accelerating Video Generation Inference via On-the-Fly Attention Sparsification: In this paper, we introduce training-free Sol-Attn (Sparsifying online attention), which unifies dynamic routing, sparse computation, and approximation correction in a single online-softmax pass, achieving a.",
+  "why_it_matters": [
+    "Overall signal 57/100 driven by novelty 45 and practical impact 68.",
+    "It maps to cross-cutting AI systems work even without explicit category metadata.",
+    "Community signal includes 23 upvote(s) and 2 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 35/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 79/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.24027",
+    "arxiv": "https://arxiv.org/abs/2607.24027",
+    "project": [
+      "http://nvlabs.github.io/Sana/Sol-Attn/"
+    ]
+  }
+}

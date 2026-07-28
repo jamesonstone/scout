@@ -1,0 +1,45 @@
+{
+  "id": "2607.23402",
+  "title": "Characterizing Warp Divergence from Pascal to Blackwell",
+  "first_seen": "2026-07-28",
+  "published_date": "2026-07-26",
+  "observed_dates": [
+    "2026-07-28"
+  ],
+  "score": {
+    "novelty": 79,
+    "practical_impact": 100,
+    "technical_depth": 81,
+    "implementation_potential": 53,
+    "relevance": 66,
+    "community_signal": 23,
+    "summary_confidence": 85,
+    "overall": 72,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Worth Watching",
+  "innovation_summary": "Characterizing Warp Divergence from Pascal to Blackwell: Combining cycle-accurate microbenchmarks, hardware counters, and static analysis of compiler-generated SASS, we separate stable behavior from architectural change.",
+  "why_it_matters": [
+    "Overall signal 72/100 driven by novelty 79 and practical impact 100.",
+    "It maps to cross-cutting AI systems work even without explicit category metadata.",
+    "Community signal includes 0 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 53/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 81/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "Evidence appears benchmark-centric, so verify transfer to production workloads before acting on the claims.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.23402",
+    "arxiv": "https://arxiv.org/abs/2607.23402"
+  }
+}

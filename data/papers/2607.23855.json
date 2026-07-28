@@ -1,0 +1,48 @@
+{
+  "id": "2607.23855",
+  "title": "OmniVAE: An Audio-Video VAE with Cross-Modal Alignment for Joint Generation",
+  "first_seen": "2026-07-28",
+  "published_date": "2026-07-26",
+  "observed_dates": [
+    "2026-07-28"
+  ],
+  "score": {
+    "novelty": 45,
+    "practical_impact": 40,
+    "technical_depth": 65,
+    "implementation_potential": 45,
+    "relevance": 30,
+    "community_signal": 100,
+    "summary_confidence": 60,
+    "overall": 51,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Skip",
+  "innovation_summary": "OmniVAE: An Audio-Video VAE with Cross-Modal Alignment for Joint Generation: We present OmniVAE, a jointly trained audio-video VAE that learns fine-grained semantic alignment between audio and video latent representations.",
+  "why_it_matters": [
+    "Overall signal 51/100 driven by novelty 45 and practical impact 40.",
+    "It maps to cross-cutting AI systems work even without explicit category metadata.",
+    "Community signal includes 20 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 45/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 65/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.23855",
+    "arxiv": "https://arxiv.org/abs/2607.23855",
+    "project": [
+      "https://openmoss.ai/OmniVAE.github.io/"
+    ]
+  }
+}

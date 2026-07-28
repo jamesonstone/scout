@@ -1,0 +1,45 @@
+{
+  "id": "2607.23242",
+  "title": "IndicTalk: A Large-Scale Persona-Based Multilingual Conversational Corpus for Indic Languages",
+  "first_seen": "2026-07-28",
+  "published_date": "2026-07-25",
+  "observed_dates": [
+    "2026-07-28"
+  ],
+  "score": {
+    "novelty": 53,
+    "practical_impact": 58,
+    "technical_depth": 61,
+    "implementation_potential": 45,
+    "relevance": 76,
+    "community_signal": 28,
+    "summary_confidence": 60,
+    "overall": 55,
+    "weights": {
+      "novelty": 0.2,
+      "practical_impact": 0.2,
+      "technical_depth": 0.15,
+      "implementation_potential": 0.15,
+      "relevance": 0.15,
+      "community_signal": 0.1,
+      "summary_confidence": 0.05
+    }
+  },
+  "recommendation": "Skip",
+  "innovation_summary": "IndicTalk: A Large-Scale Persona-Based Multilingual Conversational Corpus for Indic Languages: We present IndicTalk, one of the largest multilingual Indic code-mixed conversational corpora, comprising over 13,28,604 event-grounded multi-turn conversations across 18 language varieties covering 9 Indic languages.",
+  "why_it_matters": [
+    "Overall signal 55/100 driven by novelty 53 and practical impact 58.",
+    "It maps to cross-cutting AI systems work even without explicit category metadata.",
+    "Community signal includes 1 upvote(s) and 1 comment(s), which helps separate durable interest from title-only curiosity."
+  ],
+  "implementation_angle": [
+    "Implementation potential scores 45/100; prioritize adaptation paths for internal agent, evaluation, or platform workflows.",
+    "No linked repository is present, so expect more translation work before the ideas are production-ready.",
+    "Technical depth scores 61/100, so a quick skim should focus on architecture, data, and evaluation sections before full adoption work."
+  ],
+  "caveat": "No linked implementation is available yet, which raises integration cost and lowers reproducibility confidence.",
+  "links": {
+    "hugging_face": "https://huggingface.co/papers/2607.23242",
+    "arxiv": "https://arxiv.org/abs/2607.23242"
+  }
+}
