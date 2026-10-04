@@ -9,6 +9,10 @@
 
 **`scout` is a research-intelligence pipeline for engineers who want the highest-value AI papers without reading dozens of titles every day.**
 
+<!-- BEGIN KIT-MANAGED README BADGES -->
+[![Last commit](https://img.shields.io/github/last-commit/jamesonstone/scout)](https://github.com/jamesonstone/scout/commits) [![Open issues](https://img.shields.io/github/issues/jamesonstone/scout)](https://github.com/jamesonstone/scout/issues) [![Pull requests](https://img.shields.io/github/issues-pr/jamesonstone/scout)](https://github.com/jamesonstone/scout/pulls) [![Release](https://img.shields.io/github/v/release/jamesonstone/scout)](https://github.com/jamesonstone/scout/releases)
+<!-- END KIT-MANAGED README BADGES -->
+
 Scout ingests the Hugging Face Daily Papers feed, enriches each paper with metadata and markdown during the run, scores it across explicit weighted dimensions, persists compact curated paper records, and publishes executive-style daily and monthly intelligence briefings.
 
 ## Why Scout Exists
@@ -167,7 +171,6 @@ Current repository inspection found no pre-existing implementation for schedulin
 
 MIT.
 
-## Maintainer
+## Maintainers
 
-❤️ Lovingly overthought by [Jameson Stone](https://github.com/jamesonstone)
-🪖 Field notes at [jamesonstone.io](https://jamesonstone.io)
+Maintained with 🪖 and ❤️ by [Jameson](https://github.com/jamesonstone) (`jamesonstone`).
